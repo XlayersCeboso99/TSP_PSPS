@@ -1,0 +1,108 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+enum EstadoSubtema {
+    SIN_INICIAR
+    EN_PROGRESO
+    COMPLETADO
+}
+
+class Modulo {
+    - id: String
+    - nombre: String
+    - materia: String
+    - completado: Boolean
+    + verificarCompletitud(): Boolean
+    + notificarTemaCompletado()
+    - setCompletado(valor: Boolean)
+}
+
+class Tema {
+    - id: String
+    - nombre: String
+    - completado: Boolean
+    + verificarCompletitud(): Boolean
+    + notificarSubtemaCompletado()
+    - setCompletado(valor: Boolean)
+}
+
+class Subtema {
+    - id: String
+    - nombre: String
+    - estado: EstadoSubtema
+    + actualizarProgreso()
+    + verificarCompletitud(): Boolean
+    - establecerEstado(estado: EstadoSubtema)
+}
+
+class Pregunta {
+    - id: String
+    - enunciado: String
+    - respuestaCorrecta: String
+    - retroalimentacion: String
+    - respondida: Boolean
+    + evaluarRespuesta(respuesta: String): Boolean
+    + marcarRespondida()
+    - determinarCorrectaIncorrecta(respuesta: String): Boolean
+}
+
+class ActividadInteractiva {
+    - id: String
+    - opcional: Boolean = true
+    - realizada: Boolean
+    + verificarRealizacion(): Boolean
+}
+
+class ElementoActividad {
+    - id: String
+    - completado: Boolean
+    + completar()
+}
+
+class Logro {
+    - id: String
+    - nombre: String
+    - condicion: String
+    - obtenido: Boolean
+}
+
+class EstadoLocal {
+    - puntosTotales: Integer
+    + guardarEstadoOffline()
+    + recuperarEstado()
+}
+
+Modulo "1" *-- "1..*" Tema : contiene
+
+Tema "1" *-- "1..*" Subtema : contiene
+
+Subtema "1" *-- "1..*" Pregunta : contiene
+
+Tema "1" -- "0..*" ActividadInteractiva : tiene asociada
+
+ActividadInteractiva "1" *-- "1..*" ElementoActividad : contiene
+
+EstadoLocal --> Modulo : conserva estado
+EstadoLocal --> Subtema : conserva progreso
+EstadoLocal --> Pregunta : registra respuestas
+EstadoLocal --> ActividadInteractiva : registra realización
+EstadoLocal --> Logro : registra logros obtenidos
+
+note right of EstadoSubtema
+  SIN_INICIAR = Gris
+  EN_PROGRESO = Naranja
+  COMPLETADO = Verde
+end note
+
+note right of Pregunta
+  Una pregunta se considera
+  completada al ser respondida,
+  sea correcta o incorrecta.
+end note
+
+note right of ActividadInteractiva
+  Es opcional y no condiciona
+  la finalización del contenido.
+end note
+
+@enduml

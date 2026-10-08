@@ -1,0 +1,43 @@
+@startuml
+left to right direction
+skinparam packageStyle rectangle
+
+actor Estudiante as E
+
+package "Aplicación PSPS (Offline)" {
+
+    usecase "CU-05\nExplorar los módulos" as CU05
+
+    usecase "CU-01\nEstudiar un tema\nde un módulo" as CU01
+
+    usecase "CU-02\nPracticar conceptos mediante\nuna actividad interactiva" as CU02
+
+    usecase "CU-03\nConsultar progreso\ndel recorrido" as CU03
+
+    usecase "CU-04\nCompletar contenidos\ndel módulo" as CU04
+
+    usecase "CU-06\nConsultar logros\nobtenidos" as CU06
+}
+
+E --> CU05
+E --> CU01
+E --> CU02
+E --> CU03
+E --> CU04
+E --> CU06
+
+CU04 ..> CU01 : <<extend>>\n[al completarse un subtema]
+
+note right of CU02
+  La actividad es opcional.
+  No condiciona la finalización
+  de temas ni módulos.
+end note
+
+note bottom of CU03
+  El progreso depende de las
+  preguntas respondidas, no de
+  las respuestas correctas.
+end note
+
+@enduml

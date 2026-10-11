@@ -1,5 +1,7 @@
 # Guía de la demostración PSPS
 
+Para el uso cotidiano consulta el [Manual de usuario](../../../Documentacion/PSPS_ManualDeUsuario_TSP_Ago26.pdf). La [Guía de operación](../../../Documentacion/PSPS_GuiaDeOperacion_TSP_Ago26.pdf) describe la instalación, actualización y conservación del avance de la versión 0.1.0+1.
+
 ## Instalar en Android
 
 El APK `PSPS-Sprint1-debug.apk` se entrega aparte del repositorio (pesa unos 170 MB) o se genera con `flutter build apk --debug`. Es una versión de demostración firmada con una clave de desarrollo; no es una publicación de tienda.

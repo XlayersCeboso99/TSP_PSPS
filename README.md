@@ -3,6 +3,9 @@
 Repositorio del proyecto educativo PSPS. La app Flutter del Sprint 1 está en `Sprint 1/psps_academy` y las evidencias de la verificación del 10 de octubre de 2026 están en `Sprint 1/Pruebas`.
 
 - [Código y ejecución de la app](Sprint%201/psps_academy/README.md)
+- [Manual de usuario](Documentacion/PSPS_ManualDeUsuario_TSP_Ago26.pdf)
+- [Guía de operación](Documentacion/PSPS_GuiaDeOperacion_TSP_Ago26.pdf)
+- [Documentación editable y capturas](Documentacion/README.md)
 - [Casos ejecutados WP.14](Sprint%201/Pruebas/PSPS_CasosDePruebaEjecutados_WP14.pdf)
 - [Reporte de pruebas WP.15](Sprint%201/Pruebas/PSPS_ReporteDePruebas_WP15.pdf)
 - [Instrucciones para reproducir las pruebas](Sprint%201/Pruebas/REPRODUCIR.md)

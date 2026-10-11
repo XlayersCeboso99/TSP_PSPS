@@ -51,6 +51,8 @@ La integración usa una clave separada de prueba para no modificar el progreso d
 
 ## Documentación
 
+- [Manual de usuario](../../Documentacion/PSPS_ManualDeUsuario_TSP_Ago26.pdf)
+- [Guía de operación](../../Documentacion/PSPS_GuiaDeOperacion_TSP_Ago26.pdf)
 - [Casos ejecutados WP.14](../Pruebas/PSPS_CasosDePruebaEjecutados_WP14.pdf)
 - [Reporte WP.15](../Pruebas/PSPS_ReporteDePruebas_WP15.pdf)
 - [Reproducir la verificación del 10 de octubre](../Pruebas/REPRODUCIR.md)

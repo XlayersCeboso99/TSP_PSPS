@@ -1,6 +1,6 @@
 # Documentación de PSPS Academy
 
-Documentos de la app 0.1.0+1, incremento del Sprint 1. Versión documental 1.0 del 10 de octubre de 2026.
+Documentos de la app 0.1.0+1, incremento del Sprint 1. Versión documental 1.0 del 5 de octubre de 2026.
 
 | Documento | Uso | PDF | Versión editable |
 |---|---|---|---|

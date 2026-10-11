@@ -2,7 +2,7 @@
 
 Esta guía explica cómo preparar, instalar, comprobar y mantener el incremento Android de PSPS Academy. Incluye una ruta de instalación para el estudiante y otra para el equipo que genera el APK desde el repositorio.
 
-Versión de la guía 1.0 · 10 de octubre de 2026
+Versión de la guía 1.0 · 5 de octubre de 2026
 Aplicación 0.1.0+1 · Incremento del Sprint 1
 Android verificado: modelo 24049RN28L con Android 16
 Revisión del equipo y aceptación de la cliente: pendientes

@@ -2,7 +2,7 @@
 
 Este manual te ayuda a estudiar los contenidos de Ingeniería de Software, practicar y consultar tu avance. La app guarda tu recorrido en el teléfono y funciona sin conexión una vez instalada.
 
-Versión del manual 1.0 · 10 de octubre de 2026
+Versión del manual 1.0 · 5 de octubre de 2026
 Aplicación 0.1.0+1 · Incremento del Sprint 1
 Dirigido a estudiantes · Android verificado en modelo 24049RN28L con Android 16
 

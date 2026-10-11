@@ -11,5 +11,3 @@ Repositorio del proyecto educativo PSPS. La app Flutter del Sprint 1 está en `S
 - [Instrucciones para reproducir las pruebas](Sprint%201/Pruebas/REPRODUCIR.md)
 
 La app incluye cuatro módulos, diez temas, veinte preguntas, diez actividades y almacenamiento local. Los contenidos y los diez puntos por actividad son provisionales. La gamificación completa, iOS y la aceptación de la cliente siguen pendientes, según WP.15.
-
-La documentación histórica del Sprint 1 mantiene su fecha original; WP.14 y WP.15 registran la verificación posterior sin atribuir resultados al cierre anterior.

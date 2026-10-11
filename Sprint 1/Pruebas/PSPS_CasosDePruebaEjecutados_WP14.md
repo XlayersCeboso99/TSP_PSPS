@@ -1,7 +1,7 @@
 # Casos de prueba ejecutados WP.14
 
 PSPS Academy 0.1.0+1 · Sprint 1 · Versión documental 1.0
-10 de octubre de 2026 · Zona America/Mexico_City
+9 de octubre del 2026
 Código evaluado 1bcf2556e221ba4a58d10b3a92ec5d897e91e9c8
 
 Se registran los casos de prueba del incremento Flutter y su relación con la matriz de auditoría v1.1 del 09/10/2026. La ejecución se realizó el 10/10/2026, como verificación posterior al Sprint 1; no se trasladan estos resultados a fechas anteriores ni se atribuye aceptación de la cliente.

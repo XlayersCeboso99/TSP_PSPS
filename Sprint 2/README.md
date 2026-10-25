@@ -12,4 +12,4 @@ Incluye consulta de logros CU-06, repaso CU-07, actividades CU-08, búsqueda CU-
 
 El Sprint 1 permanece en su propia carpeta. Para trabajar con el incremento actual, abre **Sprint 2/psps_academy**. El APK se genera desde el código y no se sube a Git.
 
-Verificación: 40 pruebas automáticas aprobadas, análisis sin incidencias y recorrido integral en Android físico con 14 capturas. iOS y la ejecución específica en modo avión no se verificaron. Esta publicación no sustituye la aceptación ni las revisiones formales del equipo.
+Verificación general: 40 pruebas automáticas aprobadas, análisis sin incidencias y recorrido integral en Android físico con 14 capturas. La entrega adicional de [construcción y pruebas CU-07](Pruebas/CU07/README.md) incorpora WP.11, WP.14 y una prueba específica en modo avión con cinco capturas más. iOS no se verificó. Esta publicación no sustituye la aceptación ni las revisiones formales del equipo.

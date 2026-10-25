@@ -25,4 +25,4 @@ Para construir la aplicación normal:
 
 El resultado es `build/app/outputs/flutter-apk/app-debug.apk`. En Windows, el script usa el almacén de certificados de confianza de Windows durante la compilación. Si OneDrive bloquea archivos generados, compila desde una copia fuera de la carpeta sincronizada.
 
-Resultados registrados el 24/10/2026: 40 pruebas automáticas aprobadas, análisis sin incidencias, prueba integral Android aprobada y 14 capturas. No se realizó una verificación en modo avión ni iOS.
+Resultados registrados el 24/10/2026: 40 pruebas automáticas aprobadas, análisis sin incidencias, prueba integral Android aprobada y 14 capturas. Posteriormente se aprobó CU-07 en modo avión sin red activa; consulta CU07/README.md. iOS no se verificó.

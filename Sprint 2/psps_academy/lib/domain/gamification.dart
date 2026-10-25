@@ -1,81 +1,181 @@
 import 'course.dart';
 
-class Achievement {
-  const Achievement(this.id, this.name, this.condition);
-  final String id;
-  final String name;
-  final String condition;
+// C06 Gamificación (SDS v0.2, sección 9). Catálogo acordado por el equipo en
+// MR-09: «G-02 Logros y G-03 Desbloqueos» (S2-37, opción b) y «Propuesta G-01
+// Puntos» (S2-24). Dart puro: no lee ni escribe almacenamiento.
+
+/// Tipo de regla con que se evalúa un logro (SDS 9.2, R-06).
+enum AchievementRule {
+  answeredQuestions,
+  completedLessons,
+  completedPractices,
+  allPractices,
+  completedModule,
+  allModules,
+  reviewedQuestions,
 }
 
-class VisualTheme {
-  const VisualTheme(this.id, this.name, this.condition);
+/// Logro del catálogo G-02.
+class Achievement {
+  const Achievement(
+    this.id,
+    this.name,
+    this.condition, {
+    required this.rule,
+    this.threshold = 1,
+    this.moduleId,
+  });
   final String id;
   final String name;
+
+  /// Texto que ve el estudiante en CU-06 («Condición cumplida: …»).
   final String condition;
+  final AchievementRule rule;
+  final int threshold;
+
+  /// Solo para [AchievementRule.completedModule].
+  final String? moduleId;
+}
+
+/// Tema de color del catálogo G-03 (opción b). No bloquea contenido.
+class VisualTheme {
+  const VisualTheme(
+    this.id,
+    this.name,
+    this.condition, {
+    this.unlockedBy = const {},
+  });
+  final String id;
+  final String name;
+
+  /// Texto de la condición de desbloqueo.
+  final String condition;
+
+  /// Logros que lo desbloquean (basta uno). Vacío: disponible desde el inicio.
+  final Set<String> unlockedBy;
+}
+
+/// Datos del avance que usan las reglas (SDS 9.2, ProgressFacts).
+class ProgressFacts {
+  const ProgressFacts({
+    required this.answeredQuestions,
+    required this.completedLessons,
+    required this.completedPractices,
+    required this.totalPractices,
+    required this.completedModules,
+    required this.totalModules,
+    required this.reviewedQuestions,
+  });
+  final int answeredQuestions;
+  final int completedLessons;
+  final int completedPractices;
+  final int totalPractices;
+  final Set<String> completedModules;
+  final int totalModules;
+  final int reviewedQuestions;
 }
 
 abstract final class Gamification {
+  /// G-01 (P-01): puntos por la primera finalización guardada de una actividad.
   static const pointsPerPractice = 10;
+  static const defaultThemeId = 'U-00';
+
+  /// G-02: 11 logros (L-01 a L-11). Condiciones tal como en el catálogo.
   static const achievements = [
     Achievement(
       'L-01',
       'Primer paso',
-      'Responde tu primera pregunta, correcta o incorrectamente.',
+      'Responde tu primera pregunta.',
+      rule: AchievementRule.answeredQuestions,
     ),
     Achievement(
       'L-02',
       'Subtema completo',
       'Responde todas las preguntas de un subtema.',
+      rule: AchievementRule.completedLessons,
     ),
-    Achievement('L-03', 'Manos a la obra', 'Completa tu primera actividad.'),
+    Achievement(
+      'L-03',
+      'Manos a la obra',
+      'Realiza tu primera actividad.',
+      rule: AchievementRule.completedPractices,
+    ),
     Achievement(
       'L-04',
       'Práctica constante',
-      'Completa 5 actividades distintas.',
+      'Realiza 5 actividades.',
+      rule: AchievementRule.completedPractices,
+      threshold: 5,
     ),
     Achievement(
       'L-05',
       'Todas las prácticas',
-      'Completa todas las actividades del catálogo.',
+      'Realiza las 10 actividades.',
+      rule: AchievementRule.allPractices,
     ),
     Achievement(
       'L-06',
       'Estructuras en orden',
-      'Completa Estructuras y algoritmos.',
+      'Completa el módulo «Estructuras y algoritmos».',
+      rule: AchievementRule.completedModule,
+      moduleId: 'm1',
     ),
     Achievement(
       'L-07',
       'Mente orientada a objetos',
-      'Completa Programación y objetos.',
+      'Completa el módulo «Programación y objetos».',
+      rule: AchievementRule.completedModule,
+      moduleId: 'm2',
     ),
     Achievement(
       'L-08',
       'Datos bien relacionados',
-      'Completa Datos y relaciones.',
+      'Completa el módulo «Datos y relaciones».',
+      rule: AchievementRule.completedModule,
+      moduleId: 'm3',
     ),
     Achievement(
       'L-09',
       'Pensando en las personas',
-      'Completa Diseño para las personas.',
+      'Completa el módulo «Diseño para las personas».',
+      rule: AchievementRule.completedModule,
+      moduleId: 'm4',
+    ),
+    Achievement(
+      'L-10',
+      'Aprendo del error',
+      'En el repaso, acierta 3 preguntas que habías respondido mal.',
+      rule: AchievementRule.reviewedQuestions,
+      threshold: 3,
     ),
     Achievement(
       'L-11',
       'Recorrido completo',
-      'Completa todos los módulos del catálogo.',
+      'Completa los 4 módulos.',
+      rule: AchievementRule.allModules,
     ),
   ];
+
+  /// G-03 (opción b): temas de color.
   static const themes = [
     VisualTheme('U-00', 'Bosque', 'Disponible desde el inicio.'),
     VisualTheme(
       'U-01',
       'Océano',
-      'Obtén Manos a la obra: completa tu primera actividad.',
+      'Obtén el logro «Manos a la obra».',
+      unlockedBy: {'L-03'},
     ),
-    VisualTheme('U-02', 'Atardecer', 'Completa cualquier módulo.'),
+    VisualTheme(
+      'U-02',
+      'Atardecer',
+      'Completa tu primer módulo.',
+      unlockedBy: {'L-06', 'L-07', 'L-08', 'L-09'},
+    ),
     VisualTheme(
       'U-03',
       'Noche',
-      'Obtén Recorrido completo: completa todos los módulos.',
+      'Obtén el logro «Recorrido completo».',
+      unlockedBy: {'L-11'},
     ),
   ];
 
@@ -95,46 +195,94 @@ abstract final class Gamification {
         if (complete(t.practice, orders)) t.practice.id,
   };
 
-  static Set<String> eligible(
+  /// Calcula los hechos del avance a partir del estado guardado.
+  static ProgressFacts facts(
     List<CourseModule> modules,
     Map<String, int> answers,
-    Map<String, List<int>> orders,
-  ) {
-    bool done(Iterable<Question> questions) =>
-        questions.isNotEmpty &&
-        questions.every((q) => answers.containsKey(q.id));
+    Map<String, List<int>> orders, [
+    Map<String, int> reviewAnswers = const {},
+  ]) {
+    bool done(Iterable<Question> scope) =>
+        scope.isNotEmpty && scope.every((q) => answers.containsKey(q.id));
     final lessons = modules.expand((m) => m.topics).expand((t) => t.lessons);
+    final questions = lessons.expand((l) => l.questions);
     final activities = modules
         .expand((m) => m.topics)
         .map((t) => t.practice)
         .where((p) => p.steps.isNotEmpty);
-    final completed = completedPracticeIds(modules, orders);
+    return ProgressFacts(
+      answeredQuestions: questions
+          .where((q) => answers.containsKey(q.id))
+          .length,
+      completedLessons: lessons.where((l) => done(l.questions)).length,
+      completedPractices: completedPracticeIds(modules, orders).length,
+      totalPractices: activities.length,
+      completedModules: {
+        for (final m in modules)
+          if (done(m.questions)) m.id,
+      },
+      totalModules: modules.length,
+      // L-10: preguntas respondidas mal en el estudio y acertadas en el repaso.
+      reviewedQuestions: questions
+          .where(
+            (q) =>
+                answers.containsKey(q.id) &&
+                answers[q.id] != q.correctIndex &&
+                reviewAnswers[q.id] == q.correctIndex,
+          )
+          .length,
+    );
+  }
+
+  /// ¿Se cumple la condición del logro con este avance?
+  static bool isAchieved(Achievement a, ProgressFacts f) => switch (a.rule) {
+    AchievementRule.answeredQuestions => f.answeredQuestions >= a.threshold,
+    AchievementRule.completedLessons => f.completedLessons >= a.threshold,
+    AchievementRule.completedPractices => f.completedPractices >= a.threshold,
+    AchievementRule.allPractices =>
+      f.totalPractices > 0 && f.completedPractices >= f.totalPractices,
+    AchievementRule.completedModule => f.completedModules.contains(a.moduleId),
+    AchievementRule.allModules =>
+      f.totalModules > 0 && f.completedModules.length >= f.totalModules,
+    AchievementRule.reviewedQuestions => f.reviewedQuestions >= a.threshold,
+  };
+
+  /// IDs de los logros cuya condición se cumple.
+  static Set<String> achievedIds(ProgressFacts f) => {
+    for (final a in achievements)
+      if (isAchieved(a, f)) a.id,
+  };
+
+  static Set<String> eligible(
+    List<CourseModule> modules,
+    Map<String, int> answers,
+    Map<String, List<int>> orders, [
+    Map<String, int> reviewAnswers = const {},
+  ]) => achievedIds(facts(modules, answers, orders, reviewAnswers));
+
+  static Set<String> unlocked(Iterable<String> earned) {
+    final ids = earned.toSet();
     return {
-      if (lessons
-          .expand((l) => l.questions)
-          .any((q) => answers.containsKey(q.id)))
-        'L-01',
-      if (lessons.any((l) => done(l.questions))) 'L-02',
-      if (completed.isNotEmpty) 'L-03',
-      if (completed.length >= 5) 'L-04',
-      if (activities.isNotEmpty && completed.length == activities.length)
-        'L-05',
-      for (final (moduleId, achievementId) in [
-        ('m1', 'L-06'),
-        ('m2', 'L-07'),
-        ('m3', 'L-08'),
-        ('m4', 'L-09'),
-      ])
-        if (modules.any((m) => m.id == moduleId && done(m.questions)))
-          achievementId,
-      if (modules.isNotEmpty && modules.every((m) => done(m.questions))) 'L-11',
+      for (final t in themes)
+        if (t.unlockedBy.isEmpty || t.unlockedBy.any(ids.contains)) t.id,
     };
   }
 
-  static Set<String> unlocked(Iterable<String> earned) => {
-    'U-00',
-    if (earned.contains('L-03')) 'U-01',
-    if (['L-06', 'L-07', 'L-08', 'L-09'].any(earned.contains)) 'U-02',
-    if (earned.contains('L-11')) 'U-03',
-  };
+  /// Texto del aviso de recompensas nuevas (catálogo G-02 2.1.4 y G-03 3.2.3).
+  static String rewardMessage(
+    List<Achievement> newAchievements,
+    List<VisualTheme> newThemes,
+  ) {
+    final parts = <String>[
+      if (newAchievements.length == 1)
+        '¡Logro obtenido: ${newAchievements.first.name}!'
+      else if (newAchievements.length > 1)
+        '¡Logros obtenidos: ${newAchievements.map((a) => a.name).join(', ')}!',
+      if (newThemes.length == 1)
+        'Desbloqueaste el tema ${newThemes.first.name}.'
+      else if (newThemes.length > 1)
+        'Desbloqueaste los temas ${newThemes.map((t) => t.name).join(', ')}.',
+    ];
+    return parts.join(' ');
+  }
 }

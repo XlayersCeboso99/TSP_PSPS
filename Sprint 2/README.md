@@ -7,6 +7,7 @@ Incremento de desarrollo **0.2.0-dev.2+3** · 24/10/2026.
 - [Evidencias de Android y registros de pruebas](Pruebas/evidencias/LEEME_EVIDENCIAS.md).
 - [Reproducir las verificaciones](Pruebas/REPRODUCIR.md).
 - [Construcción y pruebas específicas de CU-05](Pruebas/CU05/README.md).
+- [Construcción y pruebas específicas de CU-06](Pruebas/CU06/README.md).
 - [Backlog del sprint](BackLog.md).
 
 Incluye consulta de logros CU-06, repaso CU-07, actividades CU-08, búsqueda CU-09, puntos CU-10 y temas visuales. La búsqueda y el almacenamiento son locales. Los contenidos siguen siendo demostrativos.

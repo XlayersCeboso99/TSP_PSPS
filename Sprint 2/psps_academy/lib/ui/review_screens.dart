@@ -143,6 +143,21 @@ class _ReviewQuestionScreenState extends State<ReviewQuestionScreen> {
       selected!,
     );
     if (!mounted) return;
+    // L-10: el repaso puede otorgar «Aprendo del error» (CU-06, G-02).
+    final rewards = widget.controller;
+    if (saved &&
+        (rewards.newAchievements.isNotEmpty || rewards.newThemes.isNotEmpty)) {
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text(
+            Gamification.rewardMessage(
+              rewards.newAchievements,
+              rewards.newThemes,
+            ),
+          ),
+        ),
+      );
+    }
     setState(() {
       busy = false;
       checked = saved;

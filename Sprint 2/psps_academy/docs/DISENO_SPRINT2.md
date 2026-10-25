@@ -7,13 +7,13 @@ Versión de desarrollo: **0.2.0-dev.2+3**. Fecha de entrega: **24/10/2026**.
 | Diseño | Implementación |
 | --- | --- |
 | CU-05 — Explorar módulos | Acceso libre a los cuatro módulos, diez temas y subtemas existentes; estado por texto, ícono y color. |
-| CU-06 — Consultar logros | Logros obtenidos con nombre, condición y fecha fiable; estado vacío, próximos logros y temas visuales. |
+| CU-06 — Consultar logros | Logros obtenidos con nombre, «Condición cumplida» y fecha fiable; estado vacío A1, próximos logros y temas visuales. Entrega específica en `feature/CU-06-logros` (ver `Sprint 2/Pruebas/CU06/README.md`). |
 | CU-07 — Repaso | Pendientes por módulo/tema, pregunta, error/reintento, acierto guardado y estado vacío. Etiquetas y jerarquía del mockup adaptadas al tema visual común. |
 | CU-08 — Actividades | Lista agrupada por módulo y tema, etiquetas Pendiente/Realizada, apertura de la actividad y estado sin actividad configurada. |
 | CU-09 — Buscar | Lupa en Inicio, mínimo de tres caracteres, búsqueda local mientras se escribe, títulos primero, fragmento resaltado, estado y ruta de cada subtema; apertura y cero resultados. |
 | CU-10 — Puntos | Total local, 0 si no hay finalizaciones, sin historial ni fechas de transacciones. |
 | G-01 | Diez puntos por primera actividad válida guardada; ningún duplicado al repetir o consultar. |
-| G-02 | Diez logros: L-01 a L-09 y L-11. L-10 se excluye; repasar no otorga recompensas. |
+| G-02 | Once logros, L-01 a L-11, con las condiciones del catálogo acordado en MR-09. L-10 «Aprendo del error» se obtiene al acertar en el repaso 3 preguntas respondidas mal; el repaso no da puntos. |
 | G-03 | Bosque inicial; Océano por primera actividad; Atardecer por primer módulo; Noche por recorrido completo. Elección persistente y contenido siempre libre. |
 
 Las pantallas de consulta no guardan ni generan recompensas. Los cambios y sus avisos se publican después de guardar; si falla la escritura, permanecen el estado y la selección anteriores. Un error de carga se muestra sin sustituir datos por ceros ni sobreescribir el almacenamiento.
@@ -43,7 +43,7 @@ Actualiza el APK **sin desinstalar** para conservar el avance. Las versiones ant
 4. En Logros, selecciona un tema disponible. Cierra y abre la app para comprobar su conservación.
 5. Usa la lupa y busca `clase`: se presentan CT-08 en títulos y CT-07 en contenido. Abre un resultado: no cambia el avance.
 6. Busca `interaccion`, con o sin acento, y luego una palabra inexistente. Comprueba la búsqueda local y el estado vacío.
-7. En un módulo con respuestas incorrectas, abre Repasar preguntas y recorre selección, error, reintento y acierto. La pregunta resuelta sale de pendientes sin puntos ni logros adicionales.
+7. En un módulo con respuestas incorrectas, abre Repasar preguntas y recorre selección, error, reintento y acierto. La pregunta resuelta sale de pendientes sin puntos. Al resolver la tercera aparece el aviso del logro L-10 «Aprendo del error».
 
 ## Verificación reproducible
 

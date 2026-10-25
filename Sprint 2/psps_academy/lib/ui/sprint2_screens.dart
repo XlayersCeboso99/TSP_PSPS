@@ -155,16 +155,15 @@ class AchievementsScreen extends StatelessWidget {
           '${earned.length} de ${Gamification.achievements.length} logros obtenidos',
         ),
         if (earned.isEmpty)
-          panel([
+          panel(key: const ValueKey('cu06.empty'), [
             const Icon(Icons.emoji_events_outlined, size: 44),
             const SizedBox(height: 12),
+            // A1 de CU-06.
             heading('Aún no tienes logros'),
-            const Text(
-              'Responde preguntas, completa subtemas y realiza actividades para obtener tus primeros logros.',
-            ),
+            const Text('Realiza actividades y completa temas para obtenerlos.'),
           ]),
         for (final a in earned)
-          panel([
+          panel(key: ValueKey('cu06.achievement.${a.id}'), [
             Row(
               children: [
                 Icon(
@@ -184,7 +183,7 @@ class AchievementsScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 12),
-            Text(a.condition),
+            Text('Condición cumplida: ${a.condition}'),
             const SizedBox(height: 8),
             caption(_date(controller.earnedAchievements[a.id])),
           ]),
@@ -221,7 +220,7 @@ class AchievementsScreen extends StatelessWidget {
     final available = controller.unlockedThemes.contains(visual.id);
     final selected = controller.selectedTheme == visual.id;
     final colors = academyTheme(visual.id).colorScheme;
-    return panel([
+    return panel(key: ValueKey('cu06.theme.${visual.id}'), [
       ListTile(
         contentPadding: EdgeInsets.zero,
         leading: CircleAvatar(
@@ -238,7 +237,7 @@ class AchievementsScreen extends StatelessWidget {
         title: Text(visual.name),
         subtitle: Text(
           selected
-              ? 'Seleccionado'
+              ? 'En uso'
               : available
               ? 'Disponible'
               : 'Bloqueado',

@@ -47,7 +47,7 @@ Actualiza el APK **sin desinstalar** para conservar el avance. Las versiones ant
 
 ## Verificación reproducible
 
-Resultados del 24/10/2026: análisis sin incidencias, **40 pruebas automáticas aprobadas** y recorrido integral aprobado en Android físico modelo 24049RN28L. Se exportaron **14 capturas** de la aplicación de pruebas, incluyendo los estados de búsqueda y repaso y el tema Noche. La prueba Android comprueba migración, consultas, búsqueda, repaso y persistencia al recargar. No se apagó la conectividad del teléfono para esta ejecución; la comprobación específica en modo avión sigue pendiente.
+Resultados del 24/10/2026: análisis sin incidencias, **40 pruebas automáticas aprobadas** y recorrido integral aprobado en Android físico modelo 24049RN28L. Se exportaron **14 capturas** de la aplicación de pruebas, incluyendo los estados de búsqueda y repaso y el tema Noche. La prueba Android comprueba migración, consultas, búsqueda, repaso y persistencia al recargar. El recorrido general original no se ejecutó en modo avión. La verificación posterior de CU-07 en modo avión, sin red activa y con cinco capturas se registra en Pruebas/CU07/README.md; no amplía esa comprobación a todo el sprint.
 
 ```powershell
 flutter pub get
@@ -57,7 +57,7 @@ flutter test
 .\tool\build_android.ps1
 ```
 
-La prueba de diseño utiliza una app temporal con ID literal `mx.edu.uaz.psps.integration`, una clave de datos separada, una migración de ejemplo y capturas del Android real. El script hace la copia y cambia el ID antes de invocar Flutter; no modifica el proyecto normal. No ejecutes las pruebas de dispositivo directamente sobre el ID normal: Flutter puede desinstalar su aplicación al terminar. Sus imágenes muestran **datos de prueba**, no el avance personal del estudiante. Los resultados efectivos y las capturas se entregan en `entrega/Sprint2-Diseno/evidencias` dentro de App TSP. No se considera comprobado iOS desde Windows.
+La prueba de diseño utiliza una app temporal con ID literal `mx.edu.uaz.psps.integration`, una clave de datos separada, una migración de ejemplo y capturas del Android real. El script hace la copia, cambia ID, namespace y actividad antes de invocar Flutter y utiliza --keep-app-running para evitar desinstalaciones automáticas; no modifica el proyecto normal. No ejecutes las pruebas de dispositivo directamente sobre el ID normal: Flutter puede desinstalar su aplicación al terminar. Sus imágenes muestran **datos de prueba**, no el avance personal del estudiante. Los resultados efectivos y las capturas se entregan en `entrega/Sprint2-Diseno/evidencias` dentro de App TSP. No se considera comprobado iOS desde Windows.
 
 Si OneDrive bloquea archivos de compilación, usa una copia temporal fuera de la carpeta sincronizada. El código entregado permanece en `cu07-repaso/Sprint 1/psps_academy`.
 

@@ -1,0 +1,5 @@
+CU07-AV01-pendientes
+CU07-AV02-error
+CU07-AV03-acierto-guardado
+CU07-AV04-sin-pendientes
+CU07-AV05-estado-recuperado

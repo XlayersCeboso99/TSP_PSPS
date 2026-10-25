@@ -1,0 +1,14 @@
+S2-01-inicio
+S2-02-actividades
+S2-03-puntos
+S2-04-logros
+S2-05-temas
+S2-06-busqueda
+S2-07-contenido
+S2-08-sin-resultados
+S2-09-pendientes
+S2-10-repaso-error
+S2-11-repaso-acierto
+S2-12-sin-pendientes
+S2-13-noche
+S2-14-logros-noche

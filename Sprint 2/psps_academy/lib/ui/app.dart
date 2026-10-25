@@ -247,6 +247,15 @@ Widget heading(String text) => Padding(
     ),
   ),
 );
+
+String _catalogSummary(LearningController controller) {
+  final modules = controller.modules.length;
+  final topics = controller.modules.expand((module) => module.topics).length;
+  final moduleLabel = modules == 1 ? 'módulo' : 'módulos';
+  final topicLabel = topics == 1 ? 'tema' : 'temas';
+  return '$modules $moduleLabel · $topics $topicLabel · A tu ritmo';
+}
+
 Widget panel(List<Widget> children, {Color? color}) => Builder(
   builder: (context) => Theme(
     data: color == null ? Theme.of(context) : academyTheme('U-00'),
@@ -415,7 +424,13 @@ class _HomeScreenState extends State<HomeScreen> {
     const SizedBox(height: 24),
     FeatureLinks(controller: c),
     heading('Elige tu próximo paso'),
-    caption('4 módulos · 10 temas · A tu ritmo'),
+    caption(_catalogSummary(c)),
+    if (c.modules.isEmpty)
+      panel([
+        const Icon(Icons.menu_book_outlined),
+        const SizedBox(height: 12),
+        const Text('No hay módulos disponibles.'),
+      ]),
     for (var i = 0; i < c.modules.length; i++)
       _moduleCard(context, c, c.modules[i], i),
     const SizedBox(height: 8),
@@ -445,6 +460,7 @@ class _HomeScreenState extends State<HomeScreen> {
         color: Theme.of(context).colorScheme.surfaceContainerLow,
         borderRadius: BorderRadius.circular(22),
         child: InkWell(
+          key: ValueKey('cu05.module.${m.id}'),
           borderRadius: BorderRadius.circular(22),
           onTap: () =>
               openScreen(context, ModuleScreen(controller: c, module: m)),
@@ -465,7 +481,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: const Color(0xFFF0F4E8),
                         borderRadius: BorderRadius.circular(14),
                       ),
-                      child: Icon(icons[i], color: forest),
+                      child: Icon(icons[i % icons.length], color: forest),
                     ),
                     const SizedBox(width: 14),
                     Expanded(
@@ -613,6 +629,7 @@ class ModuleScreen extends StatelessWidget {
           const SizedBox(height: 14),
           for (final lesson in topic.lessons)
             ListTile(
+              key: ValueKey('cu05.lesson.${lesson.id}'),
               contentPadding: EdgeInsets.zero,
               leading: Icon(
                 Icons.menu_book_rounded,
@@ -670,6 +687,7 @@ class TopicScreen extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: FilledButton.icon(
+              key: ValueKey('cu05.study.${lesson.id}'),
               onPressed: () => openScreen(
                 context,
                 LessonScreen(

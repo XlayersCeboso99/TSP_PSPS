@@ -1,0 +1,59 @@
+Resolving dependencies...
+Downloading packages...
+  cupertino_icons 1.0.9 (2.0.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  shared_preferences_android 2.4.28 (2.5.3 available)
+  shared_preferences_foundation 2.5.7 (2.6.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.2 (2.4.3 available)
+  vm_service 15.3.0 (15.4.0 available)
+  web 1.1.1 (1.1.2 available)
+Got dependencies!
+9 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Running Gradle task 'assembleDebug'...                          
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/C:/Users/sebas/.gradle/wrapper/dists/gradle-9.3.1-all/9ot9r568e8zfvvd4mn8rbu1j0/gradle-9.3.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Warning: SDK processing. This version only understands SDK XML versions up to 3 but an SDK XML file of version 4 was encountered. This can happen if you use versions of Android Studio and the command-line tools that were released at different times.
+Running Gradle task 'assembleDebug'...                            516.3s
+√ Built build\app\outputs\flutter-apk\app-debug.apk
+Installing build\app\outputs\flutter-apk\app-debug.apk...        1,325ms
+I/sps.integration( 7481): Compiler allocated 5239KB to compile void android.view.ViewRootImpl.performTraversals(long)
+I/Choreographer( 7481): Skipped 52 frames!  The application may be doing too much work on its main thread.
+D/WindowLayoutComponentImpl( 7481): Register WindowLayoutInfoListener on Context=mx.edu.uaz.psps.integration.MainActivity@eff2bb8, of which baseContext=android.app.ContextImpl@b7bc1cd
+D/FlutterJNI( 7481): Sending viewport metrics to the engine.
+D/ProfileInstaller( 7481): Installing profile for mx.edu.uaz.psps.integration
+VMServiceFlutterDriver: Connecting to Flutter application at http://127.0.0.1:59273/5cKDoe_LjFI=/
+VMServiceFlutterDriver: Isolate found with number: 6051311341947727
+VMServiceFlutterDriver: Isolate 6051311341947727 is runnable.
+VMServiceFlutterDriver: Isolate is paused at start.
+VMServiceFlutterDriver: Attempting to resume isolate
+I/flutter ( 7481): 00:00 +0: TI05-01: explore freely without changing native saved state
+VMServiceFlutterDriver: Connected to Flutter application.
+I/Choreographer( 7481): Skipped 44 frames!  The application may be doing too much work on its main thread.
+D/InsetsController( 7481): hide(ime())
+I/ImeTracker( 7481): mx.edu.uaz.psps.integration:41095496: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+D/FlutterJNI( 7481): Sending viewport metrics to the engine.
+I/Surface ( 7481): Creating surface for consumer unnamed-7481-2 with slotExpansion=1 for 64 slots
+I/Surface ( 7481): Creating surface for consumer ImageReader-390x844f1m3-7481-0 with slotExpansion=1 for 64 slots
+W/sps.integration( 7481): Suspending all threads took: 8.466ms
+I/sps.integration( 7481): NativeAlloc concurrent mark compact GC freed 2596KB AllocSpace bytes, 4(116KB) LOS objects, 49% free, 2642KB/5284KB, paused 12.238ms,3.575ms total 67.557ms
+VMServiceFlutterDriver: request_data message is taking a long time to complete...
+D/WindowOnBackDispatcher( 7481): setTopOnBackInvokedCallback (unwrapped): io.flutter.embedding.android.FlutterActivity$1@d3a4ed5
+D/WindowOnBackDispatcher( 7481): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@c7ea71f
+D/WindowOnBackDispatcher( 7481): setTopOnBackInvokedCallback (unwrapped): io.flutter.embedding.android.FlutterActivity$1@d3a4ed5
+D/WindowOnBackDispatcher( 7481): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@c7ea71f
+D/WindowOnBackDispatcher( 7481): setTopOnBackInvokedCallback (unwrapped): io.flutter.embedding.android.FlutterActivity$1@d3a4ed5
+D/WindowOnBackDispatcher( 7481): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@c7ea71f
+I/sps.integration( 7481): Background young concurrent mark compact GC freed 1042KB AllocSpace bytes, 36(1644KB) LOS objects, 49% free, 2682KB/5284KB, paused 846us,5.040ms total 41.159ms
+E/ConsumerBase( 7481): [ImageReader-390x844f1m3-7481-0] abandonLocked: ConsumerBase is abandoned!
+I/flutter ( 7481): 00:14 +1: (tearDownAll)
+I/flutter ( 7481): 00:14 +2: All tests passed!
+All tests passed.
+Leaving the application running.
+Evidencias: C:\Users\sebas\OneDrive\Carpetas Drive\Documentos\ChatGPT\TSP\repos\TSP_PSPS\Sprint 2\Pruebas\CU05
+Copia de pruebas: C:\Users\sebas\AppData\Local\Temp\psps-s2-android-6873772d7cd349ea9c2ddb232dac8d05

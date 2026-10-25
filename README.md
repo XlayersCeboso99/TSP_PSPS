@@ -9,9 +9,9 @@ PSPS Academy es una aplicación Flutter/Dart para Android e iOS que permite estu
 
 ## Estado actual
 
-- Versión de la aplicación: **0.1.0+1** (incremento del Sprint 1).
+- Versión de desarrollo actual: **0.2.0-dev.2+3**, en [Sprint 2](Sprint%202/README.md). El incremento anterior se conserva en Sprint 1.
 - Android verificado en un dispositivo físico con Android 16. iOS sin compilar ni probar (falta macOS/Xcode).
-- Logros, desbloqueos y el catálogo definitivo de gamificación están pendientes de la decisión D-02 de la cliente.
+- El incremento del Sprint 2 incorpora logros, temas visuales, repaso, búsqueda, actividades y puntos según el diseño del equipo. No hay servidor ni sincronización.
 - La aprobación del SRS y la aceptación de la cliente están pendientes.
 
 ## Estructura del repositorio
@@ -33,7 +33,7 @@ Sprint 1/
 
 ## Ejecutar y probar
 
-Consulta [Sprint 1/psps_academy/README.md](Sprint%201/psps_academy/README.md) para ejecutar la app y generar el APK, y [Sprint 1/Pruebas/REPRODUCIR.md](Sprint%201/Pruebas/REPRODUCIR.md) para repetir las pruebas.
+Consulta [Sprint 2/psps_academy/README.md](Sprint%202/psps_academy/README.md) para ejecutar la app y generar el APK, y [Sprint 2/Pruebas/REPRODUCIR.md](Sprint%202/Pruebas/REPRODUCIR.md) para repetir las pruebas actuales. La documentación histórica del Sprint 1 permanece en su carpeta.
 
 ## Gestión del trabajo
 

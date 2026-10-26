@@ -1,6 +1,6 @@
 # Corrección del defecto D-S1-01: El catálogo no se valida antes de usarse
 
-Responsable: Pablo Valentín Varela Rivera. Entrega técnica: 26/10/2026. Rama: fix/D-S1-01-validar-catalogo. Base: COMMIT_BASE; aplicación Flutter 0.2.0-dev.2+3.
+Responsable: Pablo Valentín Varela Rivera. Entrega técnica: 26/10/2026. Pruebas ejecutadas el 26/10/2026. Rama: fix/D-S1-01-validar-catalogo. Base: main, commit 53355a9913e36a06115ffd10997a519b8660701f; aplicación Flutter 0.2.0-dev.2+3.
 
 ## 1. Defecto
 
@@ -36,17 +36,17 @@ Ejecutable: psps_academy/test/fix_ds101_validar_catalogo_test.dart.
 
 | ID | Nivel | Resultado esperado | Estado |
 | --- | --- | --- | --- |
-| DS101-01 | Lógica | El catálogo del producto es válido. | ESTADO |
-| DS101-02 | Lógica | Se reportan repetidos, subtema sin preguntas, respuesta fuera de rango, menos de dos opciones, identificador vacío y actividad de un elemento. | ESTADO |
-| DS101-03 | Lógica | Con un catálogo inválido: no está listo, mensaje «Contenido no disponible», avance guardado intacto y cero escrituras. | ESTADO |
-| DS101-04 | Lógica | Las estructuras vacías siguen cargando (CU-05, CU-08). | ESTADO |
-| DS101-05 | Widget | La app muestra el mensaje y «Reintentar»; no aparece Inicio ni se escribe. | ESTADO |
+| DS101-01 | Lógica | El catálogo del producto es válido. | Aprobada |
+| DS101-02 | Lógica | Se reportan repetidos, subtema sin preguntas, respuesta fuera de rango, menos de dos opciones, identificador vacío y actividad de un elemento. | Aprobada |
+| DS101-03 | Lógica | Con un catálogo inválido: no está listo, mensaje «Contenido no disponible», avance guardado intacto y cero escrituras. | Aprobada |
+| DS101-04 | Lógica | Las estructuras vacías siguen cargando (CU-05, CU-08). | Aprobada |
+| DS101-05 | Widget | La app muestra el mensaje y «Reintentar»; no aparece Inicio ni se escribe. | Aprobada |
 
 | Verificación | Resultado y ubicación |
 | --- | --- |
-| Análisis | RESULTADO_ANALISIS. Sprint 2/Defectos/D-S1-01/analisis.log. |
-| Pruebas del defecto | RESULTADO_DEFECTO de 5. Sprint 2/Defectos/D-S1-01/pruebas.log. |
-| Regresión completa | RESULTADO_REGRESION. Sprint 2/Defectos/D-S1-01/regresion.log. |
+| Análisis | Sin incidencias. Sprint 2/Defectos/D-S1-01/analisis.log. |
+| Pruebas del defecto | 5 aprobadas de 5. Sprint 2/Defectos/D-S1-01/pruebas.log. |
+| Regresión completa | 57 aprobadas. Sprint 2/Defectos/D-S1-01/regresion.log. |
 
 ## 5. Verificación (ID 61, Sebastián)
 

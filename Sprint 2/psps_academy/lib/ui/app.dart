@@ -1118,7 +1118,7 @@ class PracticeScreen extends StatelessWidget {
         ]),
         if (!complete && !full) ...[
           heading('Elementos disponibles'),
-          for (final i in List.generate(p.steps.length, (i) => i).reversed)
+          for (final i in p.presentationOrder)
             if (!order.contains(i))
               Padding(
                 padding: const EdgeInsets.only(bottom: 10),

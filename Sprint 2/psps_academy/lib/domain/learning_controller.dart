@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 
 import '../data/progress_store.dart';
+import 'catalog_validation.dart';
 import 'course.dart';
 import 'gamification.dart';
 
@@ -65,10 +66,26 @@ class LearningController extends ChangeNotifier {
   ProgressStatus moduleStatus(CourseModule module) =>
       statusForQuestions(module.questions);
 
+  /// D-S1-01 · RP-01: mensaje cuando el catálogo no pasa la validación.
+  static const contentUnavailable =
+      'Contenido no disponible. El catálogo de la aplicación tiene errores; tu avance guardado no se modificó.';
+
+  /// Problemas encontrados en el catálogo en la última carga (vacío si es
+  /// válido).
+  List<String> catalogErrors = const [];
+
   Future<void> load() async {
     ready = false;
     loadError = null;
     notifyListeners();
+    // Validar antes de leer o escribir el avance: un catálogo inválido no se
+    // usa y el almacenamiento no se toca.
+    catalogErrors = validateCatalog(modules);
+    if (catalogErrors.isNotEmpty) {
+      loadError = contentUnavailable;
+      notifyListeners();
+      return;
+    }
     try {
       final state = await store.load();
       final byId = {for (final q in questions) q.id: q};

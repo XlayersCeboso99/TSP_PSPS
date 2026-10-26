@@ -304,16 +304,18 @@ class _SearchScreenState extends State<SearchScreen> {
         ),
         const SizedBox(height: 20),
         if (widget.controller.modules.isEmpty) ...[
-          panel([
+          // E1 de CU-09.
+          panel(key: const ValueKey('cu09.error'), [
             const Text('No pudimos recuperar el catálogo local.'),
             TextButton(
               onPressed: () => setState(() {}),
               child: const Text('Reintentar'),
             ),
           ]),
-        ] else if (query.trim().runes.length < 3) ...[
-          heading('Escribe al menos 3 letras'),
-          panel([
+        ] else if (!ContentSearch.canSearch(query)) ...[
+          // A2 de CU-09.
+          heading('Escribe al menos ${ContentSearch.minLength} letras'),
+          panel(key: const ValueKey('cu09.short'), [
             const Icon(Icons.offline_bolt_outlined),
             const SizedBox(height: 12),
             const Text(
@@ -321,7 +323,8 @@ class _SearchScreenState extends State<SearchScreen> {
             ),
           ]),
         ] else if (results.isEmpty) ...[
-          panel([
+          // A1 de CU-09.
+          panel(key: const ValueKey('cu09.empty'), [
             const Icon(Icons.search_off, size: 48),
             const SizedBox(height: 16),
             heading('No se encontraron temas con «${query.trim()}»'),
@@ -337,14 +340,16 @@ class _SearchScreenState extends State<SearchScreen> {
             ),
           ]),
         ] else ...[
-          caption('${results.length} resultados para «${query.trim()}»'),
+          caption(
+            '${results.length} ${results.length == 1 ? 'resultado' : 'resultados'} para «${query.trim()}»',
+          ),
           for (final group in MatchField.values) ...[
             if (results.any((r) => r.field == group))
               caption(
                 group == MatchField.title ? 'EN TÍTULOS' : 'EN EL CONTENIDO',
               ),
             for (final result in results.where((r) => r.field == group))
-              panel([
+              panel(key: ValueKey('cu09.result.${result.lesson.id}'), [
                 InkWell(
                   onTap: () {
                     FocusManager.instance.primaryFocus?.unfocus();

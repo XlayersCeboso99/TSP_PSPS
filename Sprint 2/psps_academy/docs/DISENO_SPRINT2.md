@@ -10,7 +10,7 @@ Versión de desarrollo: **0.2.0-dev.2+3**. Fecha de entrega: **24/10/2026**.
 | CU-06 — Consultar logros | Logros obtenidos con nombre, condición y fecha fiable; estado vacío, próximos logros y temas visuales. |
 | CU-07 — Repaso | Pendientes por módulo/tema, pregunta, error/reintento, acierto guardado y estado vacío. Etiquetas y jerarquía del mockup adaptadas al tema visual común. |
 | CU-08 — Actividades | Lista agrupada por módulo y tema, etiquetas Pendiente/Realizada, apertura de la actividad y estado sin actividad configurada. |
-| CU-09 — Buscar | Lupa en Inicio, mínimo de tres caracteres, búsqueda local mientras se escribe, títulos primero, fragmento resaltado, estado y ruta de cada subtema; apertura y cero resultados. |
+| CU-09 — Buscar | Lupa en Inicio, mínimo de tres caracteres, búsqueda local mientras se escribe, títulos primero, fragmento resaltado, estado y ruta de cada subtema; apertura y cero resultados. Admite frases aunque cambien de renglón. Entrega específica en `feature/CU-09-busqueda` (ver `Sprint 2/Pruebas/CU09/README.md`). |
 | CU-10 — Puntos | Total local, 0 si no hay finalizaciones, sin historial ni fechas de transacciones. |
 | G-01 | Diez puntos por primera actividad válida guardada; ningún duplicado al repetir o consultar. |
 | G-02 | Diez logros: L-01 a L-09 y L-11. L-10 se excluye; repasar no otorga recompensas. |

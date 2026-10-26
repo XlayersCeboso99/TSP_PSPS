@@ -1,7 +1,7 @@
 param(
   [Parameter(Mandatory = $true)][string]$DeviceId,
   [string]$EvidenceDirectory,
-  [ValidateSet('integration_test/sprint2_design_test.dart', 'integration_test/cu05_offline_test.dart', 'integration_test/cu07_offline_test.dart')]
+  [ValidateSet('integration_test/sprint2_design_test.dart', 'integration_test/cu05_offline_test.dart', 'integration_test/cu07_offline_test.dart', 'integration_test/cu10_offline_test.dart')]
   [string]$Target = 'integration_test/sprint2_design_test.dart'
 )
 $ErrorActionPreference = 'Stop'

@@ -256,7 +256,8 @@ String _catalogSummary(LearningController controller) {
   return '$modules $moduleLabel · $topics $topicLabel · A tu ritmo';
 }
 
-Widget panel(List<Widget> children, {Color? color}) => Builder(
+Widget panel(List<Widget> children, {Color? color, Key? key}) => Builder(
+  key: key,
   builder: (context) => Theme(
     data: color == null ? Theme.of(context) : academyTheme('U-00'),
     child: Container(

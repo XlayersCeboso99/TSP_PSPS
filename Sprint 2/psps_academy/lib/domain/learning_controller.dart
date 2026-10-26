@@ -1,6 +1,7 @@
 import 'package:flutter/foundation.dart';
 
 import '../data/progress_store.dart';
+import '../data/catalog_validation.dart';
 import 'course.dart';
 import 'gamification.dart';
 
@@ -69,6 +70,13 @@ class LearningController extends ChangeNotifier {
     ready = false;
     loadError = null;
     notifyListeners();
+    try {
+      validateCatalog(modules);
+    } on FormatException {
+      loadError = 'Contenido no disponible. El catálogo contiene identificadores o preguntas inválidos. Tus datos guardados se conservan.';
+      notifyListeners();
+      return;
+    }
     try {
       final state = await store.load();
       final byId = {for (final q in questions) q.id: q};

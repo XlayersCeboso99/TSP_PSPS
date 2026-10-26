@@ -1,6 +1,6 @@
 # Corrección del defecto H-01: Respuesta repetida sin retroalimentación nueva
 
-Responsable: Pablo Valentín Varela Rivera. Entrega técnica: 26/10/2026. Rama: fix/H-01-respuesta-repetida. Base: COMMIT_BASE; aplicación Flutter 0.2.0-dev.2+3.
+Responsable: Pablo Valentín Varela Rivera. Entrega técnica: 26/10/2026. Pruebas ejecutadas el 26/10/2026. Rama: fix/H-01-respuesta-repetida. Base: main, commit 53355a9913e36a06115ffd10997a519b8660701f; aplicación Flutter 0.2.0-dev.2+3.
 
 ## 1. Defecto
 
@@ -35,16 +35,16 @@ Ejecutable: psps_academy/test/fix_h01_respuesta_repetida_test.dart.
 
 | ID | Nivel | Resultado esperado | Estado |
 | --- | --- | --- | --- |
-| H01-01 | Widget | Incorrecta, «Responder de nuevo», correcta y «Comprobar de nuevo»: «¡Respuesta correcta!» y explicación; primera respuesta conservada; 1 respondida; 1 escritura; sigue en repaso. | ESTADO |
-| H01-02 | Widget | Correcta y nuevo intento incorrecto: «Sigue aprendiendo» con la respuesta correcta; sin cambios guardados. | ESTADO |
-| H01-03 | Widget | Cancelar el intento restaura la retroalimentación; la siguiente pregunta empieza sin intento. | ESTADO |
-| H01-04 | Lógica | Responder de nuevo en el controlador no guarda ni cuenta otra vez. | ESTADO |
+| H01-01 | Widget | Incorrecta, «Responder de nuevo», correcta y «Comprobar de nuevo»: «¡Respuesta correcta!» y explicación; primera respuesta conservada; 1 respondida; 1 escritura; sigue en repaso. | Aprobada |
+| H01-02 | Widget | Correcta y nuevo intento incorrecto: «Sigue aprendiendo» con la respuesta correcta; sin cambios guardados. | Aprobada |
+| H01-03 | Widget | Cancelar el intento restaura la retroalimentación; la siguiente pregunta empieza sin intento. | Aprobada |
+| H01-04 | Lógica | Responder de nuevo en el controlador no guarda ni cuenta otra vez. | Aprobada |
 
 | Verificación | Resultado y ubicación |
 | --- | --- |
-| Análisis | RESULTADO_ANALISIS. Sprint 2/Defectos/H-01/analisis.log. |
-| Pruebas del defecto | RESULTADO_DEFECTO de 4. Sprint 2/Defectos/H-01/pruebas.log. |
-| Regresión completa | RESULTADO_REGRESION. Sprint 2/Defectos/H-01/regresion.log. |
+| Análisis | Sin incidencias. Sprint 2/Defectos/H-01/analisis.log. |
+| Pruebas del defecto | 4 aprobadas de 4. Sprint 2/Defectos/H-01/pruebas.log. |
+| Regresión completa | 56 aprobadas. Sprint 2/Defectos/H-01/regresion.log. |
 
 ## 5. Verificación (ID 61, Sebastián)
 

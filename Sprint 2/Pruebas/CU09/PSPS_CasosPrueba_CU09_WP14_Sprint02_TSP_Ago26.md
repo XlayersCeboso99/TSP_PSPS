@@ -62,3 +62,9 @@ Resultado: RESULTADO_TI09. Se usa el paquete aislado mx.edu.uaz.psps.integration
 Desde Sprint 2/psps_academy, ejecutar flutter analyze y flutter test test/cu09_search_test.dart --reporter expanded --concurrency 1. Para la suite completa, flutter test --reporter expanded --concurrency 1. En un Android de pruebas sin red, usar tool/verify_sprint2_android.ps1 con -DeviceId, -EvidenceDirectory y -Target integration_test/cu09_busqueda_offline_test.dart.
 
 iOS no se verifica. La revisión de código por otro integrante, la integración y la captura de horas permanecen pendientes.
+
+## 6. Defectos encontrados y corregidos
+
+| ID | Defecto | Causa | Corrección | Prueba |
+| --- | --- | --- | --- | --- |
+| D-S2-CU09-01 | En pantallas angostas con texto ampliado, la fila «Abrir subtema» de cada resultado se desbordaba 44 píxeles a la derecha. | El texto de la fila no se podía ajustar al ancho disponible. | Se hizo flexible el texto en lib/ui/sprint2_screens.dart. | CP09-15: falló el 28/10/2026 y se aprobó después de corregir. |

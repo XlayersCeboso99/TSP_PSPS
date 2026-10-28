@@ -386,7 +386,7 @@ class _SearchScreenState extends State<SearchScreen> {
                         const SizedBox(height: 8),
                         const Row(
                           children: [
-                            Text('Abrir subtema'),
+                            Flexible(child: Text('Abrir subtema')),
                             Icon(Icons.chevron_right),
                           ],
                         ),

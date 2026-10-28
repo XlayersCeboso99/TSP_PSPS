@@ -1,6 +1,6 @@
 # WP.11 - Componentes de software CU-06
 
-Responsable del caso de uso: Pablo Valentín Varela Rivera. Entrega técnica: 25/10/2026. Rama: feature/CU-06-logros. Base: COMMIT_BASE; aplicación Flutter 0.2.0-dev.2+3.
+Responsable del caso de uso: Pablo Valentín Varela Rivera. Entrega técnica: 25/10/2026. Rama: feature/CU-06-logros. Base: main, commit 4478f4f70beba45d5b4b6db964c116ba14785e5a; aplicación Flutter 0.2.0-dev.2+3.
 
 ## 1. Alcance de la actividad
 
@@ -42,9 +42,9 @@ Los archivos de esta tabla son relativos a Sprint 2/psps_academy. La pantalla «
 
 | Verificación | Resultado y ubicación |
 | --- | --- |
-| Análisis | RESULTADO_ANALISIS. Pruebas/CU06/analisis-cu06.log. |
-| Casos específicos | RESULTADO_CU06 de 13 (CP06-01 a CP06-13). Pruebas/CU06/pruebas-cu06.log. |
-| Regresión completa | RESULTADO_REGRESION. Pruebas/CU06/regresion-cu06.log. |
-| Android sin red | RESULTADO_TI06 (TI06-01, 5 capturas). Pruebas/CU06/resultado-integracion.json. |
+| Análisis | Sin incidencias. Pruebas/CU06/analisis-cu06.log. |
+| Casos específicos | 13 aprobadas de 13 (CP06-01 a CP06-13). Pruebas/CU06/pruebas-cu06.log. |
+| Regresión completa | 65 aprobadas. Pruebas/CU06/regresion-cu06.log. |
+| Android sin red | pendiente de ejecutar en Android sin red (pruebas de integración, T10) (TI06-01, 5 capturas). Pruebas/CU06/resultado-integracion.json. |
 
 Construcción preparada para revisión del equipo. Pendientes: revisión por una persona distinta del autor, decisión sobre integración de la rama y registro de horas reales. No se modifican firmas, aceptación de la cliente ni estados del PSR.

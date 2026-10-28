@@ -12,10 +12,10 @@ Responsable: Pablo Valentín Varela Rivera. Fecha técnica: 25/10/2026. Rama: `f
 
 | Verificación | Resultado |
 | --- | --- |
-| Análisis Flutter | RESULTADO_ANALISIS |
-| CU-06 | RESULTADO_CU06 de 13 |
-| Suite completa | RESULTADO_REGRESION |
-| Android | RESULTADO_TI06 |
+| Análisis Flutter | Sin incidencias |
+| CU-06 | 13 aprobadas de 13 |
+| Suite completa | 65 aprobadas |
+| Android | pendiente de ejecutar en Android sin red (pruebas de integración, T10) |
 
 La pantalla «Logros», los temas y el formato 3 proceden de la aplicación integrada publicada por Francisco (FireBoss12). Esta entrega completa CU-06 con el catálogo acordado en MR-09: agrega L-10, usa las condiciones y el aviso del catálogo, describe las reglas con datos y agrega sus pruebas. No se altera el contenido curricular.
 

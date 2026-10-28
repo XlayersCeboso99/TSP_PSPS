@@ -1,6 +1,6 @@
 # WP.11 - Componentes de software CU-09
 
-Responsable del caso de uso: Pablo Valentín Varela Rivera. Entrega técnica: 25/10/2026. Rama: feature/CU-09-busqueda. Base: COMMIT_BASE; aplicación Flutter 0.2.0-dev.2+3.
+Responsable del caso de uso: Pablo Valentín Varela Rivera. Entrega técnica: 25/10/2026. Rama: feature/CU-09-busqueda. Base: main, commit 95187d14224d065d520c4e6dff9498c295836fe4; aplicación Flutter 0.2.0-dev.2+3.
 
 ## 1. Alcance de la actividad
 
@@ -39,9 +39,9 @@ Los archivos de esta tabla son relativos a Sprint 2/psps_academy. La lupa, la pa
 
 | Verificación | Resultado y ubicación |
 | --- | --- |
-| Análisis | RESULTADO_ANALISIS. Pruebas/CU09/analisis-cu09.log. |
-| Casos específicos | RESULTADO_CU09 de 15 (CP09-01 a CP09-15). Pruebas/CU09/pruebas-cu09.log. |
-| Regresión completa | RESULTADO_REGRESION. Pruebas/CU09/regresion-cu09.log. |
-| Android sin red | RESULTADO_TI09 (TI09-01, 5 capturas). Pruebas/CU09/resultado-integracion.json. |
+| Análisis | Sin incidencias. Pruebas/CU09/analisis-cu09.log. |
+| Casos específicos | 15 aprobadas de 15 (CP09-01 a CP09-15). Pruebas/CU09/pruebas-cu09.log. |
+| Regresión completa | 67 aprobadas. Pruebas/CU09/regresion-cu09.log. |
+| Android sin red | pendiente de ejecutar en Android sin red (pruebas de integración, T10) (TI09-01, 5 capturas). Pruebas/CU09/resultado-integracion.json. |
 
 Construcción preparada para revisión del equipo. Pendientes: revisión de código por una persona distinta del autor, decisión sobre integración de la rama y registro de horas reales. No se modifican firmas, aceptación de la cliente ni estados del PSR.

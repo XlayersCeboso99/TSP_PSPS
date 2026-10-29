@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'activity_models.dart';
 
 /// Orquestación C05 -> C06 -> C07. No incluye almacenamiento ficticio.
@@ -8,8 +9,8 @@ class ActivityEngine {
     required Iterable<ActivityDefinition> activities,
     required this.store,
     DateTime Function()? clock,
-  })  : _activities = {for (final a in activities) a.id: a},
-        _clock = clock ?? DateTime.now {
+  }) : _activities = {for (final a in activities) a.id: a},
+       _clock = clock ?? DateTime.now {
     if (_activities.length != activities.length) {
       throw ArgumentError('Los IDs del catálogo deben ser únicos.');
     }
@@ -28,6 +29,8 @@ class ActivityEngine {
   final ActivityStore store;
   final DateTime Function() _clock;
   Future<void> _writeQueue = Future<void>.value();
+  final _changes = StreamController<void>.broadcast(sync: true);
+  Stream<void> get changes => _changes.stream;
 
   Set<String> get eligibleActivityIds => Set.unmodifiable(_activities.keys);
 
@@ -88,6 +91,7 @@ class ActivityEngine {
           newlyAchieved.add(id);
         }
       }
+
       // ÚNICAMENTE logros que se disparan por actividades según MR-09.
       grant('L-03', count >= 1);
       grant('L-04', count >= 5);
@@ -101,6 +105,7 @@ class ActivityEngine {
       );
       // La confirmación solo sucede DESPUÉS de save exitoso.
       await store.save(updated);
+      _changes.add(null);
       final currentPoints = pointsFor(updated);
       return CompletionOutcome(
         justCompleted: true,

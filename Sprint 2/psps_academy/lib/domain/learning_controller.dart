@@ -216,8 +216,7 @@ class LearningController extends ChangeNotifier {
         practices: _state.practices,
         reviewAnswers: {..._state.reviewAnswers, question.id: index},
       ),
-      // L-10 «Aprendo del error» se evalúa al guardar el repaso (CU-07).
-      award: true,
+      // El repaso conserva las recompensas originales.
     );
   }
 

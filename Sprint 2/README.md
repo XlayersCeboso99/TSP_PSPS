@@ -1,3 +1,7 @@
+# Candidata integrada 0.2.0+5
+
+Preparada el 28/10/2026 para revisión e incorporación a develop. [Resultados y pendientes actuales](Pruebas/Integracion_28Oct/README.md). La información que sigue corresponde a las entregas y antecedentes originales.
+
 # Sprint 02 — PSPS Academy
 
 Incremento de desarrollo **0.2.0-dev.2+3** · 24/10/2026.

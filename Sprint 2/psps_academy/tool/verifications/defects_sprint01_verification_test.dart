@@ -39,6 +39,7 @@ void main() {
       await tester.tap(find.text('Responder de nuevo'));
       await tester.pumpAndSettle();
       await tester.tap(find.text(q.options[q.correctIndex]));
+      await tester.pumpAndSettle();
       await tester.tap(find.text('Comprobar de nuevo'));
       await tester.pumpAndSettle();
       expect(find.text('¡Respuesta correcta!'), findsOneWidget);

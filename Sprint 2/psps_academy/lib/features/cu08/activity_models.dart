@@ -24,10 +24,11 @@ class ActivityState {
   ActivityState({
     required Set<String> completedActivityIds,
     Map<String, DateTime?>? achievedAt,
-  })  : completedActivityIds = Set.unmodifiable(completedActivityIds),
-        achievedAt = Map.unmodifiable(achievedAt ?? const {});
+  }) : completedActivityIds = Set.unmodifiable(completedActivityIds),
+       achievedAt = Map.unmodifiable(achievedAt ?? const {});
 
   final Set<String> completedActivityIds;
+
   /// L-03, L-04 y L-05 se registran solo cuando surgen por actividades.
   /// El adaptador C07 debe conservar cualquier otro logro y estado v2.
   final Map<String, DateTime?> achievedAt;
@@ -36,9 +37,9 @@ class ActivityState {
     Set<String>? completedActivityIds,
     Map<String, DateTime?>? achievedAt,
   }) => ActivityState(
-        completedActivityIds: completedActivityIds ?? this.completedActivityIds,
-        achievedAt: achievedAt ?? this.achievedAt,
-      );
+    completedActivityIds: completedActivityIds ?? this.completedActivityIds,
+    achievedAt: achievedAt ?? this.achievedAt,
+  );
 }
 
 class CompletionOutcome {

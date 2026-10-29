@@ -80,7 +80,7 @@ abstract final class Gamification {
   static const pointsPerPractice = 10;
   static const defaultThemeId = 'U-00';
 
-  /// G-02: 11 logros (L-01 a L-11). Condiciones tal como en el catálogo.
+  /// G-02: 10 logros (L-01 a L-09 y L-11). Condiciones tal como en el catálogo.
   static const achievements = [
     Achievement(
       'L-01',
@@ -140,13 +140,6 @@ abstract final class Gamification {
       'Completa el módulo «Diseño para las personas».',
       rule: AchievementRule.completedModule,
       moduleId: 'm4',
-    ),
-    Achievement(
-      'L-10',
-      'Aprendo del error',
-      'En el repaso, acierta 3 preguntas que habías respondido mal.',
-      rule: AchievementRule.reviewedQuestions,
-      threshold: 3,
     ),
     Achievement(
       'L-11',

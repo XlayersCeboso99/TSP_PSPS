@@ -101,53 +101,58 @@ class ActivitiesScreen extends StatelessWidget {
   const ActivitiesScreen({super.key, required this.controller});
   final LearningController controller;
   @override
-  Widget build(BuildContext context) => ScreenFrame(
-    title: 'Actividades',
-    controller: controller,
-    content: (context) => !controller.ready
-        ? unavailableState(controller)
-        : [
-            heading('Tu práctica, a tu ritmo'),
-            caption(
-              'Actividades opcionales. Consultarlas no cambia tu avance ni tus recompensas.',
+  Widget build(BuildContext context) {
+    if (!controller.ready || controller.practices.isEmpty) {
+      return ScreenFrame(
+        title: 'Actividades',
+        controller: controller,
+        content: (_) => !controller.ready
+            ? unavailableState(controller)
+            : [
+                for (final module in controller.modules)
+                  for (final topic in module.topics) ...[
+                    Text(topic.title),
+                    const Text('Este tema no tiene actividades disponibles'),
+                  ],
+                const Text('No hay actividades disponibles.'),
+              ],
+      );
+    }
+    final activities = [
+      for (final module in controller.modules)
+        for (final topic in module.topics)
+          if (topic.practice.steps.isNotEmpty)
+            ActivityDefinition(
+              id: topic.practice.id,
+              title: topic.practice.title,
+              moduleId: module.id,
+              moduleName: module.title,
+              topicId: topic.id,
+              topicName: topic.title,
+              requiredElementIds: {
+                for (var i = 0; i < topic.practice.steps.length; i++) '$i',
+              },
             ),
-            for (final m in controller.modules) ...[
-              heading(m.title),
-              for (final t in m.topics)
-                panel([
-                  caption(t.title),
-                  if (t.practice.steps.isEmpty)
-                    const Text('Este tema no tiene actividades disponibles')
-                  else
-                    ListTile(
-                      contentPadding: EdgeInsets.zero,
-                      leading: Icon(
-                        controller.practiceCompleted(t.practice)
-                            ? Icons.task_alt
-                            : Icons.pending_outlined,
-                      ),
-                      title: Text(t.practice.title),
-                      subtitle: Padding(
-                        padding: const EdgeInsets.only(top: 8),
-                        child: Text(
-                          controller.practiceCompleted(t.practice)
-                              ? 'Realizada'
-                              : 'Pendiente',
-                          style: const TextStyle(fontWeight: FontWeight.w700),
-                        ),
-                      ),
-                      trailing: const Icon(Icons.chevron_right),
-                      onTap: () => openScreen(
-                        context,
-                        PracticeScreen(controller: controller, topic: t),
-                      ),
-                    ),
-                ]),
-            ],
-            if (controller.modules.isEmpty)
-              const Text('No hay actividades disponibles.'),
-          ],
-  );
+    ];
+    return Cu08ActivitiesPage(
+      catalog: activities,
+      engine: ActivityEngine(
+        activities: activities,
+        store: LearningActivityStore(controller),
+      ),
+      onOpenActivity: (activity) async {
+        final topic = controller.modules
+            .expand((m) => m.topics)
+            .firstWhere((t) => t.practice.id == activity.id);
+        await Navigator.of(context).push<void>(
+          MaterialPageRoute(
+            builder: (_) =>
+                PracticeScreen(controller: controller, topic: topic),
+          ),
+        );
+      },
+    );
+  }
 }
 
 class AchievementsScreen extends StatelessWidget {

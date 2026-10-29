@@ -1,0 +1,16 @@
+{
+  "command": [
+    "C:/Users/bolis/flutter/flutter/bin/cache/dart-sdk/bin/dart.exe",
+    "C:/Users/bolis/flutter/flutter/bin/cache/flutter_tools.snapshot",
+    "--no-version-check",
+    "--suppress-analytics",
+    "build",
+    "apk",
+    "--debug",
+    "--no-pub"
+  ],
+  "started_utc": "2026-10-29T01:19:16.286073+00:00",
+  "exit_code": 0,
+  "version": "0.2.0+5",
+  "sha256": "23a5be0fc937b3ecf55921d7f5745170edf20d38f5b0c9b76fc3de76dc3127ab"
+}

@@ -1,0 +1,23 @@
+{
+  "started_utc": "2026-10-29T01:16:33.905398+00:00",
+  "ended_utc": "2026-10-29T01:18:14.068154+00:00",
+  "command": [
+    "powershell.exe",
+    "-NoProfile",
+    "-ExecutionPolicy",
+    "Bypass",
+    "-File",
+    "C:\\Users\\bolis\\Documents\\Codex\\2026-10-21\\seg\\work\\integracion_git\\Sprint 2\\psps_academy\\tool\\verify_sprint2_android.ps1",
+    "-DeviceId",
+    "caq889aef6xknvkn",
+    "-EvidenceDirectory",
+    "C:\\Users\\bolis\\Documents\\Codex\\2026-10-21\\seg\\outputs\\Integracion_Sprint02_28Oct\\Android",
+    "-Target",
+    "integration_test/sprint2_design_test.dart"
+  ],
+  "exit_code": 0,
+  "version": "0.2.0+5",
+  "normal_package_preserved": true,
+  "airplane_restored": true,
+  "wifi_restored": true
+}

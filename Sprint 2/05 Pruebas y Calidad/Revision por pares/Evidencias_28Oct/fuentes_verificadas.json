@@ -1,0 +1,107 @@
+[
+  {
+    "pr": 9,
+    "file": "Construccion/CU08/PSPS_S2-43_Construccion_CU08_Recompensas_v0.1.docx",
+    "sha256": "22f91a28f4afb470e5aebba255a5f721ba577f568c2ec16ae256ac2536fd40e4"
+  },
+  {
+    "pr": 9,
+    "file": "Construccion/CU08/README_IMPLEMENTACION.md",
+    "sha256": "960a0bf3cd73c4cbda0fe326e6584bfa94491f62798119eaf3b2ff83589fc120"
+  },
+  {
+    "pr": 9,
+    "file": "Pruebas/CU08/PLAN_VERIFICACION.md",
+    "sha256": "e8d59f81619256e7093cdb8e77e2364b13d546eedfc9f848cf64deeca24d92d0"
+  },
+  {
+    "pr": 9,
+    "file": "psps_academy/lib/features/cu08/activity_engine.dart",
+    "sha256": "6cef58fab602fc72d85066a2faeb6662b0862b739443b67290727a15ea3dd7fb"
+  },
+  {
+    "pr": 9,
+    "file": "psps_academy/lib/features/cu08/activity_models.dart",
+    "sha256": "0db0f6340665d740f265b72248c00eb2e28851c6ec908baf8dac0437bf3246dd"
+  },
+  {
+    "pr": 9,
+    "file": "psps_academy/lib/features/cu08/activity_page.dart",
+    "sha256": "f3fb052f0ad9329c30d16af756bd435aa2c5a9a8a8a394d55f01efadf62940d8"
+  },
+  {
+    "pr": 9,
+    "file": "psps_academy/test/cu08_activity_engine_test.dart",
+    "sha256": "6b3982eb59d53fd8ab0a3ee6bd47b13683ef0c9e804129ddfbb5bdc21a312de1"
+  },
+  {
+    "pr": 9,
+    "file": "psps_academy/test/cu08_activity_page_test.dart",
+    "sha256": "06a85a617ab00c647a643d37798a1f8a8a3d0f0882103b4f0f9344c1b8c11a36"
+  },
+  {
+    "pr": 10,
+    "file": "Sprint 2/Construccion/CU09/PSPS_Componentes_CU09_WP11_Sprint02_TSP_Ago26.md",
+    "sha256": "ca9f67c435f352d7b1d466c3577b2693e8e4b21223220e16856863b40dd64280"
+  },
+  {
+    "pr": 10,
+    "file": "Sprint 2/Diseno/CU09/PSPS_DisenoCU09_Sprint02_TSP_Ago26.md",
+    "sha256": "f09ef48e9518f46a632ebbbc44833c0dc952e6c91a25e911e5f12c8b181121f1"
+  },
+  {
+    "pr": 10,
+    "file": "Sprint 2/Diseno/CU09/PSPS_DisenoCU09_Sprint02_TSP_Ago26.pdf",
+    "sha256": "48c94c5fcb848b2cd3bdb4fa1ffc522324b8bf33d7ed1083ff0921536b3a37af"
+  },
+  {
+    "pr": 10,
+    "file": "Sprint 2/Pruebas/CU09/PSPS_CasosPrueba_CU09_WP14_Sprint02_TSP_Ago26.md",
+    "sha256": "addff68b17fb87e44a7f4211c80ca3b5ffceabfaa9bf23a47040503a7238065e"
+  },
+  {
+    "pr": 10,
+    "file": "Sprint 2/Pruebas/CU09/README.md",
+    "sha256": "b4419e003c4af15757f3fd86f4e8416e3a9d604a0b4de09d374c81acd559d370"
+  },
+  {
+    "pr": 10,
+    "file": "Sprint 2/README.md",
+    "sha256": "fb849f7093a5282bee6949de5506360efe1f28c528d4b8f4d29963792801a6d6"
+  },
+  {
+    "pr": 10,
+    "file": "Sprint 2/psps_academy/docs/DISENO_SPRINT2.md",
+    "sha256": "c3c62e174c1e7a5ad817e5071aa2633e6074567dc5d5bc0d75b936ff764604e6"
+  },
+  {
+    "pr": 10,
+    "file": "Sprint 2/psps_academy/integration_test/cu09_busqueda_offline_test.dart",
+    "sha256": "e238f5a61bf285712d28ac81468e9e491415de53be19ae9f2b45244cfd4328b9"
+  },
+  {
+    "pr": 10,
+    "file": "Sprint 2/psps_academy/lib/domain/content_search.dart",
+    "sha256": "dbf6fb0612a77b02f63b9d429f3d6e25f61e5bc5f2e7ea4bc0fb18128359bd72"
+  },
+  {
+    "pr": 10,
+    "file": "Sprint 2/psps_academy/lib/ui/app.dart",
+    "sha256": "34c594f93f8c59ef69a70f4bedb41458d0a5d094dcf7a1e02156115c4154acc7"
+  },
+  {
+    "pr": 10,
+    "file": "Sprint 2/psps_academy/lib/ui/sprint2_screens.dart",
+    "sha256": "0be8f6f1bc184a3340ebeccb72de0489fa4c1e2d2dcbfd7872734222e23bc9e1"
+  },
+  {
+    "pr": 10,
+    "file": "Sprint 2/psps_academy/test/cu09_search_test.dart",
+    "sha256": "109aa90feaaadd17e7fb0b448687179839388bc1aa6c87bcce5dfb3bce7dc94f"
+  },
+  {
+    "pr": 10,
+    "file": "Sprint 2/psps_academy/tool/verify_sprint2_android.ps1",
+    "sha256": "c9f8c4815f5ce133dbd1aa132cafab6983e8e684002dca49e3260cf0f60d24e6"
+  }
+]

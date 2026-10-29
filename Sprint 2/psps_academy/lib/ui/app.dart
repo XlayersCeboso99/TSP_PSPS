@@ -4,6 +4,10 @@ import '../domain/course.dart';
 import '../domain/learning_controller.dart';
 import '../domain/content_search.dart';
 import '../domain/gamification.dart';
+import '../data/activity_store.dart';
+import '../features/cu08/activity_engine.dart';
+import '../features/cu08/activity_models.dart';
+import '../features/cu08/activity_page.dart';
 
 part 'review_screens.dart';
 part 'sprint2_screens.dart';
@@ -143,11 +147,7 @@ class StatusBadge extends StatelessWidget {
       child: Row(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Icon(
-            statusIcon(status),
-            color: badgeColor,
-            size: 16,
-          ),
+          Icon(statusIcon(status), color: badgeColor, size: 16),
           const SizedBox(width: 6),
           Text(
             status.label,

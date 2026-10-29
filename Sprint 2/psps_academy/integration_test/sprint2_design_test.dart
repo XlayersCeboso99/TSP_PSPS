@@ -87,9 +87,19 @@ void main() {
       await tap(find.text('Actividades'));
       expect(find.text('Realizada'), findsOneWidget);
       await shot('S2-02-actividades');
+      final pendingPractice = c.practices.skip(1).first;
+      await tap(find.text(pendingPractice.title));
+      for (final step in pendingPractice.steps) {
+        await tap(find.text(step));
+      }
+      expect(c.practiceCompleted(pendingPractice), isTrue);
+      expect(c.points, 20);
+      await back();
+      expect(find.text('Realizada'), findsNWidgets(2));
+      await shot('S2-15-cu08-regreso-realizada');
       await back();
       await tap(find.text('Puntos'));
-      expect(find.text('10 pts'), findsOneWidget);
+      expect(find.text('20 pts'), findsOneWidget);
       await shot('S2-03-puntos');
       await back();
       await tap(find.text('Logros'));
@@ -127,7 +137,7 @@ void main() {
       await tap(find.text('Continuar repaso'));
       expect(find.text('No tienes preguntas pendientes'), findsOneWidget);
       await shot('S2-12-sin-pendientes');
-      expect(c.points, 10);
+      expect(c.points, 20);
       expect(c.earnedAchievements.length, 2);
       expect(c.answeredCount, count);
 
@@ -144,7 +154,7 @@ void main() {
       await restored.load();
       expect(restored.ready, isTrue);
       expect(restored.selectedTheme, 'U-03');
-      expect(restored.points, 10);
+      expect(restored.points, 20);
       expect(restored.needsReview(q), isFalse);
       expect(restored.earnedAchievements, c.earnedAchievements);
       await tester.pumpWidget(PspsApp(key: UniqueKey(), controller: restored));

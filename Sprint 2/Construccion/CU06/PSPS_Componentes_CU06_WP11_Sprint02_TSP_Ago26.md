@@ -1,3 +1,5 @@
+> Antecedente de la rama original CU-06. El catálogo vigente tiene diez logros y no recompensa el repaso. La candidata conciliada y sus resultados están en Sprint 2/Pruebas/Integracion_28Oct. Este antecedente no acredita por sí solo el cierre actual.
+
 # WP.11 - Componentes de software CU-06
 
 Responsable del caso de uso: Pablo Valentín Varela Rivera. Entrega técnica: 25/10/2026. Rama: feature/CU-06-logros. Base: main, commit 4478f4f70beba45d5b4b6db964c116ba14785e5a; aplicación Flutter 0.2.0-dev.2+3.

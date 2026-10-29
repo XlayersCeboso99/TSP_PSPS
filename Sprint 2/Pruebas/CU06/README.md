@@ -1,3 +1,5 @@
+> Antecedente de la rama original CU-06. El catálogo vigente tiene diez logros y no recompensa el repaso. La candidata conciliada y sus resultados están en Sprint 2/Pruebas/Integracion_28Oct. Este antecedente no acredita por sí solo el cierre actual.
+
 # CU-06 - Entrega de construcción y pruebas
 
 Responsable: Pablo Valentín Varela Rivera. Fecha técnica: 25/10/2026. Rama: `feature/CU-06-logros`.

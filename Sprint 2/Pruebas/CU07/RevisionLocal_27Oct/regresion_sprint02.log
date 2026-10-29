@@ -1,0 +1,44 @@
+00:00 +0: loading C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/app_test.dart
+00:00 +0: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/app_test.dart: CU01: navigate, read without progress, answer incorrectly and finish subtopic
+00:01 +1: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/app_test.dart: CU01: navigate, read without progress, answer incorrectly and finish subtopic
+00:01 +2: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/app_test.dart: CU01: navigate, read without progress, answer incorrectly and finish subtopic
+00:01 +3: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/app_test.dart: CU01: navigate, read without progress, answer incorrectly and finish subtopic
+00:01 +4: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/app_test.dart: CU01: navigate, read without progress, answer incorrectly and finish subtopic
+00:01 +5: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/app_test.dart: CU01: navigate, read without progress, answer incorrectly and finish subtopic
+00:01 +6: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/app_test.dart: CU01: navigate, read without progress, answer incorrectly and finish subtopic
+00:01 +7: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/app_test.dart: CU01: navigate, read without progress, answer incorrectly and finish subtopic
+00:01 +8: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/audit_evidence_test.dart: TU-02: correct answer displays feedback and records progress
+00:01 +9: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/audit_evidence_test.dart: TU-02: correct answer displays feedback and records progress
+00:01 +10: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/audit_evidence_test.dart: TU-02: correct answer displays feedback and records progress
+00:01 +11: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/audit_evidence_test.dart: TU-02: correct answer displays feedback and records progress
+00:01 +12: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/audit_evidence_test.dart: TU-08: all progress badges display text icon and distinct color
+00:01 +13: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TU07-01: only original mistakes in the requested scope appear
+00:02 +14: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TU07-02/03/04: retry resolves only review; all progress is preserved
+00:02 +15: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TI07-01: last review answer survives reload and subsequent normal writes
+00:02 +16: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: existing version 1 data migrates without resetting original progress
+00:02 +17: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TI07-03: failed save keeps pending and original disk data; retry works
+00:02 +18: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: invalid or unreadable review data is reported and never overwritten
+00:02 +19: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: unanswered, correct original and invalid selections cannot be reviewed
+00:02 +20: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TW07-01/02: select, fail, retry and save correct with feedback
+00:02 +21: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TW07-01/02: select, fail, retry and save correct with feedback
+00:02 +22: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TW07-01/02: select, fail, retry and save correct with feedback
+00:02 +23: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TW07-01/02: select, fail, retry and save correct with feedback
+00:02 +24: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TW07-01/02: select, fail, retry and save correct with feedback
+00:02 +25: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TW07-01/02: select, fail, retry and save correct with feedback
+00:02 +26: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TW07-01/02: select, fail, retry and save correct with feedback
+00:02 +27: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TW07-01/02: select, fail, retry and save correct with feedback
+00:02 +28: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TW07-01/02: select, fail, retry and save correct with feedback
+00:02 +29: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/sprint2_test.dart: CU06/CU08/CU10: consultation never writes or grants rewards
+00:03 +30: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/sprint2_test.dart: CU06/CU08/CU10: consultation never writes or grants rewards
+00:03 +31: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: leaving with an unsubmitted option stores no review answer
+00:03 +32: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/sprint2_test.dart: CU08: grouped activity opens without completion
+00:03 +33: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TW07-03: both entry points open contextual empty states
+00:03 +34: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/sprint2_test.dart: CU08: topic with no configured activity has explicit empty state
+00:03 +35: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: recovery error shows retry, never a misleading empty list
+00:03 +36: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/sprint2_test.dart: CU09: type keyword and open result without changing progress
+00:03 +37: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/sprint2_test.dart: CU09: no results returns to home through Explore
+00:03 +38: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/sprint2_test.dart: empty points and achievements; locked themes cannot be selected
+00:03 +39: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/sprint2_test.dart: load error never displays zero points or resets saved data
+00:03 +40: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/sprint2_test.dart: G03: changing theme updates app and keeps all modules accessible
+00:04 +41: All tests passed!
+

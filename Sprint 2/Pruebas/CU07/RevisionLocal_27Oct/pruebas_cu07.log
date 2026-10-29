@@ -1,0 +1,16 @@
+00:00 +0: loading C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart
+00:00 +0: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TU07-01: only original mistakes in the requested scope appear
+00:00 +1: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TU07-02/03/04: retry resolves only review; all progress is preserved
+00:00 +2: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TI07-01: last review answer survives reload and subsequent normal writes
+00:00 +3: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: existing version 1 data migrates without resetting original progress
+00:00 +4: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TI07-03: failed save keeps pending and original disk data; retry works
+00:00 +5: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: invalid or unreadable review data is reported and never overwritten
+00:00 +6: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: unanswered, correct original and invalid selections cannot be reviewed
+00:00 +7: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TW07-01/02: select, fail, retry and save correct with feedback
+00:00 +8: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: failed storage never shows successful resolution and permits retry
+00:01 +9: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: leaving with an unsubmitted option stores no review answer
+00:01 +10: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: TW07-03: both entry points open contextual empty states
+00:01 +11: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_test.dart: recovery error shows retry, never a misleading empty list
+00:01 +12: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/cu07_validacion_27oct/test/review_rewards_regression_test.dart: CU07: failed and successful review preserve every reward and theme
+00:01 +13: All tests passed!
+

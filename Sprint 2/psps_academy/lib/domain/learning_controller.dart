@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 
 import '../data/progress_store.dart';
 import 'catalog_validation.dart';
+import '../data/catalog_validation.dart' as identity_validation;
 import 'course.dart';
 import 'gamification.dart';
 
@@ -83,6 +84,13 @@ class LearningController extends ChangeNotifier {
     catalogErrors = validateCatalog(modules);
     if (catalogErrors.isNotEmpty) {
       loadError = contentUnavailable;
+      notifyListeners();
+      return;
+    }
+    try {
+      identity_validation.validateCatalog(modules);
+    } on FormatException {
+      loadError = 'Contenido no disponible. El catálogo contiene identificadores o preguntas inválidos. Tus datos guardados se conservan.';
       notifyListeners();
       return;
     }
@@ -208,8 +216,7 @@ class LearningController extends ChangeNotifier {
         practices: _state.practices,
         reviewAnswers: {..._state.reviewAnswers, question.id: index},
       ),
-      // L-10 «Aprendo del error» se evalúa al guardar el repaso (CU-07).
-      award: true,
+      // El repaso conserva las recompensas originales.
     );
   }
 

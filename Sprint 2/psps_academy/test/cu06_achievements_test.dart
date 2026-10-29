@@ -60,25 +60,25 @@ Future<void> showAchievements(
 
 void main() {
   test('CP06-01: catalog G-02 (L-01 to L-11) and G-03 (U-00 to U-03)', () {
-    expect({
-      for (final a in Gamification.achievements) a.id: a.condition,
-    }, {
-      'L-01': 'Responde tu primera pregunta.',
-      'L-02': 'Responde todas las preguntas de un subtema.',
-      'L-03': 'Realiza tu primera actividad.',
-      'L-04': 'Realiza 5 actividades.',
-      'L-05': 'Realiza las 10 actividades.',
-      'L-06': 'Completa el módulo «Estructuras y algoritmos».',
-      'L-07': 'Completa el módulo «Programación y objetos».',
-      'L-08': 'Completa el módulo «Datos y relaciones».',
-      'L-09': 'Completa el módulo «Diseño para las personas».',
-      'L-10': 'En el repaso, acierta 3 preguntas que habías respondido mal.',
-      'L-11': 'Completa los 4 módulos.',
-    });
     expect(
-      Gamification.achievements.map((a) => a.id),
-      [for (var i = 1; i <= 11; i++) 'L-${two(i)}'],
+      {for (final a in Gamification.achievements) a.id: a.condition},
+      {
+        'L-01': 'Responde tu primera pregunta.',
+        'L-02': 'Responde todas las preguntas de un subtema.',
+        'L-03': 'Realiza tu primera actividad.',
+        'L-04': 'Realiza 5 actividades.',
+        'L-05': 'Realiza las 10 actividades.',
+        'L-06': 'Completa el módulo «Estructuras y algoritmos».',
+        'L-07': 'Completa el módulo «Programación y objetos».',
+        'L-08': 'Completa el módulo «Datos y relaciones».',
+        'L-09': 'Completa el módulo «Diseño para las personas».',
+        'L-11': 'Completa los 4 módulos.',
+      },
     );
+    expect(Gamification.achievements.map((a) => a.id), [
+      for (var i = 1; i <= 11; i++)
+        if (i != 10) 'L-${two(i)}',
+    ]);
     final modules = {for (final m in catalog) m.id: m.title};
     final byModule = Gamification.achievements.where(
       (x) => x.rule == AchievementRule.completedModule,
@@ -108,7 +108,7 @@ void main() {
   ) async {
     final (c, store) = await fixture();
     await showAchievements(tester, c);
-    expect(find.text('0 de 11 logros obtenidos'), findsOneWidget);
+    expect(find.text('0 de 10 logros obtenidos'), findsOneWidget);
     expect(find.text('Aún no tienes logros'), findsOneWidget);
     expect(
       find.text('Realiza actividades y completa temas para obtenerlos.'),
@@ -126,122 +126,107 @@ void main() {
     expect(tester.takeException(), isNull);
   });
 
-  test(
-    'CP06-03: L-01 with the first answer, even incorrect; L-02 with a full lesson; dated once',
-    () async {
-      final (c, store) = await fixture();
-      final lesson = catalog.first.topics.first.lessons.first;
-      final q = lesson.questions.first;
-      expect(await c.answer(q, wrong(q)), isTrue);
-      expect(c.earnedAchievements.keys.toSet(), {'L-01'});
-      expect(DateTime.tryParse(c.earnedAchievements['L-01']!), isNotNull);
-      expect(
-        Gamification.rewardMessage(c.newAchievements, c.newThemes),
-        '¡Logro obtenido: Primer paso!',
-      );
-      final other = lesson.questions[1];
-      await c.answer(other, other.correctIndex);
-      expect(c.newAchievements.map((a) => a.id), ['L-02']);
-      final date = c.earnedAchievements['L-01'];
-      final writes = store.writes;
-      expect(await c.answer(q, q.correctIndex), isTrue);
-      expect(store.writes, writes);
-      expect(c.newAchievements, isEmpty);
-      expect(c.earnedAchievements['L-01'], date);
-    },
-  );
-
-  test(
-    'CP06-04: L-03, L-04 and L-05 by activities; Ocean unlocked; achievements give no points',
-    () async {
-      final (c, _) = await fixture();
-      final practices = c.practices.toList();
-      await c.saveOrder(practices.first, solved(practices.first));
-      expect(c.newAchievements.map((a) => a.id), ['L-03']);
-      expect(c.newThemes.map((t) => t.id), ['U-01']);
-      expect(
-        Gamification.rewardMessage(c.newAchievements, c.newThemes),
-        '¡Logro obtenido: Manos a la obra! Desbloqueaste el tema Océano.',
-      );
-      for (final p in practices.skip(1).take(3)) {
-        await c.saveOrder(p, solved(p));
-      }
-      expect(c.earnedAchievements, isNot(contains('L-04')));
-      await c.saveOrder(practices[4], solved(practices[4]));
-      expect(c.newAchievements.map((a) => a.id), ['L-04']);
-      for (final p in practices.skip(5)) {
-        await c.saveOrder(p, solved(p));
-      }
-      expect(c.earnedAchievements.keys.toSet(), {'L-03', 'L-04', 'L-05'});
-      expect(c.points, practices.length * Gamification.pointsPerPractice);
-    },
-  );
-
-  test(
-    'CP06-05: one achievement per module and L-11 with all; Sunset and Night unlock',
-    () async {
-      final (c, _) = await fixture();
-      for (final q in catalog.first.questions) {
-        await c.answer(q, q.correctIndex);
-      }
-      expect(c.earnedAchievements, contains('L-06'));
-      expect(c.newThemes.map((t) => t.id), ['U-02']);
-      expect(c.earnedAchievements, isNot(contains('L-11')));
-      for (final q in catalog.skip(1).expand((m) => m.questions)) {
-        await c.answer(q, wrong(q));
-      }
-      expect(
-        c.earnedAchievements.keys,
-        containsAll(['L-07', 'L-08', 'L-09', 'L-11']),
-      );
-      expect(c.unlockedThemes, {'U-00', 'U-02', 'U-03'});
-      expect(c.points, 0);
-    },
-  );
-
-  test(
-    'CP06-06: L-10 after 3 correct reviews of wrong answers; 2 are not enough',
-    () async {
-      final (c, store) = await fixture();
-      final qs = c.questions.take(3).toList();
-      for (final q in qs) {
-        await c.answer(q, wrong(q));
-      }
-      expect(await c.reviewAnswer(qs.first, wrong(qs.first)), isTrue);
-      for (final q in qs.take(2)) {
-        await c.reviewAnswer(q, q.correctIndex);
-      }
-      expect(c.earnedAchievements, isNot(contains('L-10')));
-      final points = c.points;
-      expect(await c.reviewAnswer(qs[2], qs[2].correctIndex), isTrue);
-      expect(c.newAchievements.map((a) => a.id), ['L-10']);
-      expect(
-        Gamification.rewardMessage(c.newAchievements, c.newThemes),
-        '¡Logro obtenido: Aprendo del error!',
-      );
-      expect(c.points, points);
-      expect(c.answeredCount, 3);
-      final restored = LearningController(modules: catalog, store: store);
-      await restored.load();
-      expect(restored.earnedAchievements['L-10'], c.earnedAchievements['L-10']);
-      expect(restored.newAchievements, isEmpty);
-    },
-  );
-
-  test('CP06-07: if saving fails nothing is awarded; retry awards once', () async {
+  test('CP06-03: L-01 with the first answer, even incorrect; L-02 with a full lesson; dated once', () async {
     final (c, store) = await fixture();
-    final p = c.practices.first;
-    store.failSave = true;
-    expect(await c.saveOrder(p, solved(p)), isFalse);
-    expect(c.earnedAchievements, isEmpty);
+    final lesson = catalog.first.topics.first.lessons.first;
+    final q = lesson.questions.first;
+    expect(await c.answer(q, wrong(q)), isTrue);
+    expect(c.earnedAchievements.keys.toSet(), {'L-01'});
+    expect(DateTime.tryParse(c.earnedAchievements['L-01']!), isNotNull);
+    expect(
+      Gamification.rewardMessage(c.newAchievements, c.newThemes),
+      '¡Logro obtenido: Primer paso!',
+    );
+    final other = lesson.questions[1];
+    await c.answer(other, other.correctIndex);
+    expect(c.newAchievements.map((a) => a.id), ['L-02']);
+    final date = c.earnedAchievements['L-01'];
+    final writes = store.writes;
+    expect(await c.answer(q, q.correctIndex), isTrue);
+    expect(store.writes, writes);
     expect(c.newAchievements, isEmpty);
-    expect(c.unlockedThemes, {'U-00'});
-    store.failSave = false;
-    expect(await c.saveOrder(p, solved(p)), isTrue);
-    expect(c.newAchievements.map((a) => a.id), ['L-03']);
-    expect(await c.saveOrder(p, solved(p)), isTrue);
-    expect(c.newAchievements, isEmpty);
+    expect(c.earnedAchievements['L-01'], date);
   });
+
+  test('CP06-04: L-03, L-04 and L-05 by activities; Ocean unlocked; achievements give no points', () async {
+    final (c, _) = await fixture();
+    final practices = c.practices.toList();
+    await c.saveOrder(practices.first, solved(practices.first));
+    expect(c.newAchievements.map((a) => a.id), ['L-03']);
+    expect(c.newThemes.map((t) => t.id), ['U-01']);
+    expect(
+      Gamification.rewardMessage(c.newAchievements, c.newThemes),
+      '¡Logro obtenido: Manos a la obra! Desbloqueaste el tema Océano.',
+    );
+    for (final p in practices.skip(1).take(3)) {
+      await c.saveOrder(p, solved(p));
+    }
+    expect(c.earnedAchievements, isNot(contains('L-04')));
+    await c.saveOrder(practices[4], solved(practices[4]));
+    expect(c.newAchievements.map((a) => a.id), ['L-04']);
+    for (final p in practices.skip(5)) {
+      await c.saveOrder(p, solved(p));
+    }
+    expect(c.earnedAchievements.keys.toSet(), {'L-03', 'L-04', 'L-05'});
+    expect(c.points, practices.length * Gamification.pointsPerPractice);
+  });
+
+  test('CP06-05: one achievement per module and L-11 with all; Sunset and Night unlock', () async {
+    final (c, _) = await fixture();
+    for (final q in catalog.first.questions) {
+      await c.answer(q, q.correctIndex);
+    }
+    expect(c.earnedAchievements, contains('L-06'));
+    expect(c.newThemes.map((t) => t.id), ['U-02']);
+    expect(c.earnedAchievements, isNot(contains('L-11')));
+    for (final q in catalog.skip(1).expand((m) => m.questions)) {
+      await c.answer(q, wrong(q));
+    }
+    expect(
+      c.earnedAchievements.keys,
+      containsAll(['L-07', 'L-08', 'L-09', 'L-11']),
+    );
+    expect(c.unlockedThemes, {'U-00', 'U-02', 'U-03'});
+    expect(c.points, 0);
+  });
+
+  test('CP06-06: three correct reviews never grant rewards', () async {
+    final (c, store) = await fixture();
+    final qs = c.questions.take(3).toList();
+    for (final q in qs) {
+      await c.answer(q, wrong(q));
+    }
+    final rewards = Map<String, String?>.from(c.earnedAchievements);
+    final points = c.points;
+    for (final q in qs) {
+      expect(await c.reviewAnswer(q, q.correctIndex), isTrue);
+      expect(c.newAchievements, isEmpty);
+      expect(c.newThemes, isEmpty);
+    }
+    expect(c.earnedAchievements, rewards);
+    expect(c.points, points);
+    final restored = LearningController(modules: catalog, store: store);
+    await restored.load();
+    expect(restored.earnedAchievements, rewards);
+  });
+
+  test(
+    'CP06-07: if saving fails nothing is awarded; retry awards once',
+    () async {
+      final (c, store) = await fixture();
+      final p = c.practices.first;
+      store.failSave = true;
+      expect(await c.saveOrder(p, solved(p)), isFalse);
+      expect(c.earnedAchievements, isEmpty);
+      expect(c.newAchievements, isEmpty);
+      expect(c.unlockedThemes, {'U-00'});
+      store.failSave = false;
+      expect(await c.saveOrder(p, solved(p)), isTrue);
+      expect(c.newAchievements.map((a) => a.id), ['L-03']);
+      expect(await c.saveOrder(p, solved(p)), isTrue);
+      expect(c.newAchievements, isEmpty);
+    },
+  );
 
   testWidgets(
     'CP06-08: each achievement shows name, met condition and date or «Fecha no disponible» (CA-06)',
@@ -264,7 +249,7 @@ void main() {
       final writes = store.writes;
       final raw = store.raw;
       await showAchievements(tester, c);
-      expect(find.text('3 de 11 logros obtenidos'), findsOneWidget);
+      expect(find.text('3 de 10 logros obtenidos'), findsOneWidget);
       final first = find.byKey(const ValueKey('cu06.achievement.L-01'));
       for (final text in [
         'Primer paso',
@@ -371,47 +356,41 @@ void main() {
     },
   );
 
-  test(
-    'CP06-11: data saved before L-10 loads; L-10 appears without date, no write and no notice',
-    () async {
-      final qs = catalog.expand((m) => m.questions).take(3).toList();
-      const date = '2026-10-22T16:00:00.000Z';
-      final raw = ProgressSnapshot(
-        answers: {for (final q in qs) q.id: wrong(q)},
-        reviewAnswers: {for (final q in qs) q.id: q.correctIndex},
-        points: 0,
-        rewardedPractices: const [],
-        achievements: const {'L-01': date, 'L-02': date},
-      ).encode();
-      final (c, store) = await fixture(raw);
-      expect(c.earnedAchievements, {'L-01': date, 'L-02': date, 'L-10': null});
-      expect(store.writes, 0);
-      expect(store.raw, raw);
-      final p = c.practices.first;
-      await c.saveOrder(p, solved(p));
-      expect(c.newAchievements.map((a) => a.id), ['L-03']);
-      expect(c.earnedAchievements['L-10'], isNull);
-      expect(c.earnedAchievements['L-01'], date);
-    },
-  );
+  test('CP06-11: stored review does not create achievements on load', () async {
+    final qs = catalog.expand((m) => m.questions).take(3).toList();
+    const date = '2026-10-22T16:00:00.000Z';
+    final raw = ProgressSnapshot(
+      answers: {for (final q in qs) q.id: wrong(q)},
+      reviewAnswers: {for (final q in qs) q.id: q.correctIndex},
+      points: 0,
+      rewardedPractices: const [],
+      achievements: const {'L-01': date, 'L-02': date},
+    ).encode();
+    final (c, store) = await fixture(raw);
+    expect(c.earnedAchievements, {'L-01': date, 'L-02': date});
+    expect(store.writes, 0);
+    expect(store.raw, raw);
+    final p = c.practices.first;
+    await c.saveOrder(p, solved(p));
+    expect(c.newAchievements.map((a) => a.id), ['L-03']);
+    expect(c.earnedAchievements['L-10'], isNull);
+    expect(c.earnedAchievements['L-01'], date);
+  });
 
-  test(
-    'CP06-12: an achievement saved without its condition is rejected without overwriting',
-    () async {
-      final raw = ProgressSnapshot(
-        points: 0,
-        rewardedPractices: const [],
-        achievements: const {'L-05': null},
-      ).encode();
-      final store = MemoryStore()..raw = raw;
-      final c = LearningController(modules: catalog, store: store);
-      await c.load();
-      expect(c.ready, isFalse);
-      expect(c.loadError, isNotNull);
-      expect(store.raw, raw);
-      expect(store.writes, 0);
-    },
-  );
+  test('CP06-12: an achievement saved without its condition is rejected without overwriting', () async {
+    final raw = ProgressSnapshot(
+      points: 0,
+      rewardedPractices: const [],
+      achievements: const {'L-05': null},
+    ).encode();
+    final store = MemoryStore()..raw = raw;
+    final c = LearningController(modules: catalog, store: store);
+    await c.load();
+    expect(c.ready, isFalse);
+    expect(c.loadError, isNotNull);
+    expect(store.raw, raw);
+    expect(store.writes, 0);
+  });
 
   testWidgets(
     'CP06-13: «Logros» opens from «Mi progreso» on a narrow screen with large text',

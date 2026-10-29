@@ -1,0 +1,6 @@
+CU10-AV01-cero
+CU10-AV02-diez
+CU10-AV03-repeticion-sin-premio
+CU10-AV04-veinte
+CU10-AV05-total-recuperado
+CU10-AV06-error-sin-reinicio

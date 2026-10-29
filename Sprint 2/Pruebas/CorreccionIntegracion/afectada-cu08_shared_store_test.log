@@ -1,0 +1,19 @@
+Resolving dependencies...
+Downloading packages...
+  cupertino_icons 1.0.9 (2.0.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  shared_preferences_android 2.4.28 (2.5.4 available)
+  shared_preferences_foundation 2.5.7 (2.6.1 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.2 (2.4.4 available)
+  vm_service 15.3.0 (15.4.0 available)
+  web 1.1.1 (1.1.2 available)
+Got dependencies!
+9 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu08_shared_store_test.dart
+00:00 +0: CU08 shared store preserves answers review theme and existing rewards
+00:00 +1: CU08 shared save failure propagates without confirmed completion
+00:00 +2: CU08 real route delegates to CU02 then refreshes shared completion
+00:01 +3: All tests passed!

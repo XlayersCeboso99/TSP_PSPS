@@ -1,3 +1,7 @@
+# Candidata integrada 0.2.0+5
+
+Preparada el 28/10/2026 para revisión e incorporación a develop. [Resultados y pendientes actuales](Pruebas/Integracion_28Oct/README.md). La información que sigue corresponde a las entregas y antecedentes originales.
+
 # Sprint 02 — PSPS Academy
 
 Incremento de desarrollo **0.2.0-dev.2+3** · 24/10/2026.
@@ -7,6 +11,8 @@ Incremento de desarrollo **0.2.0-dev.2+3** · 24/10/2026.
 - [Evidencias de Android y registros de pruebas](Pruebas/evidencias/LEEME_EVIDENCIAS.md).
 - [Reproducir las verificaciones](Pruebas/REPRODUCIR.md).
 - [Construcción y pruebas específicas de CU-05](Pruebas/CU05/README.md).
+- [Construcción y pruebas específicas de CU-10](Pruebas/CU10/README.md).
+- [Calidad: tareas 54, 61 y 62](Pruebas/Calidad_54_61_62/README.md).
 - [Construcción y pruebas específicas de CU-06](Pruebas/CU06/README.md).
 - [Backlog del sprint](BackLog.md).
 - [Construcción y pruebas específicas de CU-09 (búsqueda)](Pruebas/CU09/README.md).
@@ -15,4 +21,6 @@ Incluye consulta de logros CU-06, repaso CU-07, actividades CU-08, búsqueda CU-
 
 El Sprint 1 permanece en su propia carpeta. Para trabajar con el incremento actual, abre **Sprint 2/psps_academy**. El APK se genera desde el código y no se sube a Git.
 
-Verificación general: 40 pruebas automáticas aprobadas, análisis sin incidencias y recorrido integral en Android físico con 14 capturas; ese recorrido inicial no se ejecutó en modo avión. La entrega de [construcción y pruebas CU-05](Pruebas/CU05/README.md) agrega 12 pruebas y un recorrido en emulador Android en modo avión con seis capturas. La entrega de [construcción y pruebas CU-07](Pruebas/CU07/README.md) incorpora WP.11, WP.14 y una prueba específica en modo avión con cinco capturas más. iOS no se verificó. Esta publicación no sustituye la aceptación ni las revisiones formales del equipo.
+Verificación inicial del incremento: 40 pruebas automáticas aprobadas, análisis sin incidencias y recorrido integral en Android físico con 14 capturas. Ese recorrido inicial no se ejecutó en modo avión. La entrega específica de CU-05 agrega 12 pruebas, para un total de 52 aprobadas en la suite completa, y un recorrido en emulador Android en modo avión con seis capturas. iOS sigue sin verificarse. Esta publicación no sustituye la aceptación ni las revisiones formales del equipo.
+
+La entrega específica de CU-10 agrega 16 pruebas sobre consulta de puntos y G-01; la suite completa queda en 68 pruebas aprobadas. Su documentación, resultados y condiciones de verificación están en `Pruebas/CU10/README.md`.

@@ -1,0 +1,15 @@
+[
+  {
+    "check": "cu08_reproduccion_actualizacion",
+    "command": "flutter test --no-pub --reporter expanded test/review_cu08_refresh_test.dart",
+    "exit_code": 1,
+    "expected": "Realizada al regresar de CU-02",
+    "actual": "No aparece Realizada; el estado guardado sí contiene el ID realizado."
+  },
+  {
+    "check": "cu09_diagnostico_layout",
+    "command": "flutter test --no-pub --reporter expanded test/review_layout_diagnostic_test.dart --plain-name CP09-15:",
+    "exit_code": 1,
+    "actual": "RenderFlex overflowed by 44 pixels on the right; sprint2_screens.dart:387."
+  }
+]

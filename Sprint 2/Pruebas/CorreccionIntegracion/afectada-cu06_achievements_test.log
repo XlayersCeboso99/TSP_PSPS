@@ -1,0 +1,29 @@
+Resolving dependencies...
+Downloading packages...
+  cupertino_icons 1.0.9 (2.0.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  shared_preferences_android 2.4.28 (2.5.4 available)
+  shared_preferences_foundation 2.5.7 (2.6.1 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.2 (2.4.4 available)
+  vm_service 15.3.0 (15.4.0 available)
+  web 1.1.1 (1.1.2 available)
+Got dependencies!
+9 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu06_achievements_test.dart
+00:00 +0: CP06-01: catalog G-02 (L-01 to L-11) and G-03 (U-00 to U-03)
+00:00 +1: CP06-02: A1 without achievements; consulting writes nothing
+00:01 +2: CP06-03: L-01 with the first answer, even incorrect; L-02 with a full lesson; dated once
+00:01 +3: CP06-04: L-03, L-04 and L-05 by activities; Ocean unlocked; achievements give no points
+00:01 +4: CP06-05: one achievement per module and L-11 with all; Sunset and Night unlock
+00:01 +5: CP06-06: three correct reviews never grant rewards
+00:01 +6: CP06-07: if saving fails nothing is awarded; retry awards once
+00:01 +7: CP06-08: each achievement shows name, met condition and date or ┬½Fecha no disponible┬╗ (CA-06)
+00:01 +8: CP06-09: the reward notice appears once (CA-06b)
+00:01 +9: CP06-10: locked theme cannot be used; chosen one is ┬½En uso┬╗, persists and changes nothing else (CA-07)
+00:02 +10: CP06-11: stored review does not create achievements on load
+00:02 +11: CP06-12: an achievement saved without its condition is rejected without overwriting
+00:02 +12: CP06-13: ┬½Logros┬╗ opens from ┬½Mi progreso┬╗ on a narrow screen with large text
+00:02 +13: All tests passed!

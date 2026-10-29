@@ -224,12 +224,10 @@ Future<void> reportSave(
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
-          [
-            if (controller.newAchievements.isNotEmpty)
-              'Logros obtenidos: ${controller.newAchievements.map((a) => a.name).join(', ')}.',
-            if (controller.newThemes.isNotEmpty)
-              'Temas disponibles: ${controller.newThemes.map((t) => t.name).join(', ')}.',
-          ].join(' '),
+          Gamification.rewardMessage(
+            controller.newAchievements,
+            controller.newThemes,
+          ),
         ),
       ),
     );

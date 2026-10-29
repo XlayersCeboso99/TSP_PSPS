@@ -14,7 +14,7 @@ Implementación de RF-10 / CA-10 del documento `PSPS_CasosDeUso_Sprint02_TSP_Ago
 - Guardado local independiente de la respuesta original; funciona sin servidor.
 - Salir sin comprobar no guarda una selección. Durante un guardado se bloquea la salida para evitar interrumpir la confirmación.
 - Un fallo de guardado conserva la pregunta pendiente y permite volver a comprobar. Un fallo de lectura informa el problema y permite reintentar sin sobrescribir el estado guardado.
-- El repaso no modifica avance, colores/estados, respuestas originales ni puntos. No concede logros; L-10 fue retirado del catálogo del equipo.
+- El repaso no modifica avance, colores/estados, respuestas originales ni puntos. Desde la entrega de CU-06 (`feature/CU-06-logros`), acertar en el repaso 3 preguntas respondidas mal otorga L-10 «Aprendo del error», conforme al catálogo G-02 acordado en MR-09.
 
 ## Cómo demostrarlo
 

@@ -64,18 +64,31 @@ class PointsScreen extends StatelessWidget {
                 color: Theme.of(context).colorScheme.primary,
               ),
               const SizedBox(height: 16),
-              Text(
-                '${controller.points} pts',
-                style: const TextStyle(
-                  fontSize: 56,
-                  fontWeight: FontWeight.w900,
+              Semantics(
+                key: const ValueKey('cu10.total'),
+                container: true,
+                label: 'Total de puntos acumulados',
+                value: '${controller.points} puntos',
+                excludeSemantics: true,
+                child: FittedBox(
+                  fit: BoxFit.scaleDown,
+                  child: Text(
+                    '${controller.points} pts',
+                    style: const TextStyle(
+                      fontSize: 56,
+                      fontWeight: FontWeight.w900,
+                    ),
+                  ),
                 ),
               ),
               const SizedBox(height: 16),
               const Text('Tus puntos se guardan en este dispositivo.'),
             ]),
             caption(
-              'Cada actividad completada por primera vez otorga ${Gamification.pointsPerPractice} puntos. Repetirla no suma puntos.',
+              'Cada actividad elegible completada y guardada por primera vez otorga ${Gamification.pointsPerPractice} puntos. Repetirla no suma puntos.',
+            ),
+            caption(
+              'Los puntos son recompensas de gamificación, no una calificación académica.',
             ),
             caption(
               'Consultar esta pantalla no modifica puntos, progreso, actividades ni logros.',

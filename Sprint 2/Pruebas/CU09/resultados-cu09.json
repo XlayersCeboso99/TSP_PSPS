@@ -1,0 +1,37 @@
+{"protocolVersion":"0.1.1","runnerVersion":null,"pid":16404,"type":"start","time":0}
+{"suite":{"id":0,"platform":"vm","path":"C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart"},"type":"suite","time":0}
+{"test":{"id":1,"name":"loading C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart","suiteID":0,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":1}
+{"count":1,"time":5,"type":"allSuites"}
+{"testID":1,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":2022}
+{"group":{"id":2,"suiteID":0,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":15,"line":null,"column":null,"url":null},"type":"group","time":2024}
+{"test":{"id":3,"name":"CP09-01 (TU-09-01): «clase» finds CT-08 by title, then CT-07 by content","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":97,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu09_search_test.dart"},"type":"testStart","time":2025}
+{"testID":3,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":2054}
+{"test":{"id":4,"name":"CP09-02 (TU-09-02): case and outer spaces do not change results","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":107,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu09_search_test.dart"},"type":"testStart","time":2055}
+{"testID":4,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":2061}
+{"test":{"id":5,"name":"CP09-03 (TU-09-03): accents are ignored and ñ is kept","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":113,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu09_search_test.dart"},"type":"testStart","time":2061}
+{"testID":5,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":2066}
+{"test":{"id":6,"name":"CP09-04 (TU-09-04): fewer than 3 characters does not search (A2)","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":121,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu09_search_test.dart"},"type":"testStart","time":2066}
+{"testID":6,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":2070}
+{"test":{"id":7,"name":"CP09-05 (TU-09-05): a word that is not in the catalog has no results","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":129,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu09_search_test.dart"},"type":"testStart","time":2070}
+{"testID":7,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":2073}
+{"test":{"id":8,"name":"CP09-06 (TU-09-06): questions, options, explanations and activities are not searched","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":133,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu09_search_test.dart"},"type":"testStart","time":2073}
+{"testID":8,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":2075}
+{"test":{"id":9,"name":"CP09-07: one result per lesson; a title match is listed only under titles","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":149,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu09_search_test.dart"},"type":"testStart","time":2076}
+{"testID":9,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":2080}
+{"test":{"id":10,"name":"CP09-08: phrases match across repeated spaces and line breaks; snippets are one line","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":161,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu09_search_test.dart"},"type":"testStart","time":2081}
+{"testID":10,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":2085}
+{"test":{"id":11,"name":"CP09-09: the highlighted range is the match; snippet is short","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":176,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu09_search_test.dart"},"type":"testStart","time":2085}
+{"testID":11,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":2089}
+{"test":{"id":12,"name":"CP09-10 (TW-09-01): type «clase», see route and status, open CT-08 without progress","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":190,"root_column":3,"root_url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu09_search_test.dart"},"type":"testStart","time":2090}
+{"testID":12,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":3551}
+{"test":{"id":13,"name":"CP09-11 (TW-09-02): no results (A1), search can be changed, Explore returns home","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":224,"root_column":3,"root_url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu09_search_test.dart"},"type":"testStart","time":3552}
+{"testID":13,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":4360}
+{"test":{"id":14,"name":"CP09-12: cancel goes back without changes (A3)","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":248,"root_column":3,"root_url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu09_search_test.dart"},"type":"testStart","time":4360}
+{"testID":14,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":4837}
+{"test":{"id":15,"name":"CP09-13: one result uses the singular and shows the progress status","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":264,"root_column":3,"root_url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu09_search_test.dart"},"type":"testStart","time":4838}
+{"testID":15,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":4949}
+{"test":{"id":16,"name":"CP09-14: empty catalog reports the error and allows retry (E1)","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":278,"root_column":3,"root_url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu09_search_test.dart"},"type":"testStart","time":4949}
+{"testID":16,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":5076}
+{"test":{"id":17,"name":"CP09-15: results fit a 320 x 640 screen with enlarged text","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":291,"root_column":3,"root_url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu09_search_test.dart"},"type":"testStart","time":5076}
+{"testID":17,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":5204}
+{"success":true,"type":"done","time":5251}

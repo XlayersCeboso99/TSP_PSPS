@@ -1,0 +1,45 @@
+00:00 +0: loading C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/revision_pr28/pr10/Sprint 2/psps_academy/test/cu09_search_test.dart
+00:00 +0: CP09-01 (TU-09-01): «clase» finds CT-08 by title, then CT-07 by content
+00:00 +1: CP09-02 (TU-09-02): case and outer spaces do not change results
+00:00 +2: CP09-03 (TU-09-03): accents are ignored and ñ is kept
+00:00 +3: CP09-04 (TU-09-04): fewer than 3 characters does not search (A2)
+00:00 +4: CP09-05 (TU-09-05): a word that is not in the catalog has no results
+00:00 +5: CP09-06 (TU-09-06): questions, options, explanations and activities are not searched
+00:00 +6: CP09-07: one result per lesson; a title match is listed only under titles
+00:00 +7: CP09-08: phrases match across repeated spaces and line breaks; snippets are one line
+00:00 +8: CP09-09: the highlighted range is the match; snippet is short
+00:00 +9: CP09-10 (TW-09-01): type «clase», see route and status, open CT-08 without progress
+00:00 +10: CP09-11 (TW-09-02): no results (A1), search can be changed, Explore returns home
+00:01 +11: CP09-12: cancel goes back without changes (A3)
+00:01 +12: CP09-13: one result uses the singular and shows the progress status
+00:01 +13: CP09-14: empty catalog reports the error and allows retry (E1)
+00:01 +14: CP09-15: results fit a 320 x 640 screen with enlarged text
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: null
+  Actual: FlutterError:<A RenderFlex overflowed by 44 pixels on the right.>
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure> (file:///C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/revision_pr28/pr10/Sprint%202/psps_academy/test/cu09_search_test.dart:308:7)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1953:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/revision_pr28/pr10/Sprint%202/psps_academy/test/cu09_search_test.dart line 308
+The test description was:
+  CP09-15: results fit a 320 x 640 screen with enlarged text
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:01 +14 -1: CP09-15: results fit a 320 x 640 screen with enlarged text [E]
+  Test failed. See exception logs above.
+  The test description was: CP09-15: results fit a 320 x 640 screen with enlarged text
+  
+00:01 +14 -1: Some tests failed.
+
+Failing tests:
+  C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/revision_pr28/pr10/Sprint 2/psps_academy/test/cu09_search_test.dart: CP09-15: results fit a 320 x 640 screen with enlarged text
+

@@ -1,0 +1,98 @@
+[
+  {
+    "check": "cu08_dependencias",
+    "command": [
+      "C:/Users/bolis/flutter/flutter/bin/cache/dart-sdk/bin/dart.exe",
+      "C:/Users/bolis/flutter/flutter/bin/cache/flutter_tools.snapshot",
+      "--no-version-check",
+      "--suppress-analytics",
+      "pub",
+      "get",
+      "--offline"
+    ],
+    "cwd": "C:\\Users\\bolis\\Documents\\Codex\\2026-10-21\\seg\\work\\revision_pr28\\pr9_harness",
+    "started_utc": "2026-10-29T00:38:40.580508+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "cu08_pruebas_originales",
+    "command": [
+      "C:/Users/bolis/flutter/flutter/bin/cache/dart-sdk/bin/dart.exe",
+      "C:/Users/bolis/flutter/flutter/bin/cache/flutter_tools.snapshot",
+      "--no-version-check",
+      "--suppress-analytics",
+      "test",
+      "--no-pub",
+      "--reporter",
+      "expanded",
+      "test/cu08_activity_engine_test.dart",
+      "test/cu08_activity_page_test.dart"
+    ],
+    "cwd": "C:\\Users\\bolis\\Documents\\Codex\\2026-10-21\\seg\\work\\revision_pr28\\pr9_harness",
+    "started_utc": "2026-10-29T00:38:42.916437+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "cu09_dependencias",
+    "command": [
+      "C:/Users/bolis/flutter/flutter/bin/cache/dart-sdk/bin/dart.exe",
+      "C:/Users/bolis/flutter/flutter/bin/cache/flutter_tools.snapshot",
+      "--no-version-check",
+      "--suppress-analytics",
+      "pub",
+      "get",
+      "--offline"
+    ],
+    "cwd": "C:\\Users\\bolis\\Documents\\Codex\\2026-10-21\\seg\\work\\revision_pr28\\pr10\\Sprint 2\\psps_academy",
+    "started_utc": "2026-10-29T00:38:49.468581+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "cu09_pruebas_especificas",
+    "command": [
+      "C:/Users/bolis/flutter/flutter/bin/cache/dart-sdk/bin/dart.exe",
+      "C:/Users/bolis/flutter/flutter/bin/cache/flutter_tools.snapshot",
+      "--no-version-check",
+      "--suppress-analytics",
+      "test",
+      "--no-pub",
+      "--reporter",
+      "expanded",
+      "test/cu09_search_test.dart"
+    ],
+    "cwd": "C:\\Users\\bolis\\Documents\\Codex\\2026-10-21\\seg\\work\\revision_pr28\\pr10\\Sprint 2\\psps_academy",
+    "started_utc": "2026-10-29T00:38:51.967982+00:00",
+    "exit_code": 1
+  },
+  {
+    "check": "cu09_regresion",
+    "command": [
+      "C:/Users/bolis/flutter/flutter/bin/cache/dart-sdk/bin/dart.exe",
+      "C:/Users/bolis/flutter/flutter/bin/cache/flutter_tools.snapshot",
+      "--no-version-check",
+      "--suppress-analytics",
+      "test",
+      "--no-pub",
+      "--reporter",
+      "expanded",
+      "test/"
+    ],
+    "cwd": "C:\\Users\\bolis\\Documents\\Codex\\2026-10-21\\seg\\work\\revision_pr28\\pr10\\Sprint 2\\psps_academy",
+    "started_utc": "2026-10-29T00:38:59.289049+00:00",
+    "exit_code": 1
+  },
+  {
+    "check": "cu09_analisis",
+    "command": [
+      "C:/Users/bolis/flutter/flutter/bin/cache/dart-sdk/bin/dart.exe",
+      "C:/Users/bolis/flutter/flutter/bin/cache/flutter_tools.snapshot",
+      "--no-version-check",
+      "--suppress-analytics",
+      "analyze",
+      "--no-pub"
+    ],
+    "cwd": "C:\\Users\\bolis\\Documents\\Codex\\2026-10-21\\seg\\work\\revision_pr28\\pr10\\Sprint 2\\psps_academy",
+    "started_utc": "2026-10-29T00:39:04.210006+00:00",
+    "exit_code": 0
+  }
+]

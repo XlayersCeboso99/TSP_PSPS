@@ -1,0 +1,15 @@
+{
+  "fecha_ejecucion": "2026-10-24T20:23:44.1917832-06:00",
+  "tipo_dispositivo": "Emulador Android; no es un teléfono físico",
+  "dispositivo": "sdk_gphone64_x86_64",
+  "android": "17",
+  "objetivo": "integration_test/cu05_offline_test.dart",
+  "modo_avion_antes": "1",
+  "sin_red_antes": true,
+  "app_normal_presente_antes": false,
+  "integracion_exit_code": 0,
+  "modo_avion_despues": "1",
+  "sin_red_despues": true,
+  "app_normal_presente_despues": false,
+  "app_normal_preservada": true
+}

@@ -1,0 +1,126 @@
+Resolving dependencies...
+Downloading packages...
+  cupertino_icons 1.0.9 (2.0.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  shared_preferences_android 2.4.28 (2.5.3 available)
+  shared_preferences_foundation 2.5.7 (2.6.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.2 (2.4.3 available)
+  vm_service 15.3.0 (15.4.0 available)
+  web 1.1.1 (1.1.2 available)
+Got dependencies!
+9 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Running Gradle task 'assembleDebug'...                          
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/C:/Users/sebas/.gradle/wrapper/dists/gradle-9.3.1-all/9ot9r568e8zfvvd4mn8rbu1j0/gradle-9.3.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Could not initialize SSL context. Used properties: {java.home=C:\Program Files\Android\Android Studio\jbr, javax.net.ssl.keyStore=null, javax.net.ssl.keyStorePassword=null, javax.net.ssl.keyStoreProvider=null, javax.net.ssl.keyStoreType=null, javax.net.ssl.trustStore=NONE, javax.net.ssl.trustStorePassword=null, javax.net.ssl.trustStoreProvider=null, javax.net.ssl.trustStoreType=Windows-ROOT, ssl.KeyManagerFactory.algorithm=null, ssl.TrustManagerFactory.algorithm=null}
+Could not initialize SSL context. Used properties: {java.home=C:\Program Files\Android\Android Studio\jbr, javax.net.ssl.keyStore=null, javax.net.ssl.keyStorePassword=null, javax.net.ssl.keyStoreProvider=null, javax.net.ssl.keyStoreType=null, javax.net.ssl.trustStore=NONE, javax.net.ssl.trustStorePassword=null, javax.net.ssl.trustStoreProvider=null, javax.net.ssl.trustStoreType=Windows-ROOT, ssl.KeyManagerFactory.algorithm=null, ssl.TrustManagerFactory.algorithm=null}
+Could not initialize SSL context. Used properties: {java.home=C:\Program Files\Android\Android Studio\jbr, javax.net.ssl.keyStore=null, javax.net.ssl.keyStorePassword=null, javax.net.ssl.keyStoreProvider=null, javax.net.ssl.keyStoreType=null, javax.net.ssl.trustStore=NONE, javax.net.ssl.trustStorePassword=null, javax.net.ssl.trustStoreProvider=null, javax.net.ssl.trustStoreType=Windows-ROOT, ssl.KeyManagerFactory.algorithm=null, ssl.TrustManagerFactory.algorithm=null}
+Could not initialize SSL context. Used properties: {java.home=C:\Program Files\Android\Android Studio\jbr, javax.net.ssl.keyStore=null, javax.net.ssl.keyStorePassword=null, javax.net.ssl.keyStoreProvider=null, javax.net.ssl.keyStoreType=null, javax.net.ssl.trustStore=NONE, javax.net.ssl.trustStorePassword=null, javax.net.ssl.trustStoreProvider=null, javax.net.ssl.trustStoreType=Windows-ROOT, ssl.KeyManagerFactory.algorithm=null, ssl.TrustManagerFactory.algorithm=null}
+Could not initialize SSL context. Used properties: {java.home=C:\Program Files\Android\Android Studio\jbr, javax.net.ssl.keyStore=null, javax.net.ssl.keyStorePassword=null, javax.net.ssl.keyStoreProvider=null, javax.net.ssl.keyStoreType=null, javax.net.ssl.trustStore=NONE, javax.net.ssl.trustStorePassword=null, javax.net.ssl.trustStoreProvider=null, javax.net.ssl.trustStoreType=Windows-ROOT, ssl.KeyManagerFactory.algorithm=null, ssl.TrustManagerFactory.algorithm=null}
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+A problem occurred configuring project ':integration_test'.
+> Could not resolve all artifacts for configuration 'classpath'.
+   > Could not resolve com.android.tools.build:gradle:8.11.0.
+     Required by:
+         buildscript of project ':integration_test'
+      > Could not resolve com.android.tools.build:gradle:8.11.0.
+         > Could not get resource 'https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/8.11.0/gradle-8.11.0.pom'.
+            > org.apache.http.ssl.SSLInitializationException: problem accessing trust store
+      > Could not resolve com.android.tools.build:gradle:8.11.0.
+         > Could not get resource 'https://repo.maven.apache.org/maven2/com/android/tools/build/gradle/8.11.0/gradle-8.11.0.pom'.
+            > org.apache.http.ssl.SSLInitializationException: problem accessing trust store
+      > Could not resolve com.android.tools.build:gradle:8.11.0.
+         > Could not get resource 'https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/8.11.0/gradle-8.11.0.pom'.
+            > org.apache.http.ssl.SSLInitializationException: problem accessing trust store
+      > Could not resolve com.android.tools.build:gradle:8.11.0.
+         > Could not get resource 'https://repo.maven.apache.org/maven2/com/android/tools/build/gradle/8.11.0/gradle-8.11.0.pom'.
+            > org.apache.http.ssl.SSLInitializationException: problem accessing trust store
+      > Could not resolve com.android.tools.build:gradle:8.11.0.
+         > Could not get resource 'https://plugins.gradle.org/m2/com/android/tools/build/gradle/8.11.0/gradle-8.11.0.pom'.
+            > org.apache.http.ssl.SSLInitializationException: problem accessing trust store
+> Failed to notify project evaluation listener.
+   > java.lang.NullPointerException (no error message)
+   > 'kotlin-android' plugin requires one of the Android Gradle plugins.
+     Please apply one of the following plugins to ':integration_test' project:
+     - com.android.application
+     	- com.android.library
+     	- com.android.dynamic-feature
+     	- com.android.test
+     	- com.android.instantapp
+     	- com.android.feature
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 58s
+Running Gradle task 'assembleDebug'...                             59.0s
+[!] Gradle threw an error while downloading artifacts from the network.
+Retrying Gradle Build: #1, wait time: 100ms
+Running Gradle task 'assembleDebug'...                          
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/C:/Users/sebas/.gradle/wrapper/dists/gradle-9.3.1-all/9ot9r568e8zfvvd4mn8rbu1j0/gradle-9.3.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Could not initialize SSL context. Used properties: {java.home=C:\Program Files\Android\Android Studio\jbr, javax.net.ssl.keyStore=null, javax.net.ssl.keyStorePassword=null, javax.net.ssl.keyStoreProvider=null, javax.net.ssl.keyStoreType=null, javax.net.ssl.trustStore=NONE, javax.net.ssl.trustStorePassword=null, javax.net.ssl.trustStoreProvider=null, javax.net.ssl.trustStoreType=Windows-ROOT, ssl.KeyManagerFactory.algorithm=null, ssl.TrustManagerFactory.algorithm=null}
+Could not initialize SSL context. Used properties: {java.home=C:\Program Files\Android\Android Studio\jbr, javax.net.ssl.keyStore=null, javax.net.ssl.keyStorePassword=null, javax.net.ssl.keyStoreProvider=null, javax.net.ssl.keyStoreType=null, javax.net.ssl.trustStore=NONE, javax.net.ssl.trustStorePassword=null, javax.net.ssl.trustStoreProvider=null, javax.net.ssl.trustStoreType=Windows-ROOT, ssl.KeyManagerFactory.algorithm=null, ssl.TrustManagerFactory.algorithm=null}
+Could not initialize SSL context. Used properties: {java.home=C:\Program Files\Android\Android Studio\jbr, javax.net.ssl.keyStore=null, javax.net.ssl.keyStorePassword=null, javax.net.ssl.keyStoreProvider=null, javax.net.ssl.keyStoreType=null, javax.net.ssl.trustStore=NONE, javax.net.ssl.trustStorePassword=null, javax.net.ssl.trustStoreProvider=null, javax.net.ssl.trustStoreType=Windows-ROOT, ssl.KeyManagerFactory.algorithm=null, ssl.TrustManagerFactory.algorithm=null}
+Could not initialize SSL context. Used properties: {java.home=C:\Program Files\Android\Android Studio\jbr, javax.net.ssl.keyStore=null, javax.net.ssl.keyStorePassword=null, javax.net.ssl.keyStoreProvider=null, javax.net.ssl.keyStoreType=null, javax.net.ssl.trustStore=NONE, javax.net.ssl.trustStorePassword=null, javax.net.ssl.trustStoreProvider=null, javax.net.ssl.trustStoreType=Windows-ROOT, ssl.KeyManagerFactory.algorithm=null, ssl.TrustManagerFactory.algorithm=null}
+Could not initialize SSL context. Used properties: {java.home=C:\Program Files\Android\Android Studio\jbr, javax.net.ssl.keyStore=null, javax.net.ssl.keyStorePassword=null, javax.net.ssl.keyStoreProvider=null, javax.net.ssl.keyStoreType=null, javax.net.ssl.trustStore=NONE, javax.net.ssl.trustStorePassword=null, javax.net.ssl.trustStoreProvider=null, javax.net.ssl.trustStoreType=Windows-ROOT, ssl.KeyManagerFactory.algorithm=null, ssl.TrustManagerFactory.algorithm=null}
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+A problem occurred configuring project ':integration_test'.
+> Could not resolve all artifacts for configuration 'classpath'.
+   > Could not resolve com.android.tools.build:gradle:8.11.0.
+     Required by:
+         buildscript of project ':integration_test'
+      > Could not resolve com.android.tools.build:gradle:8.11.0.
+         > Could not get resource 'https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/8.11.0/gradle-8.11.0.pom'.
+            > org.apache.http.ssl.SSLInitializationException: problem accessing trust store
+      > Could not resolve com.android.tools.build:gradle:8.11.0.
+         > Could not get resource 'https://repo.maven.apache.org/maven2/com/android/tools/build/gradle/8.11.0/gradle-8.11.0.pom'.
+            > org.apache.http.ssl.SSLInitializationException: problem accessing trust store
+      > Could not resolve com.android.tools.build:gradle:8.11.0.
+         > Could not get resource 'https://dl.google.com/dl/android/maven2/com/android/tools/build/gradle/8.11.0/gradle-8.11.0.pom'.
+            > org.apache.http.ssl.SSLInitializationException: problem accessing trust store
+      > Could not resolve com.android.tools.build:gradle:8.11.0.
+         > Could not get resource 'https://repo.maven.apache.org/maven2/com/android/tools/build/gradle/8.11.0/gradle-8.11.0.pom'.
+            > org.apache.http.ssl.SSLInitializationException: problem accessing trust store
+      > Could not resolve com.android.tools.build:gradle:8.11.0.
+         > Could not get resource 'https://plugins.gradle.org/m2/com/android/tools/build/gradle/8.11.0/gradle-8.11.0.pom'.
+            > org.apache.http.ssl.SSLInitializationException: problem accessing trust store
+> Failed to notify project evaluation listener.
+   > java.lang.NullPointerException (no error message)
+   > 'kotlin-android' plugin requires one of the Android Gradle plugins.
+     Please apply one of the following plugins to ':integration_test' project:
+     - com.android.application
+     	- com.android.library
+     	- com.android.dynamic-feature
+     	- com.android.test
+     	- com.android.instantapp
+     	- com.android.feature
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights from a Build Scan (powered by Develocity).
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 3s
+Running Gradle task 'assembleDebug'...                              4.5s
+[!] Gradle threw an error while downloading artifacts from the network.
+Gradle task assembleDebug failed with exit code 1

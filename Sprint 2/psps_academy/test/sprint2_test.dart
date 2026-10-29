@@ -55,7 +55,7 @@ void main() {
   );
 
   test(
-    'G02: all ten achievement conditions; activities never complete modules',
+    'G02: study and activity conditions (L-10 needs review, see CP06-07); activities never complete modules',
     () async {
       for (final p in c.practices) {
         await c.saveOrder(p, List.generate(p.steps.length, (i) => i));
@@ -66,9 +66,10 @@ void main() {
       for (final q in c.questions) {
         await c.answer(q, (q.correctIndex + 1) % q.options.length);
       }
+      // L-10 solo se obtiene en el repaso (CU-07); se prueba en CP06-07.
       expect(
         c.earnedAchievements.keys.toSet(),
-        Gamification.achievements.map((a) => a.id).toSet(),
+        Gamification.achievements.map((a) => a.id).toSet().difference({'L-10'}),
       );
       expect(c.earnedAchievements, isNot(contains('L-10')));
       expect(c.unlockedThemes, {'U-00', 'U-01', 'U-02', 'U-03'});

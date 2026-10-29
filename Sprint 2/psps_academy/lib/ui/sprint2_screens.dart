@@ -155,16 +155,15 @@ class AchievementsScreen extends StatelessWidget {
           '${earned.length} de ${Gamification.achievements.length} logros obtenidos',
         ),
         if (earned.isEmpty)
-          panel([
+          panel(key: const ValueKey('cu06.empty'), [
             const Icon(Icons.emoji_events_outlined, size: 44),
             const SizedBox(height: 12),
+            // A1 de CU-06.
             heading('Aún no tienes logros'),
-            const Text(
-              'Responde preguntas, completa subtemas y realiza actividades para obtener tus primeros logros.',
-            ),
+            const Text('Realiza actividades y completa temas para obtenerlos.'),
           ]),
         for (final a in earned)
-          panel([
+          panel(key: ValueKey('cu06.achievement.${a.id}'), [
             Row(
               children: [
                 Icon(
@@ -184,7 +183,7 @@ class AchievementsScreen extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 12),
-            Text(a.condition),
+            Text('Condición cumplida: ${a.condition}'),
             const SizedBox(height: 8),
             caption(_date(controller.earnedAchievements[a.id])),
           ]),
@@ -221,7 +220,7 @@ class AchievementsScreen extends StatelessWidget {
     final available = controller.unlockedThemes.contains(visual.id);
     final selected = controller.selectedTheme == visual.id;
     final colors = academyTheme(visual.id).colorScheme;
-    return panel([
+    return panel(key: ValueKey('cu06.theme.${visual.id}'), [
       ListTile(
         contentPadding: EdgeInsets.zero,
         leading: CircleAvatar(
@@ -238,7 +237,7 @@ class AchievementsScreen extends StatelessWidget {
         title: Text(visual.name),
         subtitle: Text(
           selected
-              ? 'Seleccionado'
+              ? 'En uso'
               : available
               ? 'Disponible'
               : 'Bloqueado',
@@ -304,16 +303,18 @@ class _SearchScreenState extends State<SearchScreen> {
         ),
         const SizedBox(height: 20),
         if (widget.controller.modules.isEmpty) ...[
-          panel([
+          // E1 de CU-09.
+          panel(key: const ValueKey('cu09.error'), [
             const Text('No pudimos recuperar el catálogo local.'),
             TextButton(
               onPressed: () => setState(() {}),
               child: const Text('Reintentar'),
             ),
           ]),
-        ] else if (query.trim().runes.length < 3) ...[
-          heading('Escribe al menos 3 letras'),
-          panel([
+        ] else if (!ContentSearch.canSearch(query)) ...[
+          // A2 de CU-09.
+          heading('Escribe al menos ${ContentSearch.minLength} letras'),
+          panel(key: const ValueKey('cu09.short'), [
             const Icon(Icons.offline_bolt_outlined),
             const SizedBox(height: 12),
             const Text(
@@ -321,7 +322,8 @@ class _SearchScreenState extends State<SearchScreen> {
             ),
           ]),
         ] else if (results.isEmpty) ...[
-          panel([
+          // A1 de CU-09.
+          panel(key: const ValueKey('cu09.empty'), [
             const Icon(Icons.search_off, size: 48),
             const SizedBox(height: 16),
             heading('No se encontraron temas con «${query.trim()}»'),
@@ -337,14 +339,16 @@ class _SearchScreenState extends State<SearchScreen> {
             ),
           ]),
         ] else ...[
-          caption('${results.length} resultados para «${query.trim()}»'),
+          caption(
+            '${results.length} ${results.length == 1 ? 'resultado' : 'resultados'} para «${query.trim()}»',
+          ),
           for (final group in MatchField.values) ...[
             if (results.any((r) => r.field == group))
               caption(
                 group == MatchField.title ? 'EN TÍTULOS' : 'EN EL CONTENIDO',
               ),
             for (final result in results.where((r) => r.field == group))
-              panel([
+              panel(key: ValueKey('cu09.result.${result.lesson.id}'), [
                 InkWell(
                   onTap: () {
                     FocusManager.instance.primaryFocus?.unfocus();
@@ -381,7 +385,7 @@ class _SearchScreenState extends State<SearchScreen> {
                         const SizedBox(height: 8),
                         const Row(
                           children: [
-                            Text('Abrir subtema'),
+                            Flexible(child: Text('Abrir subtema')),
                             Icon(Icons.chevron_right),
                           ],
                         ),

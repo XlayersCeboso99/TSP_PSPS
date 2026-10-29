@@ -1,0 +1,89 @@
+Resolving dependencies...
+Downloading packages...
+  cupertino_icons 1.0.9 (2.0.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  shared_preferences_android 2.4.28 (2.5.4 available)
+  shared_preferences_foundation 2.5.7 (2.6.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.2 (2.4.3 available)
+  vm_service 15.3.0 (15.4.0 available)
+  web 1.1.1 (1.1.2 available)
+Got dependencies!
+9 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/app_test.dart
+00:00 +0: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/app_test.dart: CU01: navigate, read without progress, answer incorrectly and finish subtopic
+00:02 +1: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/app_test.dart: CU02: select activity steps, complete automatically, reopen without duplicate points
+00:02 +2: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/app_test.dart: RNF05: narrow screen and larger text remain navigable
+00:02 +3: loading C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/audit_evidence_test.dart
+00:04 +3: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/audit_evidence_test.dart: TU-02: correct answer displays feedback and records progress
+00:06 +4: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/audit_evidence_test.dart: TU-08: all progress badges display text icon and distinct color
+00:06 +5: loading C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart
+00:07 +5: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart: CP09-01 (TU-09-01): ┬½clase┬╗ finds CT-08 by title, then CT-07 by content
+00:07 +6: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart: CP09-02 (TU-09-02): case and outer spaces do not change results
+00:07 +7: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart: CP09-03 (TU-09-03): accents are ignored and ├▒ is kept
+00:07 +8: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart: CP09-04 (TU-09-04): fewer than 3 characters does not search (A2)
+00:07 +9: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart: CP09-05 (TU-09-05): a word that is not in the catalog has no results
+00:07 +10: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart: CP09-06 (TU-09-06): questions, options, explanations and activities are not searched
+00:07 +11: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart: CP09-07: one result per lesson; a title match is listed only under titles
+00:07 +12: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart: CP09-08: phrases match across repeated spaces and line breaks; snippets are one line
+00:07 +13: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart: CP09-09: the highlighted range is the match; snippet is short
+00:07 +14: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart: CP09-10 (TW-09-01): type ┬½clase┬╗, see route and status, open CT-08 without progress
+00:09 +15: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart: CP09-11 (TW-09-02): no results (A1), search can be changed, Explore returns home
+00:10 +16: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart: CP09-12: cancel goes back without changes (A3)
+00:10 +17: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart: CP09-13: one result uses the singular and shows the progress status
+00:10 +18: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart: CP09-14: empty catalog reports the error and allows retry (E1)
+00:10 +19: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart: CP09-15: results fit a 320 x 640 screen with enlarged text
+00:10 +20: loading C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/module_exploration_test.dart
+00:12 +20: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/module_exploration_test.dart: CP05-01: catalog contains CT-01 through CT-10 once in its hierarchy
+00:12 +21: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/module_exploration_test.dart: CP05-02: consulting the hierarchy preserves progress and rewards
+00:12 +22: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/module_exploration_test.dart: CP05-03: Home lists every module and its subject area
+00:14 +23: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/module_exploration_test.dart: CP05-04: the last module is accessible without completing the first
+00:14 +24: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/module_exploration_test.dart: CP05-05: each module shows only its own topics and subtopics
+00:15 +25: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/module_exploration_test.dart: CP05-06: opening a topic and its content does not complete it
+00:15 +26: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/module_exploration_test.dart: CP05-07: module badges distinguish all three states by text and icon
+00:16 +27: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/module_exploration_test.dart: CP05-08: changing modules and reopening preserves the saved state
+00:16 +28: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/module_exploration_test.dart: CP05-09: failed loading is reported and retry does not overwrite saved data
+00:16 +29: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/module_exploration_test.dart: CP05-10: narrow screens and enlarged text allow free exploration
+00:17 +30: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/module_exploration_test.dart: CP05-11: the module list uses catalog counts and supports a fifth module
+00:17 +31: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/module_exploration_test.dart: CP05-12: an empty catalog is reported without invented modules
+00:17 +32: loading C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/progress_test.dart
+00:18 +32: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/progress_test.dart: CU01/CU03: wrong answers count; viewing is read-only; repeats do not count twice
+00:18 +33: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/progress_test.dart: CU04: module completion aggregates all topics, independent of practices
+00:18 +34: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/progress_test.dart: CU02: incomplete and incorrect orders give no reward; automatic completion is idempotent
+00:18 +35: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/progress_test.dart: RF08: restore answers, partial activities and rewards after reopening
+00:18 +36: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/progress_test.dart: RF08: save failure does not publish progress, retry recovers
+00:18 +37: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/progress_test.dart: corrupt data are preserved and loading can be retried
+00:18 +38: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/progress_test.dart: catalog has ten required topics and unique IDs
+00:18 +39: loading C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/review_test.dart
+00:22 +39: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/review_test.dart: TU07-01: only original mistakes in the requested scope appear
+00:22 +40: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/review_test.dart: TU07-02/03/04: retry resolves only review; all progress is preserved
+00:22 +41: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/review_test.dart: TI07-01: last review answer survives reload and subsequent normal writes
+00:22 +42: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/review_test.dart: existing version 1 data migrates without resetting original progress
+00:22 +43: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/review_test.dart: TI07-03: failed save keeps pending and original disk data; retry works
+00:22 +44: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/review_test.dart: invalid or unreadable review data is reported and never overwritten
+00:22 +45: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/review_test.dart: unanswered, correct original and invalid selections cannot be reviewed
+00:22 +46: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/review_test.dart: TW07-01/02: select, fail, retry and save correct with feedback
+00:24 +47: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/review_test.dart: failed storage never shows successful resolution and permits retry
+00:24 +48: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/review_test.dart: leaving with an unsubmitted option stores no review answer
+00:24 +49: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/review_test.dart: TW07-03: both entry points open contextual empty states
+00:24 +50: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/review_test.dart: recovery error shows retry, never a misleading empty list
+00:24 +51: loading C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart
+00:27 +51: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart: G01/G02: first saved activity gives 10, achievement and Ocean only once
+00:27 +52: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart: G02: all ten achievement conditions; activities never complete modules
+00:27 +53: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart: G03: locked theme rejected; selection atomic and persistent
+00:27 +54: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart: migration v1 and v2 recovers history without fake dates or writes
+00:27 +55: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart: review preserves rewards, dates and selected theme byte for byte
+00:27 +56: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart: inconsistent stored points are rejected without overwrite
+00:27 +57: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart: CU09: minimum length, title rank, case and accents
+00:27 +58: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart: CU09: no answers/activities indexed; snippets highlight correct range
+00:27 +59: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart: CU06/CU08/CU10: consultation never writes or grants rewards
+00:28 +60: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart: CU08: grouped activity opens without completion
+00:29 +61: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart: CU08: topic with no configured activity has explicit empty state
+00:29 +62: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart: CU09: type keyword and open result without changing progress
+00:29 +63: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart: CU09: no results returns to home through Explore
+00:30 +64: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart: empty points and achievements; locked themes cannot be selected
+00:30 +65: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart: load error never displays zero points or resets saved data
+00:30 +66: C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/sprint2_test.dart: G03: changing theme updates app and keeps all modules accessible
+00:31 +67: All tests passed!

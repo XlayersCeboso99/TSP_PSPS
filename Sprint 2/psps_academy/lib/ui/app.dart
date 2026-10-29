@@ -224,12 +224,10 @@ Future<void> reportSave(
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         content: Text(
-          [
-            if (controller.newAchievements.isNotEmpty)
-              'Logros obtenidos: ${controller.newAchievements.map((a) => a.name).join(', ')}.',
-            if (controller.newThemes.isNotEmpty)
-              'Temas disponibles: ${controller.newThemes.map((t) => t.name).join(', ')}.',
-          ].join(' '),
+          Gamification.rewardMessage(
+            controller.newAchievements,
+            controller.newThemes,
+          ),
         ),
       ),
     );
@@ -260,7 +258,8 @@ String _catalogSummary(LearningController controller) {
   return '$modules $moduleLabel · $topics $topicLabel · A tu ritmo';
 }
 
-Widget panel(List<Widget> children, {Color? color}) => Builder(
+Widget panel(List<Widget> children, {Color? color, Key? key}) => Builder(
+  key: key,
   builder: (context) => Theme(
     data: color == null ? Theme.of(context) : academyTheme('U-00'),
     child: Container(

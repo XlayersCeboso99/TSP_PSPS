@@ -1,0 +1,14 @@
+00:00 +0: loading C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/module_exploration_test.dart
+00:00 +0: CP05-01: catalog contains CT-01 through CT-10 once in its hierarchy
+00:00 +1: CP05-02: consulting the hierarchy preserves progress and rewards
+00:00 +2: CP05-03: Home lists every module and its subject area
+00:01 +3: CP05-04: the last module is accessible without completing the first
+00:02 +4: CP05-05: each module shows only its own topics and subtopics
+00:03 +5: CP05-06: opening a topic and its content does not complete it
+00:03 +6: CP05-07: module badges distinguish all three states by text and icon
+00:03 +7: CP05-08: changing modules and reopening preserves the saved state
+00:04 +8: CP05-09: failed loading is reported and retry does not overwrite saved data
+00:05 +9: CP05-10: narrow screens and enlarged text allow free exploration
+00:05 +10: CP05-11: the module list uses catalog counts and supports a fifth module
+00:05 +11: CP05-12: an empty catalog is reported without invented modules
+00:05 +12: All tests passed!

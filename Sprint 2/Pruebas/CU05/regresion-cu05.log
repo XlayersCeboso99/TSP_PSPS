@@ -1,0 +1,59 @@
+00:00 +0: loading C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/app_test.dart
+00:00 +0: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/app_test.dart: CU01: navigate, read without progress, answer incorrectly and finish subtopic
+00:03 +1: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/app_test.dart: CU02: select activity steps, complete automatically, reopen without duplicate points
+00:03 +2: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/app_test.dart: RNF05: narrow screen and larger text remain navigable
+00:03 +3: loading C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/audit_evidence_test.dart
+00:06 +3: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/audit_evidence_test.dart: TU-02: correct answer displays feedback and records progress
+00:10 +4: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/audit_evidence_test.dart: TU-08: all progress badges display text icon and distinct color
+00:10 +5: loading C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/module_exploration_test.dart
+00:12 +5: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/module_exploration_test.dart: CP05-01: catalog contains CT-01 through CT-10 once in its hierarchy
+00:12 +6: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/module_exploration_test.dart: CP05-02: consulting the hierarchy preserves progress and rewards
+00:12 +7: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/module_exploration_test.dart: CP05-03: Home lists every module and its subject area
+00:13 +8: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/module_exploration_test.dart: CP05-04: the last module is accessible without completing the first
+00:14 +9: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/module_exploration_test.dart: CP05-05: each module shows only its own topics and subtopics
+00:15 +10: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/module_exploration_test.dart: CP05-06: opening a topic and its content does not complete it
+00:16 +11: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/module_exploration_test.dart: CP05-07: module badges distinguish all three states by text and icon
+00:16 +12: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/module_exploration_test.dart: CP05-08: changing modules and reopening preserves the saved state
+00:17 +13: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/module_exploration_test.dart: CP05-09: failed loading is reported and retry does not overwrite saved data
+00:17 +14: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/module_exploration_test.dart: CP05-10: narrow screens and enlarged text allow free exploration
+00:17 +15: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/module_exploration_test.dart: CP05-11: the module list uses catalog counts and supports a fifth module
+00:17 +16: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/module_exploration_test.dart: CP05-12: an empty catalog is reported without invented modules
+00:18 +17: loading C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/progress_test.dart
+00:19 +17: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/progress_test.dart: CU01/CU03: wrong answers count; viewing is read-only; repeats do not count twice
+00:19 +18: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/progress_test.dart: CU04: module completion aggregates all topics, independent of practices
+00:19 +19: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/progress_test.dart: CU02: incomplete and incorrect orders give no reward; automatic completion is idempotent
+00:19 +20: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/progress_test.dart: RF08: restore answers, partial activities and rewards after reopening
+00:19 +21: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/progress_test.dart: RF08: save failure does not publish progress, retry recovers
+00:19 +22: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/progress_test.dart: corrupt data are preserved and loading can be retried
+00:20 +23: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/progress_test.dart: catalog has ten required topics and unique IDs
+00:20 +24: loading C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/review_test.dart
+00:21 +24: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/review_test.dart: TU07-01: only original mistakes in the requested scope appear
+00:21 +25: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/review_test.dart: TU07-02/03/04: retry resolves only review; all progress is preserved
+00:21 +26: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/review_test.dart: TI07-01: last review answer survives reload and subsequent normal writes
+00:21 +27: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/review_test.dart: existing version 1 data migrates without resetting original progress
+00:21 +28: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/review_test.dart: TI07-03: failed save keeps pending and original disk data; retry works
+00:21 +29: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/review_test.dart: invalid or unreadable review data is reported and never overwritten
+00:21 +30: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/review_test.dart: unanswered, correct original and invalid selections cannot be reviewed
+00:21 +31: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/review_test.dart: TW07-01/02: select, fail, retry and save correct with feedback
+00:23 +32: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/review_test.dart: failed storage never shows successful resolution and permits retry
+00:23 +33: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/review_test.dart: leaving with an unsubmitted option stores no review answer
+00:23 +34: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/review_test.dart: TW07-03: both entry points open contextual empty states
+00:24 +35: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/review_test.dart: recovery error shows retry, never a misleading empty list
+00:24 +36: loading C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart
+00:25 +36: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart: G01/G02: first saved activity gives 10, achievement and Ocean only once
+00:25 +37: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart: G02: all ten achievement conditions; activities never complete modules
+00:25 +38: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart: G03: locked theme rejected; selection atomic and persistent
+00:25 +39: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart: migration v1 and v2 recovers history without fake dates or writes
+00:25 +40: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart: review preserves rewards, dates and selected theme byte for byte
+00:25 +41: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart: inconsistent stored points are rejected without overwrite
+00:25 +42: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart: CU09: minimum length, title rank, case and accents
+00:25 +43: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart: CU09: no answers/activities indexed; snippets highlight correct range
+00:25 +44: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart: CU06/CU08/CU10: consultation never writes or grants rewards
+00:26 +45: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart: CU08: grouped activity opens without completion
+00:27 +46: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart: CU08: topic with no configured activity has explicit empty state
+00:27 +47: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart: CU09: type keyword and open result without changing progress
+00:29 +48: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart: CU09: no results returns to home through Explore
+00:30 +49: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart: empty points and achievements; locked themes cannot be selected
+00:30 +50: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart: load error never displays zero points or resets saved data
+00:30 +51: C:/Users/sebas/AppData/Local/Temp/psps-cu05-15ee15781ab44e009e3c57c7f6eb73c8/test/sprint2_test.dart: G03: changing theme updates app and keeps all modules accessible
+00:32 +52: All tests passed!

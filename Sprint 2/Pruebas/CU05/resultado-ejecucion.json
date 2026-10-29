@@ -1,0 +1,10 @@
+{
+  "fecha_ejecucion": "2026-10-24T20:17:33.4181520-06:00",
+  "entorno": "Windows; Flutter/Dart del SDK instalado; pruebas Flutter en copia temporal",
+  "alcance": "CU-05; datos simulados de persistencia en pruebas unitarias/widgets",
+  "base_commit": "57b8b8356b2932b52b915612887a366369b069a3",
+  "dependencias_exit_code": 0,
+  "analisis_exit_code": 0,
+  "cu05_exit_code": 0,
+  "regresion_exit_code": 0
+}

@@ -247,6 +247,15 @@ Widget heading(String text) => Padding(
     ),
   ),
 );
+
+String _catalogSummary(LearningController controller) {
+  final modules = controller.modules.length;
+  final topics = controller.modules.expand((module) => module.topics).length;
+  final moduleLabel = modules == 1 ? 'módulo' : 'módulos';
+  final topicLabel = topics == 1 ? 'tema' : 'temas';
+  return '$modules $moduleLabel · $topics $topicLabel · A tu ritmo';
+}
+
 Widget panel(List<Widget> children, {Color? color}) => Builder(
   builder: (context) => Theme(
     data: color == null ? Theme.of(context) : academyTheme('U-00'),
@@ -415,7 +424,13 @@ class _HomeScreenState extends State<HomeScreen> {
     const SizedBox(height: 24),
     FeatureLinks(controller: c),
     heading('Elige tu próximo paso'),
-    caption('4 módulos · 10 temas · A tu ritmo'),
+    caption(_catalogSummary(c)),
+    if (c.modules.isEmpty)
+      panel([
+        const Icon(Icons.menu_book_outlined),
+        const SizedBox(height: 12),
+        const Text('No hay módulos disponibles.'),
+      ]),
     for (var i = 0; i < c.modules.length; i++)
       _moduleCard(context, c, c.modules[i], i),
     const SizedBox(height: 8),
@@ -445,6 +460,7 @@ class _HomeScreenState extends State<HomeScreen> {
         color: Theme.of(context).colorScheme.surfaceContainerLow,
         borderRadius: BorderRadius.circular(22),
         child: InkWell(
+          key: ValueKey('cu05.module.${m.id}'),
           borderRadius: BorderRadius.circular(22),
           onTap: () =>
               openScreen(context, ModuleScreen(controller: c, module: m)),
@@ -465,7 +481,7 @@ class _HomeScreenState extends State<HomeScreen> {
                         color: const Color(0xFFF0F4E8),
                         borderRadius: BorderRadius.circular(14),
                       ),
-                      child: Icon(icons[i], color: forest),
+                      child: Icon(icons[i % icons.length], color: forest),
                     ),
                     const SizedBox(width: 14),
                     Expanded(
@@ -613,6 +629,7 @@ class ModuleScreen extends StatelessWidget {
           const SizedBox(height: 14),
           for (final lesson in topic.lessons)
             ListTile(
+              key: ValueKey('cu05.lesson.${lesson.id}'),
               contentPadding: EdgeInsets.zero,
               leading: Icon(
                 Icons.menu_book_rounded,
@@ -670,6 +687,7 @@ class TopicScreen extends StatelessWidget {
           SizedBox(
             width: double.infinity,
             child: FilledButton.icon(
+              key: ValueKey('cu05.study.${lesson.id}'),
               onPressed: () => openScreen(
                 context,
                 LessonScreen(
@@ -829,6 +847,19 @@ class QuestionsScreen extends StatefulWidget {
 class _QuestionsScreenState extends State<QuestionsScreen> {
   late int index;
   int? selected;
+
+  // H-01 / RP-02: «Responder de nuevo» muestra la retroalimentación del nuevo
+  // intento sin guardar ni volver a contar la pregunta. La primera respuesta
+  // guardada se conserva para el progreso y para el repaso (CU-07).
+  bool retrying = false;
+  int? retryAnswer;
+
+  void _goTo(int next) => setState(() {
+    index = next;
+    selected = null;
+    retrying = false;
+    retryAnswer = null;
+  });
   @override
   void initState() {
     super.initState();
@@ -848,7 +879,10 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
       controller: c,
       content: (context) {
         final saved = c.answerFor(q);
-        final isCorrect = saved == q.correctIndex;
+        // Respuesta cuya retroalimentación se muestra: el último intento o la
+        // respuesta guardada.
+        final shown = retrying ? null : (retryAnswer ?? saved);
+        final isCorrect = shown == q.correctIndex;
         final answered = l.questions
             .where((q) => c.answerFor(q) != null)
             .length;
@@ -877,9 +911,13 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
             '$answered ${answered == 1 ? 'pregunta respondida' : 'preguntas respondidas'}',
           ),
           heading(q.prompt),
+          if (retrying)
+            caption(
+              'Nuevo intento: elige una opción. Tu primera respuesta se conserva y la pregunta cuenta una sola vez.',
+            ),
           const SizedBox(height: 8),
-          for (var i = 0; i < q.options.length; i++) _option(q, i, saved),
-          if (saved != null)
+          for (var i = 0; i < q.options.length; i++) _option(q, i, shown),
+          if (shown != null)
             panel(
               [
                 Row(
@@ -910,9 +948,24 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                 const SizedBox(height: 6),
                 Text(q.explanation, style: const TextStyle(height: 1.6)),
                 const SizedBox(height: 12),
-                const Text(
-                  'Esta pregunta ya cuenta para tu avance.',
-                  style: TextStyle(fontWeight: FontWeight.w700),
+                Text(
+                  retryAnswer == null
+                      ? 'Esta pregunta ya cuenta para tu avance.'
+                      : 'Resultado de tu nuevo intento. Tu avance no cambia: la pregunta ya contaba.',
+                  style: const TextStyle(fontWeight: FontWeight.w700),
+                ),
+                const SizedBox(height: 12),
+                OutlinedButton.icon(
+                  key: const ValueKey('h01.retry'),
+                  icon: const Icon(Icons.refresh),
+                  label: const Text('Responder de nuevo'),
+                  onPressed: c.saving
+                      ? null
+                      : () => setState(() {
+                          retrying = true;
+                          selected = null;
+                          retryAnswer = null;
+                        }),
                 ),
               ],
               color: isCorrect
@@ -939,12 +992,26 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
                     ),
               child: Text(c.saving ? 'Guardando…' : 'Comprobar'),
             )
-          else if (index < l.questions.length - 1)
+          else if (retrying) ...[
             FilledButton(
+              onPressed: selected == null
+                  ? null
+                  : () => setState(() {
+                      retryAnswer = selected;
+                      retrying = false;
+                    }),
+              child: const Text('Comprobar de nuevo'),
+            ),
+            TextButton(
               onPressed: () => setState(() {
-                index++;
+                retrying = false;
                 selected = null;
               }),
+              child: const Text('Cancelar nuevo intento'),
+            ),
+          ] else if (index < l.questions.length - 1)
+            FilledButton(
+              onPressed: () => _goTo(index + 1),
               child: const Text('Siguiente pregunta'),
             )
           else
@@ -953,14 +1020,9 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
               child: const Text('Volver al contenido'),
             ),
           const SizedBox(height: 12),
-          if (index > 0)
+          if (index > 0 && !retrying)
             TextButton(
-              onPressed: c.saving
-                  ? null
-                  : () => setState(() {
-                      index--;
-                      selected = null;
-                    }),
+              onPressed: c.saving ? null : () => _goTo(index - 1),
               child: const Text('Pregunta anterior'),
             ),
         ];
@@ -968,9 +1030,9 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
     );
   }
 
-  Widget _option(Question q, int i, int? saved) {
-    final chosen = (saved ?? selected) == i;
-    final showCorrect = saved != null && q.correctIndex == i;
+  Widget _option(Question q, int i, int? shown) {
+    final chosen = (shown ?? selected) == i;
+    final showCorrect = shown != null && q.correctIndex == i;
     return Padding(
       padding: const EdgeInsets.only(bottom: 12),
       child: Material(
@@ -980,7 +1042,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
         borderRadius: BorderRadius.circular(16),
         child: InkWell(
           borderRadius: BorderRadius.circular(16),
-          onTap: saved != null || widget.controller.saving
+          onTap: shown != null || widget.controller.saving
               ? null
               : () => setState(() => selected = i),
           child: Semantics(

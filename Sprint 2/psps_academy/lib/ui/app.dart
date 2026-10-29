@@ -114,6 +114,14 @@ Color statusColor(ProgressStatus state) => switch (state) {
   ProgressStatus.completed => forest,
 };
 
+/// D-S1-03 · RNF-05 · CA-04 ampliado: un ícono distinto por estado, el mismo
+/// en las insignias y en las listas, para no depender solo del color.
+IconData statusIcon(ProgressStatus state) => switch (state) {
+  ProgressStatus.notStarted => Icons.circle_outlined,
+  ProgressStatus.inProgress => Icons.timelapse_rounded,
+  ProgressStatus.completed => Icons.check_circle_rounded,
+};
+
 class StatusBadge extends StatelessWidget {
   const StatusBadge(this.status, {super.key});
   final ProgressStatus status;
@@ -136,11 +144,7 @@ class StatusBadge extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: [
           Icon(
-            status == ProgressStatus.completed
-                ? Icons.check_circle_rounded
-                : status == ProgressStatus.inProgress
-                ? Icons.timelapse_rounded
-                : Icons.circle_outlined,
+            statusIcon(status),
             color: badgeColor,
             size: 16,
           ),
@@ -571,13 +575,12 @@ class _HomeScreenState extends State<HomeScreen> {
         const SizedBox(height: 12),
         for (final t in m.topics)
           ListTile(
+            key: ValueKey('ds103.topic.${t.id}'),
             contentPadding: EdgeInsets.zero,
             title: Text(t.title),
             subtitle: Text(c.topicStatus(t).label),
             leading: Icon(
-              c.topicStatus(t) == ProgressStatus.completed
-                  ? Icons.check_circle_rounded
-                  : Icons.circle_outlined,
+              statusIcon(c.topicStatus(t)),
               color: statusColor(c.topicStatus(t)),
             ),
             trailing: const Icon(Icons.chevron_right),

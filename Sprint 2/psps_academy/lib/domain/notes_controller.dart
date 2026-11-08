@@ -22,6 +22,13 @@ class NotesController extends ChangeNotifier {
   bool saving = false;
   String? loadError;
   String? saveError;
+  bool _disposed = false;
+
+  @override
+  void dispose() {
+    _disposed = true;
+    super.dispose();
+  }
 
   PersonalNote? noteFor(Lesson lesson) => _notes[lesson.id];
 
@@ -41,7 +48,7 @@ class NotesController extends ChangeNotifier {
   }
 
   Future<void> load() async {
-    if (loading || saving) return;
+    if (_disposed || loading || saving) return;
     loading = true;
     ready = false;
     loadError = null;
@@ -60,7 +67,7 @@ class NotesController extends ChangeNotifier {
       loadError = 'No se pudieron cargar tus notas. Intenta de nuevo.';
     } finally {
       loading = false;
-      notifyListeners();
+      if (!_disposed) notifyListeners();
     }
   }
 
@@ -79,7 +86,8 @@ class NotesController extends ChangeNotifier {
   Future<bool> deleteNote(Lesson lesson) => _commit(lesson, null);
 
   Future<bool> _commit(Lesson lesson, PersonalNote? note) async {
-    if (!ready ||
+    if (_disposed ||
+        !ready ||
         saving ||
         !modules
             .expand((m) => m.topics)
@@ -107,7 +115,7 @@ class NotesController extends ChangeNotifier {
       return false;
     } finally {
       saving = false;
-      notifyListeners();
+      if (!_disposed) notifyListeners();
     }
   }
 }

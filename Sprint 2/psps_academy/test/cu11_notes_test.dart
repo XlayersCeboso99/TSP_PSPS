@@ -32,9 +32,11 @@ class MemoryNotesStore implements NotesStore {
   bool failSave = false;
   bool failLoad = false;
   Completer<void>? pending;
+  Completer<void>? pendingLoad;
 
   @override
   Future<Map<String, PersonalNote>> load() async {
+    if (pendingLoad != null) await pendingLoad!.future;
     if (failLoad) throw StateError('Read failed');
     return Map.of(notes);
   }
@@ -81,6 +83,27 @@ void main() {
       expect(preferences.values['psps.progress.v1'], 'Existing progress');
       await local.save({});
       expect(await local.load(), isEmpty);
+    },
+  );
+
+  test('ID23 closing the app during notes load completes safely', () async {
+    store.pendingLoad = Completer<void>();
+    final controller = NotesController(modules: catalog, store: store);
+    final loading = controller.load();
+    controller.dispose();
+    store.pendingLoad!.complete();
+    await expectLater(loading, completes);
+  });
+
+  test(
+    'ID23 closing the app during save preserves the completed write',
+    () async {
+      store.pending = Completer<void>();
+      final saving = notes.saveNote(lesson, 'Nota al cerrar');
+      notes.dispose();
+      store.pending!.complete();
+      expect(await saving, isTrue);
+      expect(store.notes[lesson.id]!.text, 'Nota al cerrar');
     },
   );
 
@@ -270,5 +293,116 @@ void main() {
     store.failSave = false;
     await tapVisible(tester, find.text('Guardar'));
     expect(find.text('Ver mi nota'), findsOneWidget);
+  });
+
+  testWidgets(
+    'ID23 delayed load preserves saved text and enforces editor limit',
+    (tester) async {
+      tester.view.physicalSize = const Size(320, 640);
+      tester.view.devicePixelRatio = 1;
+      addTearDown(tester.view.resetPhysicalSize);
+      addTearDown(tester.view.resetDevicePixelRatio);
+      store.notes[lesson.id] = PersonalNote(
+        lessonId: lesson.id,
+        text: 'Nota existente',
+        modifiedAt: DateTime.utc(2026),
+      );
+      store.pendingLoad = Completer<void>();
+      final loading = notes.load();
+      final learning = LearningController(
+        modules: catalog,
+        store: MemoryStore(),
+      );
+      await learning.load();
+      await tester.pumpWidget(
+        PspsApp(controller: learning, notesController: notes),
+      );
+      await tester.pumpAndSettle();
+      tester
+          .state<NavigatorState>(find.byType(Navigator))
+          .push(
+            MaterialPageRoute<void>(
+              builder: (_) => NoteEditorScreen(lesson: lesson),
+            ),
+          );
+      await tester.pumpAndSettle();
+      expect(find.text('Cargando tus notas…'), findsOneWidget);
+      store.pendingLoad!.complete();
+      await loading;
+      await tester.pumpAndSettle();
+      expect(find.text('Nota existente'), findsOneWidget);
+      await tester.enterText(find.byType(TextField), 'ñ' * 1001);
+      await tester.pumpAndSettle();
+      expect(find.text('1000/1000'), findsOneWidget);
+      expect(
+        tester
+            .widget<TextField>(find.byType(TextField))
+            .controller!
+            .text
+            .length,
+        1000,
+      );
+      await tapVisible(tester, find.text('Guardar'));
+      expect(notes.noteFor(lesson)!.text, 'ñ' * 1000);
+      await tapVisible(tester, find.text('Mis notas'));
+      expect(find.text(lesson.title), findsOneWidget);
+      expect(tester.takeException(), isNull);
+    },
+  );
+
+  testWidgets('ID23 local persistence survives app relaunch and list updates', (
+    tester,
+  ) async {
+    final preferences = MemoryPreferences();
+    final progressStore = MemoryStore();
+    var learning = LearningController(modules: catalog, store: progressStore);
+    await learning.load();
+    await learning.answer(lesson.questions.first, 0);
+    final progressBefore = progressStore.raw;
+    var controller = NotesController(
+      modules: catalog,
+      store: LocalNotesStore(preferences: preferences),
+    );
+    await controller.load();
+    await controller.saveNote(lesson, 'Texto inicial');
+    await tester.pumpWidget(
+      PspsApp(controller: learning, notesController: controller),
+    );
+    await tester.pumpAndSettle();
+    await tapVisible(tester, find.text('Mis notas'));
+    await tapVisible(tester, find.text(lesson.title));
+    await tester.enterText(find.byType(TextField), 'Texto editado');
+    await tapVisible(tester, find.text('Guardar'));
+    await tester.pageBack();
+    await tester.pumpAndSettle();
+    expect(find.text('Texto editado'), findsOneWidget);
+    expect(find.text('Texto inicial'), findsNothing);
+    await tester.pumpWidget(const SizedBox());
+    controller.dispose();
+    learning.dispose();
+    controller = NotesController(
+      modules: catalog,
+      store: LocalNotesStore(preferences: preferences),
+    );
+    learning = LearningController(modules: catalog, store: progressStore);
+    await learning.load();
+    await controller.load();
+    await tester.pumpWidget(
+      PspsApp(controller: learning, notesController: controller),
+    );
+    await tester.pumpAndSettle();
+    await tapVisible(tester, find.text('Mis notas'));
+    expect(find.text('Texto editado'), findsOneWidget);
+    await tapVisible(tester, find.text(lesson.title));
+    await tapVisible(tester, find.text('Eliminar nota'));
+    await tapVisible(tester, find.text('Eliminar'));
+    await tester.pageBack();
+    await tester.pumpAndSettle();
+    expect(
+      find.text('Aún no tienes notas. Agrega una desde cualquier subtema'),
+      findsOneWidget,
+    );
+    expect(progressStore.raw, progressBefore);
+    expect(await LocalNotesStore(preferences: preferences).load(), isEmpty);
   });
 }

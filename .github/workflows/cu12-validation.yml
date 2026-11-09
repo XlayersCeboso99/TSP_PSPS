@@ -26,5 +26,5 @@ jobs:
         run: flutter pub get
       - name: Static analysis
         run: flutter analyze
-      - name: CU-11 and CU-12 tests
-        run: flutter test test/cu11_notes_test.dart test/cu12_reminders_test.dart
+      - name: Full Flutter test suite (regression)
+        run: flutter test

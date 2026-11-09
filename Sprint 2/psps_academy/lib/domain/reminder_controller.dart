@@ -85,6 +85,7 @@ class ReminderController extends ChangeNotifier {
         await _reconcile(saved);
       }
     } catch (_) {
+      ready = false;
       loadError = 'No se pudo cargar o sincronizar el recordatorio. Reintenta.';
     } finally {
       loading = false;

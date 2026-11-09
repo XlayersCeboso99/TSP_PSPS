@@ -1,0 +1,30 @@
+name: CU-11 and CU-12 Flutter validation
+
+on:
+  push:
+    branches:
+      - feature/cu12-recordatorios
+  pull_request:
+    paths:
+      - 'Sprint 2/psps_academy/**'
+      - '.github/workflows/cu12-validation.yml'
+
+jobs:
+  flutter:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: 'Sprint 2/psps_academy'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: '3.47.9'
+          channel: stable
+          cache: true
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Static analysis
+        run: flutter analyze
+      - name: CU-11 and CU-12 tests
+        run: flutter test test/cu11_notes_test.dart test/cu12_reminders_test.dart

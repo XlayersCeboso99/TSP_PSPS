@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:flutter/foundation.dart';
-import 'package:flutter/services.dart';
+import 'package:app_settings/app_settings.dart';
 import 'package:flutter_local_notifications/flutter_local_notifications.dart';
 import 'package:flutter_timezone/flutter_timezone.dart';
 import 'package:timezone/data/latest_all.dart' as tzdata;
@@ -14,7 +14,6 @@ import '../domain/reminder_controller.dart';
 class FlutterNotificationPort implements NotificationPort {
   final FlutterLocalNotificationsPlugin _plugin =
       FlutterLocalNotificationsPlugin();
-  static const _settingsChannel = MethodChannel('psps/reminder_settings');
   bool _initialized = false;
 
   @override
@@ -123,6 +122,8 @@ class FlutterNotificationPort implements NotificationPort {
   Future<void> cancelDay(int weekday) => _plugin.cancel(id: 1200 + weekday);
 
   @override
-  Future<bool> openNotificationSettings() async =>
-      await _settingsChannel.invokeMethod<bool>('open') ?? false;
+  Future<bool> openNotificationSettings() async {
+    await AppSettings.openAppSettings(type: AppSettingsType.notification);
+    return true;
+  }
 }

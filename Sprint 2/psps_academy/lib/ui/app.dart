@@ -7,6 +7,9 @@ import '../domain/gamification.dart';
 import '../data/activity_store.dart';
 import '../data/notes_store.dart';
 import '../domain/notes_controller.dart';
+import '../domain/reminder_controller.dart';
+import '../data/reminder_store.dart';
+import '../platform/reminder_notifications.dart';
 import '../features/cu08/activity_engine.dart';
 import '../features/cu08/activity_models.dart';
 import '../features/cu08/activity_page.dart';
@@ -14,21 +17,25 @@ import '../features/cu08/activity_page.dart';
 part 'review_screens.dart';
 part 'sprint2_screens.dart';
 part 'notes_screens.dart';
+part 'reminder_screens.dart';
 
 const forest = Color(0xFF164E3C);
 const cream = Color(0xFFF6F7F2);
 const ink = Color(0xFF182C25);
 
 class PspsApp extends StatefulWidget {
-  const PspsApp({super.key, required this.controller, this.notesController});
+  const PspsApp({super.key, required this.controller, this.notesController, this.reminderController});
   final LearningController controller;
   final NotesController? notesController;
+  final ReminderController? reminderController;
   @override
   State<PspsApp> createState() => _PspsAppState();
 }
 
 class _PspsAppState extends State<PspsApp> {
   late final NotesController notes;
+  late final ReminderController reminder;
+  final navigatorKey = GlobalKey<NavigatorState>();
   LearningController get controller => widget.controller;
 
   @override
@@ -38,20 +45,30 @@ class _PspsAppState extends State<PspsApp> {
         widget.notesController ??
         NotesController(modules: controller.modules, store: LocalNotesStore());
     if (!notes.ready) notes.load();
+    reminder = widget.reminderController ?? ReminderController(
+      store: LocalReminderStore(),
+      port: FlutterNotificationPort(),
+      onOpened: () => navigatorKey.currentState?.popUntil((route) => route.isFirst),
+    );
+    if (!reminder.ready) reminder.load();
   }
 
   @override
   void dispose() {
     if (widget.notesController == null) notes.dispose();
+    if (widget.reminderController == null) reminder.dispose();
     super.dispose();
   }
 
   @override
-  Widget build(BuildContext context) => NotesScope(
+  Widget build(BuildContext context) => ReminderScope(
+    controller: reminder,
+    child: NotesScope(
     controller: notes,
     child: AnimatedBuilder(
       animation: controller,
       builder: (context, _) => MaterialApp(
+        navigatorKey: navigatorKey,
         title: 'PSPS Academy · Aprende software',
         debugShowCheckedModeBanner: false,
         theme: academyTheme(controller.selectedTheme),
@@ -96,6 +113,7 @@ class _PspsAppState extends State<PspsApp> {
           },
         ),
       ),
+    ),
     ),
   );
 }
@@ -345,6 +363,11 @@ class _HomeScreenState extends State<HomeScreen> {
             ],
           ),
           actions: [
+            IconButton(
+              tooltip: 'Recordatorio de estudio',
+              icon: const Icon(Icons.alarm_outlined),
+              onPressed: () => openScreen(context, const ReminderScreen()),
+            ),
             IconButton(
               tooltip: 'Buscar contenidos',
               icon: const Icon(Icons.search),

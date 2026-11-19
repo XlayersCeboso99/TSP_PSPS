@@ -109,8 +109,8 @@ Detalle y reglas de dependencia: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 | Plataforma | Estado |
 | --- | --- |
-| Android | APK *release* compilado y verificado por CI (`.github/workflows/sprint3-android.yml` en la raíz de TSP_PSPS) con SHA-256, versión y certificado registrados. La instalación física de `0.3.0+7` se registra aparte con su commit y SHA-256. Guía: [docs/platforms/ANDROID.md](docs/platforms/ANDROID.md). |
-| iOS | Mismo código y catálogo que Android. Compilación para simulador sin firma y prueba de integración en simulador en el CI de macOS (`.github/workflows/sprint3-ios.yml` en la raíz de TSP_PSPS). Una compilación de simulador **no** equivale a una instalación en iPhone; la firma, el IPA y las pruebas en iPhone físico se documentan en [docs/platforms/IOS.md](docs/platforms/IOS.md). |
+| Android | APK *release* `0.3.0+7` publicado en el Release [`v0.3.0-sprint03`](https://github.com/XlayersCeboso99/TSP_PSPS/releases/tag/v0.3.0-sprint03) con commit, SHA-256 y certificado registrados; CI en `.github/workflows/sprint3-android.yml` (raíz de TSP_PSPS). Probado físicamente por el equipo sobre el mismo código (Galaxy S24 Ultra, build 6); detalle en [ENTREGA_SPRINT3.md](../ENTREGA_SPRINT3.md). Guía: [docs/platforms/ANDROID.md](docs/platforms/ANDROID.md). |
+| iOS | Mismo código y catálogo que Android. Compilación para simulador sin firma y prueba de integración en simulador en el CI de macOS (`.github/workflows/sprint3-ios.yml` en la raíz de TSP_PSPS). IPA de dispositivo **sin firma** publicado en el Release `v0.3.0-sprint03` (`.github/workflows/sprint3-ios-ipa.yml`); debe firmarse con un Apple ID para instalarse. Una compilación de simulador **no** equivale a una instalación en iPhone. Guía: [docs/platforms/IOS.md](docs/platforms/IOS.md). |
 | HarmonyOS NEXT | Fuera del alcance de esta entrega. La preparación se conserva sin cambios en la rama `port/harmonyos-next` del repositorio PSPS-Academy; no está integrada aquí. |
 | Web | Carpeta presente por la plantilla de Flutter; no es objetivo del proyecto. |
 

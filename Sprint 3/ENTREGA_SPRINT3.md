@@ -45,7 +45,7 @@ Los APK que publica el CI (`sprint3-android.yml`) se firman con la clave *debug*
 | `flutter analyze` | Sin incidencias | Local y CI |
 | `flutter test` | **224/224** | Local y CI |
 | `tool/verifications` (defectos Sprint 1 + procedencia del formato Sprint 2) | 10/10 | Local y CI |
-| Auditoría CU-01…CU-12 frente a Sprint 2 | Sin regresiones | Revisión del agente Codex, validada por Claude |
+| Auditoría CU-01…CU-12 frente a Sprint 2 | Sin regresiones | Revisión de código y pruebas de regresión |
 | IDs históricos (módulos, temas, subtemas, preguntas, actividades, logros, temas visuales) | 68/68 conservados | `tool/verifications/tsp_sprint2_fixture_origin_test.dart` |
 | Compatibilidad de datos guardados por Sprint 2 | Progreso, puntos, logros, tema, notas y recordatorio se leen y reescriben sin pérdida | `test/regression/tsp_sprint2_compat_test.dart` |
 | CI Flutter / Android / iOS simulador sobre `4938b95` | Aprobados: [44438228587](https://github.com/XlayersCeboso99/TSP_PSPS/actions/runs/44438228587), [44438228579](https://github.com/XlayersCeboso99/TSP_PSPS/actions/runs/44438228579), [44438228642](https://github.com/XlayersCeboso99/TSP_PSPS/actions/runs/44438228642) | GitHub Actions |
@@ -76,7 +76,3 @@ Los APK que publica el CI (`sprint3-android.yml`) se firman con la clave *debug*
 - Notificaciones de CU-12 en modo inexacto: Android puede retrasarlas unos minutos.
 - `Sprint 2/psps_academy/` se conserva como histórico sin cambios: su `pubspec.lock` está desincronizado y `app_settings 6.1.1` impide compilar su APK (corregido en Sprint 3).
 - `main` conserva la carpeta histórica `psps_academy/` (CU-08 anterior, PR #9); no forma parte de la aplicación vigente.
-
-## 7. Método de cierre
-
-Integración coordinada por Claude (Claude Code) con dos agentes en copias aisladas y archivos disjuntos: **Codex CLI** (auditoría funcional, IDs, persistencia y pruebas de regresión) y **OpenCode CLI** (versión, Android, CI e iOS). Todos los cambios de los agentes se revisaron antes de integrarse; las pruebas canónicas se repitieron fuera de sus entornos.

@@ -1,0 +1,65 @@
+name: Sprint 3 Flutter CI
+
+# Validacion de Dart de la app oficial del Sprint 3 dentro de TSP_PSPS.
+# El proyecto vive en "Sprint 3/psps_academy"; todos los comandos se ejecutan
+# desde ese directorio.
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+      - 'integracion/**'
+      - 'release/**'
+    tags:
+      - 'v*'
+    paths:
+      - 'Sprint 3/psps_academy/**'
+      - '.github/workflows/sprint3-flutter-ci.yml'
+  pull_request:
+    branches:
+      - develop
+      - main
+    paths:
+      - 'Sprint 3/psps_academy/**'
+      - '.github/workflows/sprint3-flutter-ci.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sprint3-flutter-ci-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: 'Sprint 3/psps_academy'
+
+env:
+  FLUTTER_VERSION: 3.47.9
+
+jobs:
+  analyze-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          cache: true
+
+      - name: Install dependencies (locked)
+        run: flutter pub get --enforce-lockfile
+
+      - name: Analyze
+        run: flutter analyze
+
+      - name: Unit, widget and verification tests
+        run: flutter test
+
+      - name: Inherited Sprint 1 verifications
+        run: flutter test tool/verifications/defects_sprint01_verification_test.dart

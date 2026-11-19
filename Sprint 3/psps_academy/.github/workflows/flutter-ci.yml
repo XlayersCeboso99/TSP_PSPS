@@ -1,3 +1,4 @@
+# En TSP_PSPS los workflows activos son los de la raiz (.github/workflows/sprint3-flutter-ci.yml).
 name: Flutter CI
 
 on:

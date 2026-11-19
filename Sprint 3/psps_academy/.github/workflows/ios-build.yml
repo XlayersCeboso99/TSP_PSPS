@@ -1,3 +1,4 @@
+# En TSP_PSPS los workflows activos son los de la raiz (.github/workflows/sprint3-ios.yml).
 name: iOS build
 
 # Native iOS verification on a GitHub macOS runner: Dart checks, Swift Package

@@ -1,3 +1,4 @@
+# En TSP_PSPS los workflows activos son los de la raiz (.github/workflows/sprint3-android.yml).
 name: Android build
 
 # Validates that the Android debug APK builds on a clean machine, independently

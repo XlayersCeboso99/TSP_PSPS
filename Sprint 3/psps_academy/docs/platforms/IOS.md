@@ -165,8 +165,22 @@ flutter build ipa --release
   desarrollador de pago y un *provisioning profile* ad-hoc.
 - La salida queda en `build/ios/ipa/*.ipa` y los archivos de exportación en
   `build/ios/archive/`.
-- Un IPA no se genera en el CI de este repositorio: el workflow solo produce un
-  `.app` de simulador sin firma.
+- Sin Mac ni certificado, el workflow `.github/workflows/sprint3-ios-ipa.yml`
+  (raíz de TSP_PSPS) genera en macOS un **IPA de dispositivo sin firma**
+  (`flutter build ios --release --no-codesign` empaquetado en `Payload/`), con
+  `SHA256SUMS.txt` y `build-info_ios.txt` (bundle id, versión, arquitectura,
+  estado de firma). El de la entrega está en el Release `v0.3.0-sprint03`.
+
+### 6.4 Instalar el IPA sin firma
+
+Un IPA sin firma **no** se instala directamente. Debe firmarse con un Apple ID:
+
+1. Windows o Mac: instalar Sideloadly (o AltStore) y conectar el iPhone por USB.
+2. Abrir el `.ipa`, iniciar sesión con el Apple ID y **conservar el bundle id**
+   `mx.edu.uaz.psps` (si se cambia, se instala como otra app, sin sus datos).
+3. En el iPhone: Ajustes → General → VPN y gestión de dispositivos → confiar en
+   el desarrollador. Con Apple ID gratuito la firma caduca a los 7 días.
+4. Comprobar el SHA-256 del IPA contra `SHA256SUMS.txt` antes de firmarlo.
 
 ## 7. Pendientes que requieren Xcode, simulador o iPhone
 

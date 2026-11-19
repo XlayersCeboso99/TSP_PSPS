@@ -3,8 +3,7 @@ name: Sprint 3 iOS IPA (unsigned)
 # Genera un IPA de dispositivo (arm64, Release) SIN FIRMA de la app oficial del
 # Sprint 3 en un runner macOS. Un IPA sin firma NO se instala directamente en un
 # iPhone: debe firmarse después con una identidad de Apple (Xcode, Sideloadly,
-# AltStore o un certificado de distribución). No se usan secretos ni
-# certificados en este workflow.
+# AltStore o un certificado de distribución).
 
 on:
   push:

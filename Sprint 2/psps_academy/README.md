@@ -8,9 +8,9 @@ La guía vigente de este incremento está en [DISEÑO DEL SPRINT 2](docs/DISENO_
 
 Entra a un tema o módulo y pulsa **Repasar preguntas**. Verás únicamente sus preguntas originalmente incorrectas y todavía no resueltas en repaso. Selecciona una, elige una opción y comprueba la respuesta. Si te equivocas, puedes reintentar; si aciertas y se guarda el resultado, desaparece de pendientes. Salir sin comprobar no registra una respuesta.
 
-El repaso funciona offline, se conserva al reiniciar y no modifica respuestas originales, avance, estados ni puntos. No otorga logros. Los datos de la versión anterior se recuperan sin restablecer el progreso. Consulta [alcance y pruebas de CU-07](docs/CU07_REPASO.md).
+El repaso funciona offline, se conserva al reiniciar y no modifica respuestas originales, avance, estados ni puntos. Acertar en el repaso 3 preguntas que habías respondido mal otorga el logro L-10 «Aprendo del error» (CU-06). Los datos de la versión anterior se recuperan sin restablecer el progreso. Consulta [alcance y pruebas de CU-07](docs/CU07_REPASO.md).
 
-Incluye cuatro módulos, diez temas, veinte preguntas con retroalimentación, diez actividades de ordenamiento, estados de progreso y almacenamiento local. Aplica el catálogo del equipo: diez puntos por primera actividad completada, diez logros (L-01 a L-09 y L-11) y cuatro temas de color. Los contenidos educativos siguen siendo demostrativos. El servidor y las pruebas iOS están pendientes.
+Incluye cuatro módulos, diez temas, veinte preguntas con retroalimentación, diez actividades de ordenamiento, estados de progreso y almacenamiento local. Aplica el catálogo del equipo: diez puntos por primera actividad completada, once logros (L-01 a L-11) y cuatro temas de color. Los contenidos educativos siguen siendo demostrativos. El servidor y las pruebas iOS están pendientes.
 
 ## Ejecutar
 

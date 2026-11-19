@@ -1,0 +1,121 @@
+{
+  "source": "C:\\Users\\bolis\\OneDrive\\Documentos\\App TSP\\publicacion-sprint02\\Sprint 2\\psps_academy",
+  "files": [
+    {
+      "file": "lib/main.dart",
+      "sha256": "0e8fce01f9781f319d4c484824a5f4085df675234d7dea57890649f254e97fd4"
+    },
+    {
+      "file": "lib/data/catalog.dart",
+      "sha256": "e7f5a7350ebf479637c90f33209e06203794366af4b0a8bf9de2b45edd0e818e"
+    },
+    {
+      "file": "lib/data/progress_store.dart",
+      "sha256": "df2c5c23bff0a4587dc5df9a665babced76463c5d0f2d109cd5acea4dbcf26b8"
+    },
+    {
+      "file": "lib/domain/content_search.dart",
+      "sha256": "c325cc4990b485b8192f93cbba15fe3a938f8cbe7aa1b62574a267bfc74661b2"
+    },
+    {
+      "file": "lib/domain/course.dart",
+      "sha256": "58667dd63874c13d3052f6d8ee5ca26a4db111283650c3ba231eafc4239a61e9"
+    },
+    {
+      "file": "lib/domain/gamification.dart",
+      "sha256": "452ff2647fff56756085323f54f15e8b118fc15266e1c6eda1676503c4a3990b"
+    },
+    {
+      "file": "lib/domain/learning_controller.dart",
+      "sha256": "f6b591270e37babab469763fe300307c41f1ef3520dd739299120b6c7531371e"
+    },
+    {
+      "file": "lib/ui/app.dart",
+      "sha256": "97c0ab7b54b6546f79c65ef2e3b0ccc2d920fe3848379af6b4cd99120cfb736a"
+    },
+    {
+      "file": "lib/ui/review_screens.dart",
+      "sha256": "f8b4f35c55825b8d04a074ac10b0ff45fb1196594f95d57ef9be93ca016610a1"
+    },
+    {
+      "file": "lib/ui/sprint2_screens.dart",
+      "sha256": "6084853d9b296e2176355bbff88974553a904b069d16e0b349fcc600e2b16dd1"
+    },
+    {
+      "file": "test/app_test.dart",
+      "sha256": "822d51e2f489f7e176cc21e5c51ed146ff5e4e552ac5863053b2f4e315a5f1be"
+    },
+    {
+      "file": "test/audit_evidence_test.dart",
+      "sha256": "9e1c8e4ec5871b3e74d776094604abe8b940bb3d91300ddd781b64c4eb78dee0"
+    },
+    {
+      "file": "test/progress_test.dart",
+      "sha256": "604ce604dab09d1c12ef1cdf06df04b9782ee4fe46699d6188994ec5f63bface"
+    },
+    {
+      "file": "test/review_test.dart",
+      "sha256": "036a7e11aa97fc66040f30e45c454121c28ede8f76c26dcbf106bb3f09234bbc"
+    },
+    {
+      "file": "test/sprint2_test.dart",
+      "sha256": "cdfb1c28034a524abc64c7b9a2ea81bd434399fd03b508d739cdcd2e50737ddf"
+    },
+    {
+      "file": "test/support.dart",
+      "sha256": "682755f63a09fd4920ba0e7ab5dc2389e56ba2d43af261c742d04fe17f56a64e"
+    },
+    {
+      "file": "integration_test/cu07_offline_test.dart",
+      "sha256": "40af7107d8521c03dac6965722339cb7fa43f7a73d7ec1bd06deef68e97ef756"
+    },
+    {
+      "file": "integration_test/evidence_test.dart",
+      "sha256": "3df431f0e3a313f41868ef35287175d58047ce5dc149588bbf49f79b0ad5094d"
+    },
+    {
+      "file": "integration_test/offline_test.dart",
+      "sha256": "89507ec6d269432093cd1c15b3664e5addb1393f5f60e7670cb5ae93f5a60d45"
+    },
+    {
+      "file": "integration_test/sprint2_design_test.dart",
+      "sha256": "7aa182bff196ab2d083222511956ffb4f76362f75ea7588ae20716a6db1ce13f"
+    },
+    {
+      "file": "test_driver/design_driver.dart",
+      "sha256": "c07eb3c172218faab8399aea1c77d8de4088c408a6e1fef62069cc944225d377"
+    },
+    {
+      "file": "test_driver/evidence_driver.dart",
+      "sha256": "f3ccd3ccfa80429bb0783684e299a9fd113c9c15b1d67477125369a4dee7c4b6"
+    },
+    {
+      "file": "tool/build_android.ps1",
+      "sha256": "99737de022144081414c5f3e1b21dbdc5d80549a9d2dad555c784655eecffa3d"
+    },
+    {
+      "file": "tool/instalar_android.bat",
+      "sha256": "b8681e933371c336d603293fab1cc6f437eff9d6b22327837341adc6aa16f07c"
+    },
+    {
+      "file": "tool/instalar_android.ps1",
+      "sha256": "be0770a3e82e432f9e32a1ed8a926ad57ab9781af61e5a63cfebb410f5cb7836"
+    },
+    {
+      "file": "tool/verify_sprint2_android.ps1",
+      "sha256": "12efeb05718d6f0081e8810adba0ce8e832726aa4e35c01c13cea4a474d954a8"
+    },
+    {
+      "file": "pubspec.yaml",
+      "sha256": "849ea4d74592cd122c560cba52241fd313b59f0f44ea6904ef48cf54bff72058"
+    },
+    {
+      "file": "pubspec.lock",
+      "sha256": "737f4699190cbdea4c20b5fe83ede9ede1167d0a72afe5cc2d7e67285f844797"
+    },
+    {
+      "file": "analysis_options.yaml",
+      "sha256": "1f229aabbb10b67e0a4b18a772d8436d36fc0a7eec46ab567c6918549ec442bd"
+    }
+  ]
+}

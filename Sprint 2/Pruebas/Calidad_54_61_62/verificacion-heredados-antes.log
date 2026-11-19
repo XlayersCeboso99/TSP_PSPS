@@ -1,0 +1,104 @@
+00:00 +0: loading C:/Users/sebas/AppData/Local/Temp/psps-calidad-765b2acc1ebe4c77a8f93f5c7dbbbe48/tool/verifications/defects_sprint01_verification_test.dart
+00:00 +0: VER-H-01: answered questions offer the documented repeat action
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _TextWidgetFinder:<Found 0 widgets with text "Responder de nuevo": []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure> (file:///C:/Users/sebas/AppData/Local/Temp/psps-calidad-765b2acc1ebe4c77a8f93f5c7dbbbe48/tool/verifications/defects_sprint01_verification_test.dart:38:7)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1953:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Users/sebas/AppData/Local/Temp/psps-calidad-765b2acc1ebe4c77a8f93f5c7dbbbe48/tool/verifications/defects_sprint01_verification_test.dart line 38
+The test description was:
+  VER-H-01: answered questions offer the documented repeat action
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:00 +0 -1: VER-H-01: answered questions offer the documented repeat action [E]
+  Test failed. See exception logs above.
+  The test description was: VER-H-01: answered questions offer the documented repeat action
+  
+00:00 +0 -1: VER-D-S1-01: duplicate catalog IDs are rejected before content is exposed
+00:00 +0 -2: VER-D-S1-01: duplicate catalog IDs are rejected before content is exposed [E]
+  Expected: false
+    Actual: <true>
+  
+  package:matcher                                                  expect
+  package:flutter_test/src/widget_tester.dart 473:18               expect
+  tool\verifications\defects_sprint01_verification_test.dart 58:7  main.<fn>
+  
+00:00 +0 -2: VER-D-S1-02: activity presentation is not the canonical or reversed order
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: not [
+            'Leer el valor en esa posición',
+            'Identificar el índice de columna',
+            'Identificar el índice de fila'
+          ]
+  Actual: [
+            'Leer el valor en esa posición',
+            'Identificar el índice de columna',
+            'Identificar el índice de fila'
+          ]
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure> (file:///C:/Users/sebas/AppData/Local/Temp/psps-calidad-765b2acc1ebe4c77a8f93f5c7dbbbe48/tool/verifications/defects_sprint01_verification_test.dart:92:7)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1953:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Users/sebas/AppData/Local/Temp/psps-calidad-765b2acc1ebe4c77a8f93f5c7dbbbe48/tool/verifications/defects_sprint01_verification_test.dart line 92
+The test description was:
+  VER-D-S1-02: activity presentation is not the canonical or reversed order
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:01 +0 -3: VER-D-S1-02: activity presentation is not the canonical or reversed order [E]
+  Test failed. See exception logs above.
+  The test description was: VER-D-S1-02: activity presentation is not the canonical or reversed order
+  
+00:01 +0 -3: VER-D-S1-03: progress list uses a clock for a partially answered topic
+══╡ EXCEPTION CAUGHT BY FLUTTER TEST FRAMEWORK ╞════════════════════════════════════════════════════
+The following TestFailure was thrown running a test:
+Expected: exactly one matching candidate
+  Actual: _DescendantWidgetFinder:<Found 0 widgets with icon "IconData(U+F0235)" descending from
+widgets with type "ListTile" that are ancestors of widgets with text "Arreglos bidimensionales": []>
+   Which: means none were found but one was expected
+
+When the exception was thrown, this was the stack:
+#4      main.<anonymous closure> (file:///C:/Users/sebas/AppData/Local/Temp/psps-calidad-765b2acc1ebe4c77a8f93f5c7dbbbe48/tool/verifications/defects_sprint01_verification_test.dart:114:7)
+<asynchronous suspension>
+#5      testWidgets.<anonymous closure>.<anonymous closure> (package:flutter_test/src/widget_tester.dart:192:15)
+<asynchronous suspension>
+#6      TestWidgetsFlutterBinding._runTestBody (package:flutter_test/src/binding.dart:1953:5)
+<asynchronous suspension>
+<asynchronous suspension>
+(elided one frame from package:stack_trace)
+
+This was caught by the test expectation on the following line:
+  file:///C:/Users/sebas/AppData/Local/Temp/psps-calidad-765b2acc1ebe4c77a8f93f5c7dbbbe48/tool/verifications/defects_sprint01_verification_test.dart line 114
+The test description was:
+  VER-D-S1-03: progress list uses a clock for a partially answered topic
+════════════════════════════════════════════════════════════════════════════════════════════════════
+00:01 +0 -4: VER-D-S1-03: progress list uses a clock for a partially answered topic [E]
+  Test failed. See exception logs above.
+  The test description was: VER-D-S1-03: progress list uses a clock for a partially answered topic
+  
+00:01 +0 -4: VER-D-S1-04: the fifth module does not overflow the icon array
+00:01 +1 -4: Some tests failed.
+
+Failing tests:
+  C:/Users/sebas/AppData/Local/Temp/psps-calidad-765b2acc1ebe4c77a8f93f5c7dbbbe48/tool/verifications/defects_sprint01_verification_test.dart: VER-D-S1-01: duplicate catalog IDs are rejected before content is exposed
+  C:/Users/sebas/AppData/Local/Temp/psps-calidad-765b2acc1ebe4c77a8f93f5c7dbbbe48/tool/verifications/defects_sprint01_verification_test.dart: VER-D-S1-02: activity presentation is not the canonical or reversed order
+  C:/Users/sebas/AppData/Local/Temp/psps-calidad-765b2acc1ebe4c77a8f93f5c7dbbbe48/tool/verifications/defects_sprint01_verification_test.dart: VER-D-S1-03: progress list uses a clock for a partially answered topic
+  C:/Users/sebas/AppData/Local/Temp/psps-calidad-765b2acc1ebe4c77a8f93f5c7dbbbe48/tool/verifications/defects_sprint01_verification_test.dart: VER-H-01: answered questions offer the documented repeat action

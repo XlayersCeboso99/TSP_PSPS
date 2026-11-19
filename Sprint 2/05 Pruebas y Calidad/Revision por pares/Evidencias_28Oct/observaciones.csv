@@ -1,0 +1,6 @@
+﻿ID local,Caso,Prioridad,Observación,Responsable,Estado
+REV08-01,CU-08,Alta,Integración real pendiente,Marco,Abierto
+REV08-02,CU-08,Media,Lista sin refresco al volver de CU-02,Marco,Reproducido
+REV09-01,CU-09,Media,Desbordamiento CP09-15 de 44 píxeles,Pablo,Reproducido
+REV09-02,CU-09,Media,WP.14 con resultados sin completar,Pablo,Abierto
+REVINT-01,CU-08 y CU-09,Media,Alinear destino main con develop del PSR,Equipo,Abierto

@@ -55,7 +55,7 @@ void main() {
   );
 
   test(
-    'G02: all ten achievement conditions; activities never complete modules',
+    'G02: ten approved achievements; activities never complete modules',
     () async {
       for (final p in c.practices) {
         await c.saveOrder(p, List.generate(p.steps.length, (i) => i));
@@ -253,6 +253,7 @@ void main() {
     tester,
   ) async {
     await tester.pumpWidget(MaterialApp(home: ActivitiesScreen(controller: c)));
+    await tester.pumpAndSettle();
     await tapVisible(tester, find.text(c.practices.first.title));
     expect(find.text('TU SECUENCIA'), findsOneWidget);
     expect(c.completedPractices, 0);

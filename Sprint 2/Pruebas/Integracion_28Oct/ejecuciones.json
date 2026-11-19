@@ -1,0 +1,74 @@
+[
+  {
+    "check": "dependencias",
+    "command": [
+      "C:/Users/bolis/flutter/flutter/bin/cache/dart-sdk/bin/dart.exe",
+      "C:/Users/bolis/flutter/flutter/bin/cache/flutter_tools.snapshot",
+      "--no-version-check",
+      "--suppress-analytics",
+      "pub",
+      "get",
+      "--offline"
+    ],
+    "started_utc": "2026-10-29T01:14:33.642428+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "pruebas",
+    "command": [
+      "C:/Users/bolis/flutter/flutter/bin/cache/dart-sdk/bin/dart.exe",
+      "C:/Users/bolis/flutter/flutter/bin/cache/flutter_tools.snapshot",
+      "--no-version-check",
+      "--suppress-analytics",
+      "test",
+      "--no-pub",
+      "--reporter",
+      "expanded",
+      "test/"
+    ],
+    "started_utc": "2026-10-29T01:14:35.964828+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "analisis",
+    "command": [
+      "C:/Users/bolis/flutter/flutter/bin/cache/dart-sdk/bin/dart.exe",
+      "C:/Users/bolis/flutter/flutter/bin/cache/flutter_tools.snapshot",
+      "--no-version-check",
+      "--suppress-analytics",
+      "analyze",
+      "--no-pub"
+    ],
+    "started_utc": "2026-10-29T01:14:47.102604+00:00",
+    "exit_code": 1
+  },
+  {
+    "check": "heredados",
+    "command": [
+      "C:/Users/bolis/flutter/flutter/bin/cache/dart-sdk/bin/dart.exe",
+      "C:/Users/bolis/flutter/flutter/bin/cache/flutter_tools.snapshot",
+      "--no-version-check",
+      "--suppress-analytics",
+      "test",
+      "--no-pub",
+      "--reporter",
+      "expanded",
+      "tool/verifications/defects_sprint01_verification_test.dart"
+    ],
+    "started_utc": "2026-10-29T01:14:52.177313+00:00",
+    "exit_code": 0
+  },
+  {
+    "check": "analisis_final",
+    "command": [
+      "C:/Users/bolis/flutter/flutter/bin/cache/dart-sdk/bin/dart.exe",
+      "C:/Users/bolis/flutter/flutter/bin/cache/flutter_tools.snapshot",
+      "--no-version-check",
+      "--suppress-analytics",
+      "analyze",
+      "--no-pub"
+    ],
+    "exit_code": 0,
+    "executed_utc": "2026-10-29T01:22:56.202212+00:00"
+  }
+]

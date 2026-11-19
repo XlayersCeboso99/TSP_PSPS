@@ -1,0 +1,31 @@
+Resolving dependencies...
+Downloading packages...
+  cupertino_icons 1.0.9 (2.0.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  shared_preferences_android 2.4.28 (2.5.4 available)
+  shared_preferences_foundation 2.5.7 (2.6.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.2 (2.4.3 available)
+  vm_service 15.3.0 (15.4.0 available)
+  web 1.1.1 (1.1.2 available)
+Got dependencies!
+9 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu09_search_test.dart
+00:00 +0: CP09-01 (TU-09-01): ┬½clase┬╗ finds CT-08 by title, then CT-07 by content
+00:00 +1: CP09-02 (TU-09-02): case and outer spaces do not change results
+00:00 +2: CP09-03 (TU-09-03): accents are ignored and ├▒ is kept
+00:00 +3: CP09-04 (TU-09-04): fewer than 3 characters does not search (A2)
+00:00 +4: CP09-05 (TU-09-05): a word that is not in the catalog has no results
+00:00 +5: CP09-06 (TU-09-06): questions, options, explanations and activities are not searched
+00:00 +6: CP09-07: one result per lesson; a title match is listed only under titles
+00:00 +7: CP09-08: phrases match across repeated spaces and line breaks; snippets are one line
+00:00 +8: CP09-09: the highlighted range is the match; snippet is short
+00:00 +9: CP09-10 (TW-09-01): type ┬½clase┬╗, see route and status, open CT-08 without progress
+00:01 +10: CP09-11 (TW-09-02): no results (A1), search can be changed, Explore returns home
+00:02 +11: CP09-12: cancel goes back without changes (A3)
+00:02 +12: CP09-13: one result uses the singular and shows the progress status
+00:02 +13: CP09-14: empty catalog reports the error and allows retry (E1)
+00:03 +14: CP09-15: results fit a 320 x 640 screen with enlarged text
+00:03 +15: All tests passed!

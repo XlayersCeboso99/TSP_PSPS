@@ -1,0 +1,75 @@
+Resolving dependencies...
+Downloading packages...
+  cupertino_icons 1.0.9 (2.0.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  shared_preferences_android 2.4.28 (2.5.3 available)
+  shared_preferences_foundation 2.5.7 (2.6.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.2 (2.4.3 available)
+  vm_service 15.3.0 (15.4.0 available)
+  web 1.1.1 (1.1.2 available)
+Got dependencies!
+9 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+Running Gradle task 'assembleDebug'...                          
+WARNING: A restricted method in java.lang.System has been called
+WARNING: java.lang.System::load has been called by net.rubygrapefruit.platform.internal.NativeLibraryLoader in an unnamed module (file:/C:/Users/sebas/.gradle/wrapper/dists/gradle-9.3.1-all/9ot9r568e8zfvvd4mn8rbu1j0/gradle-9.3.1/lib/native-platform-0.22-milestone-29.jar)
+WARNING: Use --enable-native-access=ALL-UNNAMED to avoid a warning for callers in this module
+WARNING: Restricted methods will be blocked in a future release unless native access is enabled
+
+Running Gradle task 'assembleDebug'...                            260.0s
+√ Built build\app\outputs\flutter-apk\app-debug.apk
+Installing build\app\outputs\flutter-apk\app-debug.apk...           5.5s
+W/libc    ( 6191): Access denied finding property "vendor.mesa.virtgpu.kumquat"
+D/WindowOnBackDispatcher( 6191): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@bd9a11
+I/WindowExtensionsImpl( 6191): Initializing Window Extensions, vendor API level=10, activity embedding enabled=true
+W/UiContextUtils( 6191): Requested context is a non-UI Context. Creating a UI-Context with display: 0. Context: Context=android.app.Application@7059ceb, of which baseContext=android.app.ContextImpl@1d7e675
+D/VRI[MainActivity]( 6191): WindowInsets changed: 390x844 statusBars:[0,24,0,0] navigationBars:[0,0,0,24] mandatorySystemGestures:[0,32,0,32] 
+D/FlutterRenderer( 6191): Width is zero. 0,0
+I/Surface ( 6191): Creating surface for consumer unnamed-6191-0 with slotExpansion=1 for 64 slots
+I/Surface ( 6191): Creating surface for consumer VRI[MainActivity]#0(BLAST Consumer)0 with slotExpansion=1 for 64 slots
+D/FlutterJNI( 6191): Sending viewport metrics to the engine.
+I/Surface ( 6191): Creating surface for consumer unnamed-6191-1 with slotExpansion=1 for 64 slots
+I/Surface ( 6191): Creating surface for consumer 7fc0757 SurfaceView[mx.edu.uaz.psps.integration/mx.edu.uaz.psps.integration.MainActivity]#1(BLAST Consumer)1 with slotExpansion=1 for 64 slots
+I/sps.integration( 6191): Compiler allocated 5239KB to compile void android.view.ViewRootImpl.performTraversals(long)
+I/Choreographer( 6191): Skipped 53 frames!  The application may be doing too much work on its main thread.
+D/WindowLayoutComponentImpl( 6191): Register WindowLayoutInfoListener on Context=mx.edu.uaz.psps.integration.MainActivity@7143c62, of which baseContext=android.app.ContextImpl@5ecf5ba
+D/ProfileInstaller( 6191): Installing profile for mx.edu.uaz.psps.integration
+D/FlutterJNI( 6191): Sending viewport metrics to the engine.
+VMServiceFlutterDriver: Connecting to Flutter application at http://127.0.0.1:54817/IiChlTFCFao=/
+VMServiceFlutterDriver: Isolate found with number: 1795322047614431
+VMServiceFlutterDriver: Isolate 1795322047614431 is runnable.
+VMServiceFlutterDriver: Isolate is paused at start.
+VMServiceFlutterDriver: Attempting to resume isolate
+I/flutter ( 6191): 00:00 +0: TI10-01: consult native totals offline without duplicate rewards
+VMServiceFlutterDriver: Connected to Flutter application.
+I/Choreographer( 6191): Skipped 34 frames!  The application may be doing too much work on its main thread.
+D/InsetsController( 6191): hide(ime())
+I/ImeTracker( 6191): mx.edu.uaz.psps.integration:94edf7: onCancelled at PHASE_CLIENT_ALREADY_HIDDEN
+D/FlutterJNI( 6191): Sending viewport metrics to the engine.
+I/Surface ( 6191): Creating surface for consumer unnamed-6191-2 with slotExpansion=1 for 64 slots
+I/Surface ( 6191): Creating surface for consumer ImageReader-390x844f1m3-6191-0 with slotExpansion=1 for 64 slots
+D/WindowOnBackDispatcher( 6191): setTopOnBackInvokedCallback (unwrapped): io.flutter.embedding.android.FlutterActivity$1@4bb1cd4
+D/WindowOnBackDispatcher( 6191): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@bd9a11
+D/WindowOnBackDispatcher( 6191): setTopOnBackInvokedCallback (unwrapped): io.flutter.embedding.android.FlutterActivity$1@4bb1cd4
+VMServiceFlutterDriver: request_data message is taking a long time to complete...
+D/WindowOnBackDispatcher( 6191): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@bd9a11
+D/WindowOnBackDispatcher( 6191): setTopOnBackInvokedCallback (unwrapped): io.flutter.embedding.android.FlutterActivity$1@4bb1cd4
+D/WindowOnBackDispatcher( 6191): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@bd9a11
+D/WindowOnBackDispatcher( 6191): setTopOnBackInvokedCallback (unwrapped): io.flutter.embedding.android.FlutterActivity$1@4bb1cd4
+D/WindowOnBackDispatcher( 6191): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@bd9a11
+D/WindowOnBackDispatcher( 6191): setTopOnBackInvokedCallback (unwrapped): io.flutter.embedding.android.FlutterActivity$1@4bb1cd4
+D/WindowOnBackDispatcher( 6191): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@bd9a11
+D/WindowOnBackDispatcher( 6191): setTopOnBackInvokedCallback (unwrapped): io.flutter.embedding.android.FlutterActivity$1@4bb1cd4
+D/WindowOnBackDispatcher( 6191): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@bd9a11
+D/WindowOnBackDispatcher( 6191): setTopOnBackInvokedCallback (unwrapped): io.flutter.embedding.android.FlutterActivity$1@4bb1cd4
+D/WindowOnBackDispatcher( 6191): setTopOnBackInvokedCallback (unwrapped): android.app.Activity$$ExternalSyntheticLambda0@bd9a11
+D/WindowOnBackDispatcher( 6191): setTopOnBackInvokedCallback (unwrapped): io.flutter.embedding.android.FlutterActivity$1@4bb1cd4
+E/ConsumerBase( 6191): [ImageReader-390x844f1m3-6191-0] abandonLocked: ConsumerBase is abandoned!
+I/flutter ( 6191): 00:14 +1: (tearDownAll)
+I/flutter ( 6191): 00:15 +2: All tests passed!
+All tests passed.
+Leaving the application running.
+Evidencias: C:\Users\sebas\OneDrive\Carpetas Drive\Documentos\ChatGPT\TSP\repos\TSP_PSPS\Sprint 2\Pruebas\CU10
+Copia de pruebas: C:\Users\sebas\AppData\Local\Temp\psps-s2-android-78d643d94ec54e1b9d29cb556761e1a2

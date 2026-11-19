@@ -1,0 +1,14 @@
+{
+  "fecha_ejecucion": "2026-10-25T19:28:15.4041339-06:00",
+  "fecha_planeada_54": "2026-10-26",
+  "fecha_planeada_61_62": "2026-10-27",
+  "base_commit": "df315f5173d2a41ce7f59e94d187bae96a84b6d2",
+  "almacenamiento_unitarias": "MemoryStore y DelayedStore simulados",
+  "plataforma_widgets": "Flutter tester en Windows",
+  "integracion_android": "Preparada; no ejecutada en esta revisión",
+  "analisis_exit_code": 0,
+  "tarea54_exit_code": 0,
+  "regresion_exit_code": 0,
+  "tarea61_exit_code": 1,
+  "doctor_exit_code": 0
+}

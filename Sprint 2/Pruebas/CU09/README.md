@@ -12,10 +12,10 @@ Responsable: Pablo Valentín Varela Rivera. Fecha técnica: 25/10/2026. Rama: `f
 
 | Verificación | Resultado |
 | --- | --- |
-| Análisis Flutter | RESULTADO_ANALISIS |
-| CU-09 | RESULTADO_CU09 de 15 |
-| Suite completa | RESULTADO_REGRESION |
-| Android | RESULTADO_TI09 |
+| Análisis Flutter | Sin incidencias |
+| CU-09 | 15 aprobadas de 15 |
+| Suite completa | 67 aprobadas |
+| Android | pendiente de ejecutar en Android sin red (pruebas de integración, T10) |
 
 La lupa, la pantalla de búsqueda y ContentSearch proceden de la aplicación integrada publicada por Francisco (FireBoss12). Esta entrega completa CU-09 según su especificación y el diseño S2-36: frases con espacios o saltos de línea, regla única de 3 caracteres, singular en el conteo, claves de prueba, 15 pruebas específicas y la prueba en Android sin red. No se altera el contenido curricular ni el formato guardado.
 

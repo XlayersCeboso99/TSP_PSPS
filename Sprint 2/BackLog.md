@@ -47,9 +47,9 @@ Estados: ✅ Terminado · 🔄 En proceso · ⬜ Pendiente
 | S2-10 | Día de gamificación: consolidar el catálogo (G-01 a G-03) y preparar la presentación a la cliente | D-02; G-01–G-03 | T04 (SI.02.03) | 1 | 20/10 | 20/10 | ⬜ Pendiente | Catálogo de gamificación (SRS §5.2) |
 | S2-11 | Día de gamificación: registrar la decisión de la cliente sobre el catálogo en la minuta MR-09 y actualizar D-02 | D-02 | T04 (SI.02.03) | 0.75 | 20/10 | 20/10 | ⬜ Pendiente | Minuta MR-09 (WP.05) |
 | S2-12 | Actualizar Project Plan: sección de riesgos y calendario si se aprueba CR-02 | Auditoría S1: PM-6, a) | T01 (PM.01.08) | 1.5 | 21/10 | 21/10 | ⬜ Pendiente | Project Plan v1.1 (WP.07) |
-| S2-13 | Construir CU-07 en rama feature/CU-07-repaso | CU-07 | T07 (SI.04.02) | 7.25 | 21/10 | 26/10 | ⬜ Pendiente | Componentes (WP.11) |
+| S2-13 | Construir CU-07 en rama feature/CU-07-repaso | CU-07 | T07 (SI.04.02) | 7.25 | 21/10 | 26/10 | ✅ Terminado (técnico) | [Componentes WP.11](Construccion/CU07/PSPS_Componentes_CU07_WP11_Sprint02_TSP_Ago26.pdf) |
 | S2-14 | Actualizar PSR: avance, CPI por tarea y desviaciones | Sprint 02 | T14 (PM.03.01) | 0.75 | 26/10 | 26/10 | ⬜ Pendiente | Progress Status Record (WP.06) |
-| S2-15 | Pruebas unitarias y de widgets de CU-07; corregir defectos | CU-07, CA-10 | T08 (SI.04.03–.04) | 2.5 | 26/10 | 27/10 | ⬜ Pendiente | Casos de prueba (WP.14) |
+| S2-15 | Pruebas unitarias y de widgets de CU-07; corregir defectos | CU-07, CA-10 | T08 (SI.04.03–.04) | 2.5 | 26/10 | 27/10 | ✅ Terminado (técnico) | [Casos de prueba WP.14](Pruebas/CU07/PSPS_CasosPrueba_CU07_WP14_Sprint02_TSP_Ago26.pdf) |
 | S2-16 | Revisión de código por pares (pull requests de CU-08 y CU-09) | CU-08, CU-09 | T06 (SI.03.02) | 1.5 | 27/10 | 27/10 | ⬜ Pendiente | Registro de revisión |
 | S2-17 | Integrar CU-07 en develop (pull request revisado) | CU-07 | T09 (SI.05.03) | 0.75 | 27/10 | 28/10 | ⬜ Pendiente | Software integrado (WP.10) |
 | S2-18 | Avance de la Guía de operación: secciones de CU-07 a CU-10 y gamificación | Agreement §6 | T12 (SI.06.02) | 1.75 | 28/10 | 28/10 | ⬜ Pendiente | Guía de operación (WP.13) |

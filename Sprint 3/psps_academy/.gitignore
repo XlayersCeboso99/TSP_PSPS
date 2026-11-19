@@ -1,0 +1,53 @@
+# Local Flutter output and machine-specific configuration.
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+coverage/
+android/.gradle/
+android/local.properties
+android/gradlew
+android/gradlew.bat
+android/gradle/wrapper/gradle-wrapper.jar
+android/key.properties
+android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+*.jks
+*.keystore
+ios/Flutter/Generated.xcconfig
+ios/Flutter/flutter_export_environment.sh
+ios/Flutter/ephemeral/
+ios/Runner/GeneratedPluginRegistrant.*
+ios/Pods/
+ios/.symlinks/
+*.apk
+
+# Android build intermediates and Kotlin caches.
+android/.kotlin/
+android/app/.cxx/
+android/captures/
+
+# Build artifacts that must not be versioned.
+*.aab
+*.ipa
+
+# Evidence produced locally by test drivers (see docs/TESTING.md).
+/evidence/
+
+# Credentials and private environment files.
+.env
+.env.*
+*.pem
+google-services.json
+GoogleService-Info.plist
+
+# Editors and OS files.
+.idea/
+*.iml
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+
+# Crash logs written in the project root by external tools.
+/debug.log

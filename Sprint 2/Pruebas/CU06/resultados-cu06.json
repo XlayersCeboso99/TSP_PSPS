@@ -1,0 +1,33 @@
+{"protocolVersion":"0.1.1","runnerVersion":null,"pid":24060,"type":"start","time":0}
+{"suite":{"id":0,"platform":"vm","path":"C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu06_achievements_test.dart"},"type":"suite","time":0}
+{"test":{"id":1,"name":"loading C:/Users/vpabl/TSP_PSPS/Sprint 2/psps_academy/test/cu06_achievements_test.dart","suiteID":0,"groupIDs":[],"metadata":{"skip":false,"skipReason":null},"line":null,"column":null,"url":null},"type":"testStart","time":1}
+{"count":1,"time":5,"type":"allSuites"}
+{"testID":1,"result":"success","skipped":false,"hidden":true,"type":"testDone","time":3264}
+{"group":{"id":2,"suiteID":0,"parentID":null,"name":"","metadata":{"skip":false,"skipReason":null},"testCount":13,"line":null,"column":null,"url":null},"type":"group","time":3267}
+{"test":{"id":3,"name":"CP06-01: catalog G-02 (L-01 to L-11) and G-03 (U-00 to U-03)","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":62,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu06_achievements_test.dart"},"type":"testStart","time":3267}
+{"testID":3,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":3299}
+{"test":{"id":4,"name":"CP06-02: A1 without achievements; consulting writes nothing","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":106,"root_column":3,"root_url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu06_achievements_test.dart"},"type":"testStart","time":3300}
+{"testID":4,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":4403}
+{"test":{"id":5,"name":"CP06-03: L-01 with the first answer, even incorrect; L-02 with a full lesson; dated once","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":129,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu06_achievements_test.dart"},"type":"testStart","time":4404}
+{"testID":5,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":4414}
+{"test":{"id":6,"name":"CP06-04: L-03, L-04 and L-05 by activities; Ocean unlocked; achievements give no points","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":154,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu06_achievements_test.dart"},"type":"testStart","time":4414}
+{"testID":6,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":4424}
+{"test":{"id":7,"name":"CP06-05: one achievement per module and L-11 with all; Sunset and Night unlock","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":180,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu06_achievements_test.dart"},"type":"testStart","time":4424}
+{"testID":7,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":4434}
+{"test":{"id":8,"name":"CP06-06: L-10 after 3 correct reviews of wrong answers; 2 are not enough","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":202,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu06_achievements_test.dart"},"type":"testStart","time":4434}
+{"testID":8,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":4441}
+{"test":{"id":9,"name":"CP06-07: if saving fails nothing is awarded; retry awards once","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":231,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu06_achievements_test.dart"},"type":"testStart","time":4442}
+{"testID":9,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":4447}
+{"test":{"id":10,"name":"CP06-08: each achievement shows name, met condition and date or «Fecha no disponible» (CA-06)","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":246,"root_column":3,"root_url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu06_achievements_test.dart"},"type":"testStart","time":4447}
+{"testID":10,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":4569}
+{"test":{"id":11,"name":"CP06-09: the reward notice appears once (CA-06b)","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":296,"root_column":3,"root_url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu06_achievements_test.dart"},"type":"testStart","time":4570}
+{"testID":11,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":4745}
+{"test":{"id":12,"name":"CP06-10: locked theme cannot be used; chosen one is «En uso», persists and changes nothing else (CA-07)","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":335,"root_column":3,"root_url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu06_achievements_test.dart"},"type":"testStart","time":4745}
+{"testID":12,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":4948}
+{"test":{"id":13,"name":"CP06-11: data saved before L-10 loads; L-10 appears without date, no write and no notice","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":374,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu06_achievements_test.dart"},"type":"testStart","time":4948}
+{"testID":13,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":4953}
+{"test":{"id":14,"name":"CP06-12: an achievement saved without its condition is rejected without overwriting","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":398,"column":3,"url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu06_achievements_test.dart"},"type":"testStart","time":4953}
+{"testID":14,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":4957}
+{"test":{"id":15,"name":"CP06-13: «Logros» opens from «Mi progreso» on a narrow screen with large text","suiteID":0,"groupIDs":[2],"metadata":{"skip":false,"skipReason":null},"line":174,"column":5,"url":"package:flutter_test/src/widget_tester.dart","root_line":416,"root_column":3,"root_url":"file:///C:/Users/vpabl/TSP_PSPS/Sprint%202/psps_academy/test/cu06_achievements_test.dart"},"type":"testStart","time":4957}
+{"testID":15,"result":"success","skipped":false,"hidden":false,"type":"testDone","time":5313}
+{"success":true,"type":"done","time":5363}

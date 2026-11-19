@@ -1,0 +1,417 @@
+{
+  "base": "df315f5173d2a41ce7f59e94d187bae96a84b6d2",
+  "ramas_revisadas": {
+    "05": {
+      "branch": "feature/CU-05-modulos",
+      "commit": "8e03d0fe113a4202c7fae8f44b6e5473fa4b2569",
+      "incorporada_en_candidata": true
+    },
+    "06": {
+      "branch": "feature/CU-06-logros",
+      "commit": "6ccb343016b6d7f4a5cc4bb813b8dc5e80e50daa",
+      "incorporada_en_candidata": false
+    },
+    "07": {
+      "branch": "feature/CU-07-repaso",
+      "commit": "e8c44746b26dc8607b2c0868f19f9742295b08a7",
+      "incorporada_en_candidata": false
+    },
+    "08": {
+      "branch": "feature/CU-08-actividades",
+      "commit": "348d8371abe8f6151cd0b0344a2919523b7d14b1",
+      "incorporada_en_candidata": false
+    },
+    "09": {
+      "branch": "feature/CU-09-busqueda",
+      "commit": "95187d14224d065d520c4e6dff9498c295836fe4",
+      "incorporada_en_candidata": false
+    },
+    "10": {
+      "branch": "feature/CU-10-puntos",
+      "commit": "c28a51afbccee750ac57346756cf2870e3464bf0",
+      "incorporada_en_candidata": true
+    },
+    "fix": {
+      "branch": "fix",
+      "commit": "28e13745b19a7c1793a42b91d9ee8478d5c3c56a",
+      "incorporada_en_candidata": false
+    }
+  },
+  "sha256_dart": {
+    "Sprint 2/psps_academy/integration_test/cu05_offline_test.dart": "fc65123e7c7789df724e29c6d3ae422192f03b6a1441e289d0bd9e1dd6922bdb",
+    "Sprint 2/psps_academy/integration_test/cu10_offline_test.dart": "a12567a826ad5dfdf7023adf01a2107ee035b84c20df577846d7937e61b73b7a",
+    "Sprint 2/psps_academy/integration_test/evidence_test.dart": "3df431f0e3a313f41868ef35287175d58047ce5dc149588bbf49f79b0ad5094d",
+    "Sprint 2/psps_academy/integration_test/offline_test.dart": "89507ec6d269432093cd1c15b3664e5addb1393f5f60e7670cb5ae93f5a60d45",
+    "Sprint 2/psps_academy/integration_test/sprint2_design_test.dart": "7aa182bff196ab2d083222511956ffb4f76362f75ea7588ae20716a6db1ce13f",
+    "Sprint 2/psps_academy/lib/data/catalog.dart": "e7f5a7350ebf479637c90f33209e06203794366af4b0a8bf9de2b45edd0e818e",
+    "Sprint 2/psps_academy/lib/data/catalog_validation.dart": "9584850c850ec8fe3440f9c3421a20ce7837a40c6770240fd3df377024dd706f",
+    "Sprint 2/psps_academy/lib/data/progress_store.dart": "df2c5c23bff0a4587dc5df9a665babced76463c5d0f2d109cd5acea4dbcf26b8",
+    "Sprint 2/psps_academy/lib/domain/content_search.dart": "c325cc4990b485b8192f93cbba15fe3a938f8cbe7aa1b62574a267bfc74661b2",
+    "Sprint 2/psps_academy/lib/domain/course.dart": "58667dd63874c13d3052f6d8ee5ca26a4db111283650c3ba231eafc4239a61e9",
+    "Sprint 2/psps_academy/lib/domain/gamification.dart": "452ff2647fff56756085323f54f15e8b118fc15266e1c6eda1676503c4a3990b",
+    "Sprint 2/psps_academy/lib/domain/learning_controller.dart": "d8743fa348cff97532a040aeea8345b412020e33a2904187684d44592e3554fe",
+    "Sprint 2/psps_academy/lib/main.dart": "0e8fce01f9781f319d4c484824a5f4085df675234d7dea57890649f254e97fd4",
+    "Sprint 2/psps_academy/lib/ui/app.dart": "adea42ba4a865d2b868812cfe8715a56d36f4f9f9ba7c941f42aa38e2ad74ca1",
+    "Sprint 2/psps_academy/lib/ui/review_screens.dart": "f8b4f35c55825b8d04a074ac10b0ff45fb1196594f95d57ef9be93ca016610a1",
+    "Sprint 2/psps_academy/lib/ui/sprint2_screens.dart": "0f43649a95cd0c663363590d8ff67018791a75b185210b8cd38ea864e59aeb9e",
+    "Sprint 2/psps_academy/test/app_test.dart": "822d51e2f489f7e176cc21e5c51ed146ff5e4e552ac5863053b2f4e315a5f1be",
+    "Sprint 2/psps_academy/test/audit_evidence_test.dart": "9e1c8e4ec5871b3e74d776094604abe8b940bb3d91300ddd781b64c4eb78dee0",
+    "Sprint 2/psps_academy/test/catalog_integrity_test.dart": "a980b160ee61fea722b3841f3a4e643db465759a80da6dabe4596b4dfec14f3f",
+    "Sprint 2/psps_academy/test/module_exploration_test.dart": "8dd92b7aae88772b701191c7132591fa700749b6254dd491b00340ab444ea1bb",
+    "Sprint 2/psps_academy/test/points_consultation_test.dart": "9a9bed1b04f066216d5c88b62e544cbf76b00173ae312d00194d9692efbdc2cb",
+    "Sprint 2/psps_academy/test/progress_test.dart": "604ce604dab09d1c12ef1cdf06df04b9782ee4fe46699d6188994ec5f63bface",
+    "Sprint 2/psps_academy/test/review_test.dart": "036a7e11aa97fc66040f30e45c454121c28ede8f76c26dcbf106bb3f09234bbc",
+    "Sprint 2/psps_academy/test/sprint2_test.dart": "cdfb1c28034a524abc64c7b9a2ea81bd434399fd03b508d739cdcd2e50737ddf",
+    "Sprint 2/psps_academy/test/support.dart": "682755f63a09fd4920ba0e7ab5dc2389e56ba2d43af261c742d04fe17f56a64e",
+    "Sprint 2/psps_academy/test/wp14_cu05_cu10_test.dart": "e1bf48f015873cd55f2f2e6c9da56c94c322fd6cee3ba5588577e2b998600833",
+    "Sprint 2/psps_academy/test_driver/design_driver.dart": "c07eb3c172218faab8399aea1c77d8de4088c408a6e1fef62069cc944225d377",
+    "Sprint 2/psps_academy/test_driver/evidence_driver.dart": "f3ccd3ccfa80429bb0783684e299a9fd113c9c15b1d67477125369a4dee7c4b6",
+    "Sprint 2/psps_academy/tool/verifications/defects_sprint01_verification_test.dart": "4c6fbb10a1682e24b37067c47a26f4e4f88f3e81a75a9fd68d67826960aec4b4"
+  },
+  "tarea54": [
+    {
+      "id": "CP05-01",
+      "name": "CP05-01: catalog contains CT-01 through CT-10 once in its hierarchy",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP05-02",
+      "name": "CP05-02: consulting the hierarchy preserves progress and rewards",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP05-03",
+      "name": "CP05-03: Home lists every module and its subject area",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP05-04",
+      "name": "CP05-04: the last module is accessible without completing the first",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP05-05",
+      "name": "CP05-05: each module shows only its own topics and subtopics",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP05-06",
+      "name": "CP05-06: opening a topic and its content does not complete it",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP05-07",
+      "name": "CP05-07: module badges distinguish all three states by text and icon",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP05-08",
+      "name": "CP05-08: changing modules and reopening preserves the saved state",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP05-09",
+      "name": "CP05-09: failed loading is reported and retry does not overwrite saved data",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP05-10",
+      "name": "CP05-10: narrow screens and enlarged text allow free exploration",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP05-11",
+      "name": "CP05-11: the module list uses catalog counts and supports a fifth module",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP05-12",
+      "name": "CP05-12: an empty catalog is reported without invented modules",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP10-01",
+      "name": "CP10-01: absent rewards mean zero without creating a saved value",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP10-02",
+      "name": "CP10-02: every eligible activity has a unique nonempty ID",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP10-03",
+      "name": "CP10-03: three total queries return 30 and preserve the entire snapshot",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP10-04",
+      "name": "CP10-04: incomplete activity does not earn points or complete progress",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP10-05",
+      "name": "CP10-05: one reward per saved ID; two distinct activities earn 20",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP10-06",
+      "name": "CP10-06: failed save awards nothing; retry commits exactly once",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP10-07",
+      "name": "CP10-07: pending storage does not expose a reward or accept a duplicate",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP10-08",
+      "name": "CP10-08: questions, module completion and review give no G-01 points",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP10-09",
+      "name": "CP10-09: v1/v2 recover historical points in memory without a write",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP10-10",
+      "name": "CP10-10: inconsistent stored total is rejected and preserved",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP10-11",
+      "name": "CP10-11: zero total is visible with G-01 and academic distinction",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP10-12",
+      "name": "CP10-12: entering and leaving from Home and Progress preserves 20",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP10-13",
+      "name": "CP10-13: pending load is distinct from a zero balance",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP10-14",
+      "name": "CP10-14: failed reading hides the total and retry restores 20",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP10-15",
+      "name": "CP10-15: visible total updates only after a successful save",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CP10-16",
+      "name": "CP10-16: total has an accessible label and fits narrow enlarged text",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "TG-S2-006",
+      "name": "TG-S2-006: consulting and reviewing preserve a confirmed total of 20",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "TG-S2-007",
+      "name": "TG-S2-007: reopening restores 10 and the rewarded ID without duplication",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "TU-S2-001",
+      "name": "TU-S2-001: CT-01 to CT-10 appear once in the local catalog",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "TU-S2-002",
+      "name": "TU-S2-002: independent module/topic/subtopic relationships are preserved",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "TU-S2-003",
+      "name": "TU-S2-003: catalog queries preserve three answers and 20 saved points",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "TU-S2-004",
+      "name": "TU-S2-004: later modules are accessible with no prior progress",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "TU-S2-005",
+      "name": "TU-S2-005: ambiguous catalog relationships are reported without modifying saved data",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "TU-S2-030",
+      "name": "TU-S2-030: absent local rewards return zero without a write",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "TU-S2-031",
+      "name": "TU-S2-031: two distinct confirmed activities produce a saved total of 20",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "TU-S2-032",
+      "name": "TU-S2-032: repeated total queries do not change 30 saved points",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "TU-S2-033",
+      "name": "TU-S2-033: the points query returns a total without requiring history or dates",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "TU-S2-034",
+      "name": "TU-S2-034: reading failure remains distinguishable from a zero balance",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CAT-01",
+      "name": "CAT-01: duplicate question identities cannot merge unrelated progress",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CAT-02",
+      "name": "CAT-02: out-of-range correct answers are rejected",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "CAT-03",
+      "name": "CAT-03: invalid catalog shows an error and preserves saved data",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    }
+  ],
+  "tarea61": [
+    {
+      "id": "VER-H-01",
+      "name": "VER-H-01: answered questions offer the documented repeat action",
+      "result": "failure",
+      "raw_result": "error",
+      "errors": [
+        "Test failed. See exception logs above.\nThe test description was: VER-H-01: answered questions offer the documented repeat action"
+      ]
+    },
+    {
+      "id": "VER-D-S1-01",
+      "name": "VER-D-S1-01: duplicate catalog IDs are rejected before content is exposed",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    },
+    {
+      "id": "VER-D-S1-02",
+      "name": "VER-D-S1-02: activity presentation is not the canonical or reversed order",
+      "result": "failure",
+      "raw_result": "error",
+      "errors": [
+        "Test failed. See exception logs above.\nThe test description was: VER-D-S1-02: activity presentation is not the canonical or reversed order"
+      ]
+    },
+    {
+      "id": "VER-D-S1-03",
+      "name": "VER-D-S1-03: progress list uses a clock for a partially answered topic",
+      "result": "failure",
+      "raw_result": "error",
+      "errors": [
+        "Test failed. See exception logs above.\nThe test description was: VER-D-S1-03: progress list uses a clock for a partially answered topic"
+      ]
+    },
+    {
+      "id": "VER-D-S1-04",
+      "name": "VER-D-S1-04: the fifth module does not overflow the icon array",
+      "result": "success",
+      "raw_result": "success",
+      "errors": []
+    }
+  ]
+}

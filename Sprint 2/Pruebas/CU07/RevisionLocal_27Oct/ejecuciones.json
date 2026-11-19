@@ -1,0 +1,48 @@
+[
+  {
+    "check": "pruebas_cu07",
+    "started_utc": "2026-10-28T01:46:52.403948+00:00",
+    "command": [
+      "C:/Users/bolis/flutter/flutter/bin/cache/dart-sdk/bin/dart.exe",
+      "C:/Users/bolis/flutter/flutter/bin/cache/flutter_tools.snapshot",
+      "--no-version-check",
+      "--suppress-analytics",
+      "test",
+      "--no-pub",
+      "--reporter",
+      "expanded",
+      "test/review_test.dart",
+      "test/review_rewards_regression_test.dart"
+    ],
+    "exit_code": 0
+  },
+  {
+    "check": "regresion_sprint02",
+    "started_utc": "2026-10-28T01:46:56.770948+00:00",
+    "command": [
+      "C:/Users/bolis/flutter/flutter/bin/cache/dart-sdk/bin/dart.exe",
+      "C:/Users/bolis/flutter/flutter/bin/cache/flutter_tools.snapshot",
+      "--no-version-check",
+      "--suppress-analytics",
+      "test",
+      "--no-pub",
+      "--reporter",
+      "expanded",
+      "test/"
+    ],
+    "exit_code": 0
+  },
+  {
+    "check": "analisis_estatico",
+    "started_utc": "2026-10-28T01:47:05.505265+00:00",
+    "command": [
+      "C:/Users/bolis/flutter/flutter/bin/cache/dart-sdk/bin/dart.exe",
+      "C:/Users/bolis/flutter/flutter/bin/cache/flutter_tools.snapshot",
+      "--no-version-check",
+      "--suppress-analytics",
+      "analyze",
+      "--no-pub"
+    ],
+    "exit_code": 0
+  }
+]

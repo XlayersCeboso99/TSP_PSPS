@@ -1,6 +1,6 @@
 # Corrección del defecto D-S1-03: «En progreso» con el mismo ícono que «Sin iniciar» en «Mi progreso»
 
-Responsable: Pablo Valentín Varela Rivera. Entrega técnica: 26/10/2026. Rama: fix/D-S1-03-iconos-progreso. Base: COMMIT_BASE; aplicación Flutter 0.2.0-dev.2+3.
+Responsable: Pablo Valentín Varela Rivera. Entrega técnica: 26/10/2026. Pruebas ejecutadas el 26/10/2026. Rama: fix/D-S1-03-iconos-progreso. Base: main, commit 53355a9913e36a06115ffd10997a519b8660701f; aplicación Flutter 0.2.0-dev.2+3.
 
 ## 1. Defecto
 
@@ -34,15 +34,15 @@ Ejecutable: psps_academy/test/fix_ds103_iconos_progreso_test.dart.
 
 | ID | Nivel | Resultado esperado | Estado |
 | --- | --- | --- | --- |
-| DS103-01 | Lógica | Cada estado tiene un ícono distinto. | ESTADO |
-| DS103-02 | Widget | Las insignias usan el mismo ícono que las listas. | ESTADO |
-| DS103-03 | Widget | En «Mi progreso»: círculo, reloj y palomita, con su texto, para los tres estados. | ESTADO |
+| DS103-01 | Lógica | Cada estado tiene un ícono distinto. | Aprobada |
+| DS103-02 | Widget | Las insignias usan el mismo ícono que las listas. | Aprobada |
+| DS103-03 | Widget | En «Mi progreso»: círculo, reloj y palomita, con su texto, para los tres estados. | Aprobada |
 
 | Verificación | Resultado y ubicación |
 | --- | --- |
-| Análisis | RESULTADO_ANALISIS. Sprint 2/Defectos/D-S1-03/analisis.log. |
-| Pruebas del defecto | RESULTADO_DEFECTO de 3. Sprint 2/Defectos/D-S1-03/pruebas.log. |
-| Regresión completa | RESULTADO_REGRESION. Sprint 2/Defectos/D-S1-03/regresion.log. |
+| Análisis | Sin incidencias. Sprint 2/Defectos/D-S1-03/analisis.log. |
+| Pruebas del defecto | 3 aprobadas de 3. Sprint 2/Defectos/D-S1-03/pruebas.log. |
+| Regresión completa | 55 aprobadas. Sprint 2/Defectos/D-S1-03/regresion.log. |
 
 ## 5. Verificación (ID 61, Sebastián)
 

@@ -1,6 +1,6 @@
 # Corrección del defecto D-S1-02: Elementos de la actividad siempre en orden inverso
 
-Responsable: Pablo Valentín Varela Rivera. Entrega técnica: 26/10/2026. Rama: fix/D-S1-02-orden-actividad. Base: COMMIT_BASE; aplicación Flutter 0.2.0-dev.2+3.
+Responsable: Pablo Valentín Varela Rivera. Entrega técnica: 26/10/2026. Pruebas ejecutadas el 26/10/2026. Rama: fix/D-S1-02-orden-actividad. Base: main, commit 53355a9913e36a06115ffd10997a519b8660701f; aplicación Flutter 0.2.0-dev.2+3.
 
 ## 1. Defecto
 
@@ -35,16 +35,16 @@ Ejecutable: psps_academy/test/fix_ds102_orden_actividad_test.dart.
 
 | ID | Nivel | Resultado esperado | Estado |
 | --- | --- | --- | --- |
-| DS102-01 | Lógica | Cada actividad del catálogo: permutación completa, distinta del orden correcto y del inverso, y estable. | ESTADO |
-| DS102-02 | Lógica | 0, 1 y 2 elementos; 800 identificadores de prueba con 3 a 7 elementos. | ESTADO |
-| DS102-03 | Widget | La pantalla muestra los elementos en el orden de presentación. | ESTADO |
-| DS102-04 | Widget | Elegir el orden correcto sigue completando la actividad. | ESTADO |
+| DS102-01 | Lógica | Cada actividad del catálogo: permutación completa, distinta del orden correcto y del inverso, y estable. | Aprobada |
+| DS102-02 | Lógica | 0, 1 y 2 elementos; 800 identificadores de prueba con 3 a 7 elementos. | Aprobada |
+| DS102-03 | Widget | La pantalla muestra los elementos en el orden de presentación. | Aprobada |
+| DS102-04 | Widget | Elegir el orden correcto sigue completando la actividad. | Aprobada |
 
 | Verificación | Resultado y ubicación |
 | --- | --- |
-| Análisis | RESULTADO_ANALISIS. Sprint 2/Defectos/D-S1-02/analisis.log. |
-| Pruebas del defecto | RESULTADO_DEFECTO de 4. Sprint 2/Defectos/D-S1-02/pruebas.log. |
-| Regresión completa | RESULTADO_REGRESION. Sprint 2/Defectos/D-S1-02/regresion.log. |
+| Análisis | Sin incidencias. Sprint 2/Defectos/D-S1-02/analisis.log. |
+| Pruebas del defecto | 4 aprobadas de 4. Sprint 2/Defectos/D-S1-02/pruebas.log. |
+| Regresión completa | 56 aprobadas. Sprint 2/Defectos/D-S1-02/regresion.log. |
 
 ## 5. Verificación (ID 61, Sebastián)
 

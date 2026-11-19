@@ -1,0 +1,23 @@
+00:00 +0: loading C:/Users/sebas/AppData/Local/Temp/psps-calidad-765b2acc1ebe4c77a8f93f5c7dbbbe48/test/wp14_cu05_cu10_test.dart
+00:00 +0: TU-S2-001: CT-01 to CT-10 appear once in the local catalog
+00:00 +1: TU-S2-002: independent module/topic/subtopic relationships are preserved
+00:00 +2: TU-S2-003: catalog queries preserve three answers and 20 saved points
+00:00 +3: TU-S2-004: later modules are accessible with no prior progress
+00:00 +4: TU-S2-005: ambiguous catalog relationships are reported without modifying saved data
+00:00 +4 -1: TU-S2-005: ambiguous catalog relationships are reported without modifying saved data [E]
+  Expected: false
+    Actual: <true>
+  
+  package:matcher                                     expect
+  package:flutter_test/src/widget_tester.dart 473:18  expect
+  test\wp14_cu05_cu10_test.dart 108:5                 main.<fn>
+  
+00:00 +4 -1: TU-S2-030: absent local rewards return zero without a write
+00:00 +5 -1: TU-S2-031: two distinct confirmed activities produce a saved total of 20
+00:00 +6 -1: TU-S2-032: repeated total queries do not change 30 saved points
+00:00 +7 -1: TU-S2-033: the points query returns a total without requiring history or dates
+00:00 +8 -1: TU-S2-034: reading failure remains distinguishable from a zero balance
+00:00 +9 -1: Some tests failed.
+
+Failing tests:
+  C:/Users/sebas/AppData/Local/Temp/psps-calidad-765b2acc1ebe4c77a8f93f5c7dbbbe48/test/wp14_cu05_cu10_test.dart: TU-S2-005: ambiguous catalog relationships are reported without modifying saved data

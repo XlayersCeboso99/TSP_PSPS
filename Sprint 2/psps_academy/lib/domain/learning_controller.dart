@@ -2,6 +2,7 @@ import 'package:flutter/foundation.dart';
 
 import '../data/progress_store.dart';
 import 'catalog_validation.dart';
+import '../data/catalog_validation.dart' as identity_validation;
 import 'course.dart';
 import 'gamification.dart';
 
@@ -87,6 +88,13 @@ class LearningController extends ChangeNotifier {
       return;
     }
     try {
+      identity_validation.validateCatalog(modules);
+    } on FormatException {
+      loadError = 'Contenido no disponible. El catálogo contiene identificadores o preguntas inválidos. Tus datos guardados se conservan.';
+      notifyListeners();
+      return;
+    }
+    try {
       final state = await store.load();
       final byId = {for (final q in questions) q.id: q};
       for (final entry in state.reviewAnswers.entries) {
@@ -122,13 +130,17 @@ class LearningController extends ChangeNotifier {
         modules,
         state.answers,
         state.practices,
+        state.reviewAnswers,
       );
       if (state.points != null) {
         final rewarded = state.rewardedPractices.toSet();
         if (rewarded.length != state.rewardedPractices.length ||
             !setEquals(rewarded, completed) ||
             state.points != rewarded.length * pointsPerPractice ||
-            !setEquals(state.achievements.keys.toSet(), eligible) ||
+            // Ningún logro guardado sin su condición. Un logro que el avance
+            // ya cumple y no está guardado (p. ej. L-10, agregado después del
+            // formato 3) se reconoce como avance previo, sin fecha (CU-06).
+            !eligible.containsAll(state.achievements.keys) ||
             state.achievements.values.any(
               (date) => date != null && DateTime.tryParse(date) == null,
             ) ||
@@ -204,6 +216,7 @@ class LearningController extends ChangeNotifier {
         practices: _state.practices,
         reviewAnswers: {..._state.reviewAnswers, question.id: index},
       ),
+      // El repaso conserva las recompensas originales.
     );
   }
 
@@ -216,6 +229,7 @@ class LearningController extends ChangeNotifier {
       modules,
       state.answers,
       state.practices,
+      state.reviewAnswers,
     );
     final existing = historical ? state.achievements : _state.achievements;
     final completed = Gamification.completedPracticeIds(

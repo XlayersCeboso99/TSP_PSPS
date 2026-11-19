@@ -1,0 +1,28 @@
+Resolving dependencies...
+Downloading packages...
+  cupertino_icons 1.0.9 (2.0.0 available)
+  material_color_utilities 0.13.0 (0.13.1 available)
+  meta 1.18.3 (1.19.0 available)
+  shared_preferences_android 2.4.28 (2.5.3 available)
+  shared_preferences_foundation 2.5.7 (2.6.0 available)
+  test_api 0.7.12 (0.7.15 available)
+  vector_math 2.4.2 (2.4.3 available)
+  vm_service 15.3.0 (15.4.0 available)
+  web 1.1.1 (1.1.2 available)
+Got dependencies!
+9 packages have newer versions incompatible with dependency constraints.
+Try `flutter pub outdated` for more information.
+00:00 +0: loading C:/Users/bolis/AppData/Local/Temp/psps-cu07-wp14-1c40dbc6/test/review_test.dart
+00:00 +0: TU07-01: only original mistakes in the requested scope appear
+00:00 +1: TU07-02/03/04: retry resolves only review; all progress is preserved
+00:00 +2: TI07-01: last review answer survives reload and subsequent normal writes
+00:00 +3: existing version 1 data migrates without resetting original progress
+00:00 +4: TI07-03: failed save keeps pending and original disk data; retry works
+00:00 +5: invalid or unreadable review data is reported and never overwritten
+00:00 +6: unanswered, correct original and invalid selections cannot be reviewed
+00:00 +7: TW07-01/02: select, fail, retry and save correct with feedback
+00:00 +8: failed storage never shows successful resolution and permits retry
+00:01 +9: leaving with an unsubmitted option stores no review answer
+00:01 +10: TW07-03: both entry points open contextual empty states
+00:01 +11: recovery error shows retry, never a misleading empty list
+00:01 +12: All tests passed!

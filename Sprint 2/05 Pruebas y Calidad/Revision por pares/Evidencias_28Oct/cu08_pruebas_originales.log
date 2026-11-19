@@ -1,0 +1,12 @@
+00:00 +0: loading C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/revision_pr28/pr9_harness/test/cu08_activity_engine_test.dart
+00:00 +0: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/revision_pr28/pr9_harness/test/cu08_activity_engine_test.dart: CU-08 lee sin modificar estado ni otorgar recompensas
+00:00 +1: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/revision_pr28/pr9_harness/test/cu08_activity_engine_test.dart: La primera actividad guardada suma 10, otorga L-03 y U-01
+00:00 +2: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/revision_pr28/pr9_harness/test/cu08_activity_engine_test.dart: Repetir el mismo ID nunca vuelve a recompensar
+00:00 +3: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/revision_pr28/pr9_harness/test/cu08_activity_engine_test.dart: Intento incompleto no guarda ni otorga puntos
+00:00 +4: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/revision_pr28/pr9_harness/test/cu08_activity_engine_test.dart: La quinta actividad distinta concede L-04
+00:00 +5: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/revision_pr28/pr9_harness/test/cu08_activity_engine_test.dart: Al realizar todas las actividades del catálogo concede L-05
+00:00 +6: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/revision_pr28/pr9_harness/test/cu08_activity_engine_test.dart: Fallo de escritura: no confirma recompensa ni muta el estado
+00:00 +7: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/revision_pr28/pr9_harness/test/cu08_activity_engine_test.dart: Dos finalizaciones concurrentes del mismo ID no duplican puntos
+00:00 +8: C:/Users/bolis/Documents/Codex/2026-10-21/seg/work/revision_pr28/pr9_harness/test/cu08_activity_page_test.dart: CU-08: estados visibles, sin escribir, navegación delegada
+00:00 +9: All tests passed!
+

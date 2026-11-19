@@ -1,0 +1,18 @@
+00:00 +0: loading C:/Users/sebas/AppData/Local/Temp/psps-cu10-df2175f6b3954079b225caff89a61dd1/test/points_consultation_test.dart
+00:00 +0: CP10-01: absent rewards mean zero without creating a saved value
+00:00 +1: CP10-02: every eligible activity has a unique nonempty ID
+00:00 +2: CP10-03: three total queries return 30 and preserve the entire snapshot
+00:00 +3: CP10-04: incomplete activity does not earn points or complete progress
+00:00 +4: CP10-05: one reward per saved ID; two distinct activities earn 20
+00:00 +5: CP10-06: failed save awards nothing; retry commits exactly once
+00:00 +6: CP10-07: pending storage does not expose a reward or accept a duplicate
+00:00 +7: CP10-08: questions, module completion and review give no G-01 points
+00:00 +8: CP10-09: v1/v2 recover historical points in memory without a write
+00:00 +9: CP10-10: inconsistent stored total is rejected and preserved
+00:00 +10: CP10-11: zero total is visible with G-01 and academic distinction
+00:07 +11: CP10-12: entering and leaving from Home and Progress preserves 20
+00:10 +12: CP10-13: pending load is distinct from a zero balance
+00:10 +13: CP10-14: failed reading hides the total and retry restores 20
+00:10 +14: CP10-15: visible total updates only after a successful save
+00:10 +15: CP10-16: total has an accessible label and fits narrow enlarged text
+00:11 +16: All tests passed!

@@ -142,13 +142,19 @@ siguen el avance, los puntos, los logros, las notas y el recordatorio.
 
 ## 6. Resultados registrados
 
+> Los valores de esta tabla corresponden a una **compilación de verificación** hecha
+> el 18/11/2026 en la copia de trabajo del agente de integración (cambios aún sin
+> confirmar). **No es el APK oficial.** El APK oficial, su commit, `versionCode`,
+> certificado y SHA-256 se registran en el manifiesto de entrega del Sprint 3
+> (`SHA256SUMS.txt` / notas del GitHub Release) y en `build-info.txt` del CI.
+
 | Verificación | Resultado | Fecha |
 | --- | --- | --- |
 | `flutter pub get --enforce-lockfile` | Correcto con `app_settings 7.0.0`; lock sin cambios | 18/11/2026 |
 | `flutter build apk --release` | Compila en 241 s; APK de 53 642 944 bytes (51.2 MB) | 18/11/2026 |
 | `aapt2 dump badging` | `mx.edu.uaz.psps`, `versionCode 7`, `versionName 0.3.0`, compileSdk 36, minSdk 24, targetSdk 36 | 18/11/2026 |
 | `apksigner verify --print-certs` | Verifica con esquema v2; certificado `CN=Android Debug` | 18/11/2026 |
-| SHA-256 del APK | `6608b4f70eaf43c1933fa78eafebb4619cc2353222d08d40a79dabc8285f22e0` | 18/11/2026 |
+| SHA-256 del APK (verificación, no oficial) | `6608b4f70eaf43c1933fa78eafebb4619cc2353222d08d40a79dabc8285f22e0` | 18/11/2026 |
 | SHA-256 del certificado | `c48a4c7d3caa49f133b6b6a32ae2faa8c3c7adfd6c089257a7b0fe51d3c510e2` | 18/11/2026 |
 | `flutter test` | Ver detalle en el informe del cierre del Sprint 3 | 18/11/2026 |
 | Pruebas en dispositivo | **No ejecutadas** (ver §7) | — |

@@ -63,3 +63,8 @@ jobs:
 
       - name: Inherited Sprint 1 verifications
         run: flutter test tool/verifications/defects_sprint01_verification_test.dart
+
+      # Genera los bytes con los escritores originales de Sprint 2/psps_academy
+      # (solo lectura) y los compara con las fixtures de test/regression/.
+      - name: Sprint 2 data-format provenance
+        run: flutter test tool/verifications/tsp_sprint2_fixture_origin_test.dart

@@ -143,8 +143,7 @@ siguen el avance, los puntos, los logros, las notas y el recordatorio.
 ## 6. Resultados registrados
 
 > Los valores de esta tabla corresponden a una **compilación de verificación** hecha
-> el 18/11/2026 en la copia de trabajo del agente de integración (cambios aún sin
-> confirmar). **No es el APK oficial.** El APK oficial, su commit, `versionCode`,
+> el 18/11/2026 antes de confirmar los cambios de la integración. **No es el APK oficial.** El APK oficial, su commit, `versionCode`,
 > certificado y SHA-256 se registran en el manifiesto de entrega del Sprint 3
 > (`SHA256SUMS.txt` / notas del GitHub Release) y en `build-info.txt` del CI.
 

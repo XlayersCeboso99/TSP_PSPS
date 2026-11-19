@@ -70,7 +70,7 @@ Riesgos de registro de plugins y notificaciones:
 
 ## 3. Verificación en Windows (solo Dart)
 
-Windows 11, Flutter 3.47.9 / Dart 3.13.7, rama `agente/opencode-sprint03`:
+Windows 11, Flutter 3.47.9 / Dart 3.13.7:
 
 | Comando | Resultado |
 | --- | --- |

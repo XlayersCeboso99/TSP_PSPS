@@ -9,31 +9,45 @@ PSPS Academy es una aplicación Flutter/Dart para Android e iOS que permite estu
 
 ## Estado actual
 
-- Versión de desarrollo actual: **0.2.0-dev.2+3**, en [Sprint 2](Sprint%202/README.md). El incremento anterior se conserva en Sprint 1.
-- Android verificado en un dispositivo físico con Android 16. iOS sin compilar ni probar (falta macOS/Xcode).
-- El incremento del Sprint 2 incorpora logros, temas visuales, repaso, búsqueda, actividades y puntos según el diseño del equipo. No hay servidor ni sincronización.
-- La aprobación del SRS y la aceptación de la cliente están pendientes.
+- **Aplicación oficial vigente: [`Sprint 3/psps_academy/`](Sprint%203/psps_academy/README.md), versión `0.3.0+7`.** Incluye CU-01 a CU-12 (CU-11 notas personales, CU-12 recordatorios locales) y el catálogo ampliado: 4 módulos, 10 temas, 10 subtemas, 40 preguntas y 20 actividades opcionales. Funciona sin conexión y guarda el progreso, puntos, logros, notas y recordatorio en el dispositivo.
+- Procedencia: integrada desde [`XlayersCeboso99/PSPS-Academy`](https://github.com/XlayersCeboso99/PSPS-Academy) (`feature/sprint03-catalog-expansion@904d26b` + `fix/ios-preflight@ad2f907`) con `git subtree`, conservando su historial. Los identificadores y claves de almacenamiento del Sprint 2 se conservan (los datos guardados por versiones anteriores siguen siendo válidos).
+- Estado por plataforma y evidencias: ver [`Sprint 3/psps_academy/docs/platforms/`](Sprint%203/psps_academy/docs/platforms) y el informe de entrega del Sprint 3. Una compilación correcta no equivale a una prueba en dispositivo; cada evidencia física se registra con su commit, versión y SHA-256.
+- Versiones anteriores (históricas, no se modifican): Sprint 2 `0.2.0` en [`Sprint 2/psps_academy/`](Sprint%202/psps_academy/README.md) y Sprint 1 en `Sprint 1/psps_academy/`.
+- HarmonyOS NEXT queda fuera del alcance de esta entrega; su preparación se conserva en la rama `port/harmonyos-next` de PSPS-Academy.
 
 ## Estructura del repositorio
 
 ```
-Sprint 1/
-├── psps_academy/   Código fuente Flutter, pruebas y scripts
-│   ├── lib/                  Aplicación (data, domain, ui)
-│   ├── test/                 Pruebas unitarias y de interfaz
-│   ├── integration_test/     Pruebas de integración en dispositivo
-│   ├── test_driver/          Driver para capturas de evidencia
-│   ├── tool/                 Scripts de compilación e instalación en Windows
-│   └── docs/                 Alcance del sprint y guía de demostración
-├── Pruebas/
-│   ├── REPRODUCIR.md         Cómo repetir la verificación
-│   └── evidencias/           Capturas, logs e inspecciones de la verificación
-└── UML_fuentes/    Fuentes PlantUML de los diagramas UML v1.1
+Sprint 1/                     Incremento y documentación del Sprint 1 (histórico)
+Sprint 2/                     Incremento 0.2.0, documentación, pruebas y evidencias del Sprint 2 (histórico)
+Sprint 3/
+├── 03 Requisitos y Diseño/   Trazabilidad y documentos del Sprint 3 (ID 32)
+└── psps_academy/             APLICACIÓN OFICIAL ACTUAL (Flutter, Android e iOS)
+    ├── lib/                  app/, core/ (catálogo, almacenamiento), features/ (CU-01…CU-12)
+    ├── test/                 Pruebas unitarias, de widgets, Sprint 3 y regresión/migración
+    ├── integration_test/     Pruebas de integración en dispositivo/simulador
+    ├── android/  ios/        Proyectos nativos (applicationId / bundle id mx.edu.uaz.psps)
+    ├── tool/                 Scripts de diagnóstico, compilación e instalación
+    └── docs/                 Arquitectura, casos de uso, pruebas y guías por plataforma
+.github/workflows/            CI: sprint3-flutter-ci, sprint3-android, sprint3-ios (Sprint 3) y cu12-validation (Sprint 2)
+docs/                         Documentación general del proyecto
 ```
 
-## Ejecutar y probar
+## Compilar y probar (Sprint 3)
 
-Consulta [Sprint 2/psps_academy/README.md](Sprint%202/psps_academy/README.md) para ejecutar la app y generar el APK, y [Sprint 2/Pruebas/REPRODUCIR.md](Sprint%202/Pruebas/REPRODUCIR.md) para repetir las pruebas actuales. La documentación histórica del Sprint 1 permanece en su carpeta.
+Requisitos: Flutter 3.47.9 (Dart 3.13.7). Desde `Sprint 3/psps_academy`:
+
+```bash
+flutter pub get --enforce-lockfile   # dependencias exactas del pubspec.lock
+flutter analyze
+flutter test                         # suite completa
+flutter build apk --release          # Android: build/app/outputs/flutter-apk/app-release.apk
+flutter build ios --simulator --debug  # iOS (solo en macOS con Xcode)
+```
+
+Guías detalladas: [Android](Sprint%203/psps_academy/docs/platforms/ANDROID.md) (incluye cómo verificar firma, versión y SHA-256 e instalar **como actualización** sin perder datos) e [iOS](Sprint%203/psps_academy/docs/platforms/IOS.md) (simulador, iPhone con Xcode e IPA). Los workflows de `.github/workflows/sprint3-*.yml` repiten estas comprobaciones en cada cambio y publican el APK y la compilación de simulador como artefactos con su SHA-256.
+
+Para las versiones anteriores consulta [Sprint 2/psps_academy/README.md](Sprint%202/psps_academy/README.md) y [Sprint 2/Pruebas/REPRODUCIR.md](Sprint%202/Pruebas/REPRODUCIR.md).
 
 ## Gestión del trabajo
 
@@ -41,4 +55,4 @@ El Product Backlog, los Sprint Backlogs y los defectos se gestionan en **GitHub 
 
 Ramas: `main` (versiones liberadas), `develop` (integración) y `feature/<issue>-<descripción>` (Plan de integración v1.1).
 
-El APK no se versiona en el repositorio; se genera con `flutter build apk --debug`.
+Los binarios (APK/IPA) no se versionan en Git: se publican como artefactos de GitHub Actions y en los GitHub Releases, acompañados de su SHA-256.

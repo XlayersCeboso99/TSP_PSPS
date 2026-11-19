@@ -2,7 +2,7 @@
 
 PSPS Academy es una aplicación educativa móvil, desarrollada con Flutter, para estudiar y practicar Ingeniería de Software **sin conexión a internet**. El estudiante recorre módulos, temas y subtemas, responde preguntas con retroalimentación inmediata, realiza actividades de ordenamiento, repasa sus errores, gana puntos y logros y desbloquea temas visuales. Todo el avance se guarda en el dispositivo.
 
-> **Estado:** versión `0.2.0+5`, migrada sin cambios funcionales desde el repositorio del curso `TSP_PSPS` (ver [Procedencia](#procedencia)). Base preparada para el Sprint 3.
+> **Estado:** versión `0.3.0+7` — aplicación oficial del Sprint 3 dentro del repositorio del curso `TSP_PSPS` (carpeta `Sprint 3/psps_academy/`). Ver [Procedencia](#procedencia).
 
 ## Objetivo educativo
 
@@ -109,21 +109,21 @@ Detalle y reglas de dependencia: [docs/ARCHITECTURE.md](docs/ARCHITECTURE.md).
 
 | Plataforma | Estado |
 | --- | --- |
-| Android | Compila con CU-11/CU-12 (`flutter build apk --debug` verificado el 09/11/2026). Pruebas en dispositivo: **pendientes** (ver [docs/platforms/ANDROID.md](docs/platforms/ANDROID.md)). |
-| iOS | Rama `port/ios-sprint03`. Compilación para simulador sin firma y una prueba de integración en simulador aprobadas en el CI de macOS (Xcode 26.6, iOS 26.4; `.github/workflows/ios-build.yml`). Pendiente: firma, iPhone físico y pruebas manuales de CU-11/CU-12. Guía: `docs/platforms/IOS.md`. |
-| HarmonyOS NEXT | Puerto preparado en la rama `port/harmonyos-next` (adaptador de recordatorios propio y plugin ArkTS, guía en `docs/platforms/HARMONYOS_NEXT.md`). **No compilado ni probado**: requiere el SDK Flutter-OH 3.35.7 (Dart 3.9) y DevEco Studio. |
+| Android | APK *release* compilado y verificado por CI (`.github/workflows/sprint3-android.yml` en la raíz de TSP_PSPS) con SHA-256, versión y certificado registrados. La instalación física de `0.3.0+7` se registra aparte con su commit y SHA-256. Guía: [docs/platforms/ANDROID.md](docs/platforms/ANDROID.md). |
+| iOS | Mismo código y catálogo que Android. Compilación para simulador sin firma y prueba de integración en simulador en el CI de macOS (`.github/workflows/sprint3-ios.yml` en la raíz de TSP_PSPS). Una compilación de simulador **no** equivale a una instalación en iPhone; la firma, el IPA y las pruebas en iPhone físico se documentan en [docs/platforms/IOS.md](docs/platforms/IOS.md). |
+| HarmonyOS NEXT | Fuera del alcance de esta entrega. La preparación se conserva sin cambios en la rama `port/harmonyos-next` del repositorio PSPS-Academy; no está integrada aquí. |
 | Web | Carpeta presente por la plantilla de Flutter; no es objetivo del proyecto. |
 
 ## Procedencia
 
-Migrado desde [`XlayersCeboso99/TSP_PSPS`](https://github.com/XlayersCeboso99/TSP_PSPS), rama `develop`, commit `119ab3eed0467c62d6b6c3c73b0705ff302a16b1`, carpeta `Sprint 2/psps_academy`. El historial anterior, los PDF del curso (manual de usuario, guía de operación, reportes de pruebas) y las evidencias de los sprints 1 y 2 permanecen en ese repositorio. Detalles: [docs/MIGRATION_REPORT.md](docs/MIGRATION_REPORT.md).
+Desarrollada en [`XlayersCeboso99/PSPS-Academy`](https://github.com/XlayersCeboso99/PSPS-Academy) a partir de `TSP_PSPS@119ab3e` (`Sprint 2/psps_academy`) y reintegrada en TSP_PSPS con `git subtree` desde `feature/sprint03-catalog-expansion@904d26b` + `fix/ios-preflight@ad2f907` (consolidados en `release/sprint03@e5a0861`), conservando su historial. Los PDF del curso y las evidencias de los sprints 1 y 2 permanecen en `Sprint 1/` y `Sprint 2/` de este repositorio. Detalles de la migración original: [docs/MIGRATION_REPORT.md](docs/MIGRATION_REPORT.md).
 
 ## Limitaciones conocidas
 
 - Contenido educativo demostrativo; se edita en `lib/core/content/catalog.dart`.
 - Sin servidor, cuentas ni sincronización entre dispositivos.
 - La compilación *release* usa la firma *debug*; no apta para publicación en tienda.
-- iOS compilado y probado en simulador por CI; sin firma ni pruebas en iPhone. HarmonyOS NEXT preparado en su rama, sin compilar ni probar.
+- iOS: el CI compila y prueba en simulador; la instalación en iPhone y el IPA dependen de una Mac y de la cuenta Apple disponible (ver docs/platforms/IOS.md). HarmonyOS NEXT fuera de alcance.
 - El catálogo admite módulos/temas vacíos que el SRS (RP-01) prohíbe; decisión pendiente.
 - Lista completa: [docs/MIGRATION_REPORT.md](docs/MIGRATION_REPORT.md#pendientes).
 

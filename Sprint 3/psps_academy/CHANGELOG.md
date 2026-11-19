@@ -4,6 +4,16 @@ Formato basado en [Keep a Changelog](https://keepachangelog.com/es-ES/1.1.0/). L
 
 ## [Sin publicar]
 
+## [0.3.0+7] — Integración oficial en TSP_PSPS (Sprint 3)
+
+### Cambiado
+- Versión `0.3.0+7` (`versionCode` 7, mayor que el build 6 usado en las pruebas del Galaxy S24 Ultra, para instalar como actualización sin perder datos).
+- La aplicación se integra en `TSP_PSPS/Sprint 3/psps_academy/` desde `feature/sprint03-catalog-expansion@904d26b` + `fix/ios-preflight@ad2f907` (iOS: delegado de notificaciones en `AppDelegate.swift`, `ios/.gitignore`).
+- CI en la raíz de TSP_PSPS: `sprint3-flutter-ci.yml`, `sprint3-android.yml`, `sprint3-ios.yml`.
+
+Las entradas siguientes corresponden al trabajo del Sprint 3 incluido en esta versión.
+
+
 ### Añadido
 - CU-11 Notas personales por subtema (`lib/features/notes/`, pantallas en `lib/app/notes_screens.dart`), clave `psps.notes.v1`.
 - CU-12 Recordatorio de estudio semanal con notificaciones locales (`lib/features/reminders/`, pantalla en `lib/app/reminder_screens.dart`), clave `psps.reminder.v1`. Interfaz de plataforma `NotificationPort` separada del adaptador Android/iOS (`adapters/flutter_notification_port.dart`) y punto único de selección `adapters/notification_port_factory.dart`.

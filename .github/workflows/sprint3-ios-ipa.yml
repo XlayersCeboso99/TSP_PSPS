@@ -1,0 +1,99 @@
+name: Sprint 3 iOS IPA (unsigned)
+
+# Genera un IPA de dispositivo (arm64, Release) SIN FIRMA de la app oficial del
+# Sprint 3 en un runner macOS. Un IPA sin firma NO se instala directamente en un
+# iPhone: debe firmarse después con una identidad de Apple (Xcode, Sideloadly,
+# AltStore o un certificado de distribución). No se usan secretos ni
+# certificados en este workflow.
+
+on:
+  push:
+    branches:
+      - develop
+      - main
+      - 'integracion/**'
+      - 'release/**'
+    tags:
+      - 'v*'
+    paths:
+      - 'Sprint 3/psps_academy/**'
+      - '.github/workflows/sprint3-ios-ipa.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: sprint3-ios-ipa-${{ github.ref }}
+  cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: 'Sprint 3/psps_academy'
+
+env:
+  FLUTTER_VERSION: 3.47.9
+
+jobs:
+  unsigned-ipa:
+    runs-on: macos-latest
+    timeout-minutes: 45
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+          flutter-version: ${{ env.FLUTTER_VERSION }}
+          cache: true
+
+      - name: Install dependencies (locked)
+        run: flutter pub get --enforce-lockfile
+
+      - name: Analyze and test
+        run: |
+          flutter analyze
+          flutter test
+
+      - name: Build iOS device app (Release, no codesign)
+        run: flutter build ios --release --no-codesign
+
+      - name: Package unsigned IPA and record identity
+        run: |
+          set -euo pipefail
+          SHORT="${GITHUB_SHA::7}"
+          VERSION=$(grep -m1 '^version:' pubspec.yaml | awk '{print $2}')
+          NAME="PSPS_Academy_${VERSION}_${SHORT}_ios-unsigned.ipa"
+          APP=build/ios/iphoneos/Runner.app
+          OUT=ci-ipa
+          mkdir -p "$OUT/Payload"
+          cp -R "$APP" "$OUT/Payload/"
+          (cd "$OUT" && zip -qry "$NAME" Payload && rm -rf Payload)
+          PLIST="$APP/Info.plist"
+          {
+            echo "commit=${GITHUB_SHA}"
+            echo "ref=${GITHUB_REF}"
+            echo "pubspec_version=${VERSION}"
+            echo "ipa=${NAME}"
+            echo "CFBundleIdentifier=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleIdentifier' "$PLIST")"
+            echo "CFBundleShortVersionString=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleShortVersionString' "$PLIST")"
+            echo "CFBundleVersion=$(/usr/libexec/PlistBuddy -c 'Print :CFBundleVersion' "$PLIST")"
+            echo "MinimumOSVersion=$(/usr/libexec/PlistBuddy -c 'Print :MinimumOSVersion' "$PLIST")"
+            echo "--- lipo (arquitecturas)"
+            lipo -info "$APP/Runner"
+            echo "--- codesign -dv (se espera: sin firma o firma ad-hoc del enlazador)"
+            codesign -dv "$APP" 2>&1 || true
+            echo "--- toolchain"
+            xcodebuild -version
+            flutter --version | head -1
+            echo "AVISO: IPA SIN FIRMA. No se instala directamente en un iPhone; debe firmarse con una identidad de Apple."
+          } | tee "$OUT/build-info_ios.txt"
+          (cd "$OUT" && shasum -a 256 "$NAME" | tee SHA256SUMS.txt)
+          echo "short=$SHORT" >> "$GITHUB_ENV"
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: sprint3-ios-ipa-unsigned-${{ env.short }}
+          path: Sprint 3/psps_academy/ci-ipa/
+          if-no-files-found: error
+          retention-days: 30
